@@ -26,7 +26,7 @@
 	--ct-primary-soft-2: #e0d9ff;
 	--ct-primary-text: #4b2ee3;
 	--ct-on-primary: #ffffff;
-	--ct-success: #0d7f57;
+	--ct-success: #0a7450;
 	--ct-success-soft: #e6f5ee;
 	--ct-warn: #995200;
 	--ct-warn-soft: #fff3df;
@@ -734,3 +734,6 @@ fieldset.ct-fieldset legend { font-weight: 600; font-size: var(--ct-fs-sm); marg
 .ct-doc__sign { margin-top: 36px; width: min(260px, 100%); margin-left: auto; border-top: 1px solid #636376; padding-top: 6px; text-align: center; }
 .ct-doc-stack { display: grid; gap: 16px; }
 .ct-doc__totals .num { text-align: right; }
+/* La vista previa del documento imita papel: siempre fondo blanco, también en modo oscuro. */
+.ct-doc .ct-table, .ct-doc .ct-table td, .ct-doc .ct-table tr { background: #fff; }
+.ct-doc .ct-table thead th { background: #f3f1ff; color: #15151d; }
