@@ -1,0 +1,13 @@
+/* ClickTools — estilos de impresión (calendarios, listas, facturas, presupuestos). */
+@page { margin: 14mm; }
+.ct-header, .ct-footer, .ct-crumbs, .ct-tool-hero__actions, .ct-note, .ct-tool-content, .ct-ad, .ct-consent, .ct-toast-region, .ct-palette, .ct-skip, .ct-no-print, .ct-actions, .ct-drop, #wpadminbar { display: none !important; }
+body.ct-body { background: #fff !important; color: #000 !important; font-size: 11pt; }
+.ct-workspace { border: 0 !important; box-shadow: none !important; padding: 0 !important; animation: none !important; }
+.ct-tool-hero { padding: 0 0 6mm !important; }
+.ct-tool-hero__icon, .ct-tool-hero__meta, .ct-tool-hero__intro { display: none !important; }
+.ct-print-area { display: block !important; }
+.ct-print-only { display: block !important; }
+.ct-panel, .ct-card, .ct-result, .ct-table-wrap { break-inside: avoid; border-color: #bbb !important; background: #fff !important; box-shadow: none !important; }
+.ct-calendar td.is-today { background: none !important; color: #000 !important; outline: 1px solid #000; }
+a { color: #000 !important; text-decoration: none !important; }
+body.ct-printing-doc .ct-app > :not(.ct-print-area) { display: none !important; }
