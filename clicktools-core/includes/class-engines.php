@@ -300,7 +300,7 @@ class Engines {
 			return new \WP_Error( 'ct_move', __( 'No se ha podido preparar el archivo.', 'clicktools' ), array( 'status' => 500 ) );
 		}
 
-		$result = self::run_operation( $tool['key'], $op, $in, $in_ext, $dir, $request );
+		$result = self::run_operation( $tool['key'], $op, $in, $in_ext, $dir, $request, $limits['timeout'] );
 		if ( is_wp_error( $result ) ) {
 			self::cleanup( $dir );
 			return $result;
@@ -344,9 +344,10 @@ class Engines {
 	 * @param string           $in_ext  Tipo/demuxer de entrada.
 	 * @param string           $dir     Directorio de trabajo.
 	 * @param \WP_REST_Request $request Parámetros.
+	 * @param int              $timeout Tiempo máximo en segundos.
 	 * @return array|\WP_Error path, name, mime
 	 */
-	private static function run_operation( $key, array $op, $in, $in_ext, $dir, \WP_REST_Request $request ) {
+	private static function run_operation( $key, array $op, $in, $in_ext, $dir, \WP_REST_Request $request, $timeout ) {
 		$bin  = self::binary( $op['engine'] );
 		$out  = $dir . '/out';
 		$base = sanitize_file_name( pathinfo( (string) $request->get_param( 'name' ), PATHINFO_FILENAME ) );
@@ -441,7 +442,7 @@ class Engines {
 				return new \WP_Error( 'ct_op', __( 'Operación no admitida.', 'clicktools' ), array( 'status' => 400 ) );
 		}
 
-		$run = self::run( $cmd, $env, $limits['timeout'], $dir );
+		$run = self::run( $cmd, $env, $timeout, $dir );
 		if ( is_wp_error( $run ) ) {
 			return $run;
 		}
