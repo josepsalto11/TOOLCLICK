@@ -81,7 +81,7 @@
 	}
 
 	var TYPES = {
-		url: { label: __('Enlace'), icon: 'link', fields: [['url', __('Dirección web'), 'url', 'https://clicktools.es']] },
+		url: { label: __('Enlace'), icon: 'link', fields: [['url', __('Dirección web'), 'url', (CT.cfg && CT.cfg.home) || 'https://example.com']] },
 		text: { label: __('Texto'), icon: 'type', fields: [['text', __('Texto'), 'textarea', '']] },
 		wifi: { label: 'Wi-Fi', icon: 'wifi', fields: [['ssid', __('Nombre de la red (SSID)'), 'text', ''], ['pass', __('Contraseña'), 'text', ''], ['enc', __('Seguridad'), 'select', 'WPA', [{ value: 'WPA', label: 'WPA/WPA2/WPA3' }, { value: 'WEP', label: 'WEP' }, { value: 'nopass', label: __('Sin contraseña') }]], ['hidden', __('Red oculta'), 'checkbox', false]] },
 		email: { label: __('Correo'), icon: 'mail', fields: [['to', __('Destinatario'), 'email', ''], ['subject', __('Asunto'), 'text', ''], ['body', __('Mensaje'), 'textarea', '']] },

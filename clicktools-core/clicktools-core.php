@@ -1,7 +1,6 @@
 <?php
 /**
  * Plugin Name:       ClickTools Core
- * Plugin URI:        https://clicktools.es/
  * Description:       Plataforma de herramientas online (PDF, imágenes, texto, calculadoras, conversores, QR, fechas, desarrollo, seguridad, archivos, productividad y empresas). Incluye catálogo, buscador, páginas SEO por herramienta, plantilla visual propia, formularios, consentimiento y administración. «Todo lo que necesitas, en un clic».
  * Version:           1.0.0
  * Requires at least: 6.4
