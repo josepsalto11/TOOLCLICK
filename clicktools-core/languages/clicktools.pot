@@ -9,18 +9,13 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-19T09:25:39+00:00\n"
+"POT-Creation-Date: 2026-10-19T09:39:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
 #: clicktools-core.php
 msgid "ClickTools Core"
-msgstr ""
-
-#. Plugin URI of the plugin
-#: clicktools-core.php
-msgid "https://clicktools.es/"
 msgstr ""
 
 #. Description of the plugin
@@ -34,7 +29,7 @@ msgid "ClickTools"
 msgstr ""
 
 #. translators: 1: versión mínima de PHP, 2: versión mínima de WordPress
-#: clicktools-core.php:35
+#: clicktools-core.php:34
 #, php-format
 msgid "ClickTools Core necesita PHP %1$s y WordPress %2$s o superiores. El plugin no se ha cargado."
 msgstr ""
@@ -9860,27 +9855,27 @@ msgstr ""
 msgid "No se ha podido preparar el archivo."
 msgstr ""
 
-#: includes/class-engines.php:385
+#: includes/class-engines.php:386
 msgid "Indica una contraseña válida (máximo 128 caracteres)."
 msgstr ""
 
-#: includes/class-engines.php:441
+#: includes/class-engines.php:442
 msgid "Operación no admitida."
 msgstr ""
 
-#: includes/class-engines.php:450
+#: includes/class-engines.php:451
 msgid "No se ha podido desbloquear el PDF. Comprueba que la contraseña es correcta."
 msgstr ""
 
-#: includes/class-engines.php:451
+#: includes/class-engines.php:452
 msgid "El motor no ha podido procesar el archivo. Puede estar dañado o usar funciones no compatibles."
 msgstr ""
 
-#: includes/class-engines.php:478
+#: includes/class-engines.php:479
 msgid "No se ha podido iniciar el motor de procesamiento."
 msgstr ""
 
-#: includes/class-engines.php:498
+#: includes/class-engines.php:499
 msgid "El procesamiento ha superado el tiempo máximo. Prueba con un archivo más pequeño."
 msgstr ""
 
