@@ -634,6 +634,14 @@
 		});
 	};
 
+	/** Luminancia relativa y contraste WCAG entre dos colores HEX. */
+	CT.luminance = function (hex) {
+		var m = /^#?([0-9a-f]{6})$/i.exec(hex); if (!m) { return 1; }
+		var n = parseInt(m[1], 16);
+		return [n >> 16, (n >> 8) & 255, n & 255].map(function (c) { c /= 255; return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); }).reduce(function (a, c, i) { return a + c * [0.2126, 0.7152, 0.0722][i]; }, 0);
+	};
+	CT.contrast = function (a, b) { var x = CT.luminance(a), y = CT.luminance(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+
 	/** Imprimir solo una zona del documento. */
 	CT.printArea = function (node) {
 		var area = CT.h('div', { class: 'ct-print-area' });
