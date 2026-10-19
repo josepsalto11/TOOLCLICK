@@ -150,37 +150,62 @@ class Registry {
 	 */
 	public static function all_tools() {
 		if ( null === self::$tools ) {
-			$tools = array();
-			foreach ( glob( CLICKTOOLS_DIR . 'data/tools/*.php' ) as $file ) {
-				$list = require $file;
-				if ( is_array( $list ) ) {
-					foreach ( $list as $tool ) {
-						$tools[] = $tool;
-					}
-				}
-			}
-			foreach ( self::custom_tools() as $tool ) {
-				$tools[] = $tool;
-			}
-			$tools     = apply_filters( 'clicktools_tools', $tools );
-			$overrides = (array) get_option( self::OVERRIDES_OPTION, array() );
-			$out       = array();
-			foreach ( $tools as $tool ) {
-				if ( empty( $tool['slug'] ) || empty( $tool['cat'] ) || isset( $out[ $tool['slug'] ] ) ) {
-					continue;
-				}
-				$tool = self::normalize( $tool );
-				if ( isset( $overrides[ $tool['slug'] ] ) && is_array( $overrides[ $tool['slug'] ] ) ) {
-					$tool = self::apply_override( $tool, $overrides[ $tool['slug'] ] );
-				}
-				if ( ! self::category( $tool['cat'] ) ) {
-					continue;
-				}
-				$out[ $tool['slug'] ] = $tool;
-			}
-			self::$tools = $out;
+			self::$tools = self::build( true );
 		}
 		return self::$tools;
+	}
+
+	/**
+	 * Definición original de una herramienta, sin los cambios del panel.
+	 *
+	 * @param string $slug Slug.
+	 * @return array|null
+	 */
+	public static function base_tool( $slug ) {
+		static $base = null;
+		if ( null === $base ) {
+			$base = self::build( false );
+		}
+		return isset( $base[ $slug ] ) ? $base[ $slug ] : null;
+	}
+
+	/**
+	 * Construye el registro a partir de los archivos de datos, las calculadoras
+	 * personalizadas, el filtro clicktools_tools y, opcionalmente, los cambios del panel.
+	 *
+	 * @param bool $with_overrides Aplicar cambios guardados en el panel.
+	 * @return array<string,array>
+	 */
+	private static function build( $with_overrides ) {
+		$tools = array();
+		foreach ( glob( CLICKTOOLS_DIR . 'data/tools/*.php' ) as $file ) {
+			$list = require $file;
+			if ( is_array( $list ) ) {
+				foreach ( $list as $tool ) {
+					$tools[] = $tool;
+				}
+			}
+		}
+		foreach ( self::custom_tools() as $tool ) {
+			$tools[] = $tool;
+		}
+		$tools     = apply_filters( 'clicktools_tools', $tools );
+		$overrides = $with_overrides ? (array) get_option( self::OVERRIDES_OPTION, array() ) : array();
+		$out       = array();
+		foreach ( $tools as $tool ) {
+			if ( empty( $tool['slug'] ) || empty( $tool['cat'] ) || isset( $out[ $tool['slug'] ] ) ) {
+				continue;
+			}
+			$tool = self::normalize( $tool );
+			if ( isset( $overrides[ $tool['slug'] ] ) && is_array( $overrides[ $tool['slug'] ] ) ) {
+				$tool = self::apply_override( $tool, $overrides[ $tool['slug'] ] );
+			}
+			if ( ! self::category( $tool['cat'] ) ) {
+				continue;
+			}
+			$out[ $tool['slug'] ] = $tool;
+		}
+		return $out;
 	}
 
 	/**
