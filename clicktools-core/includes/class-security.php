@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 class Security {
 
 	const TOKEN_TTL = 7200; // 2 horas.
-	const TOKEN_MIN = 3;    // Segundos mínimos antes de enviar (anti-bots).
+	const TOKEN_MIN = 3;    // Segundos mínimos antes de enviar un formulario (anti-bots).
 
 	/**
 	 * Registra hooks.
@@ -74,7 +74,9 @@ class Security {
 		if ( $age > self::TOKEN_TTL ) {
 			return new \WP_Error( 'ct_token_expired', __( 'El formulario ha caducado. Recarga la página e inténtalo de nuevo.', 'clicktools' ), array( 'status' => 403 ) );
 		}
-		if ( $age < self::TOKEN_MIN ) {
+		// El tiempo mínimo solo tiene sentido en formularios que rellena una persona: el token de
+		// procesamiento de archivos se pide justo al pulsar el botón.
+		if ( 'message' === $action && $age < self::TOKEN_MIN ) {
 			return new \WP_Error( 'ct_too_fast', __( 'Has enviado el formulario demasiado rápido. Espera unos segundos e inténtalo de nuevo.', 'clicktools' ), array( 'status' => 429 ) );
 		}
 		return true;

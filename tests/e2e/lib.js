@@ -22,7 +22,9 @@ async function test(name, fn, opts) {
   try {
     await withPage(async (page, errors) => {
       await fn(page);
-      if (errors.length) throw new Error('Errores JS: ' + errors.join(' | '));
+      // allowHttpErrors: la prueba provoca a propósito una respuesta 4xx que el navegador anota en consola.
+      const real = opts && opts.allowHttpErrors ? errors.filter(e => !/Failed to load resource/.test(e)) : errors;
+      if (real.length) throw new Error('Errores JS: ' + real.join(' | '));
     }, opts);
     passed++; results.push(['OK', name]); console.log('  ✓ ' + name);
   } catch (e) {
