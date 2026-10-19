@@ -99,7 +99,7 @@ class Settings_Page {
 					array( 'server_enabled', 'checkbox', __( 'Activar las herramientas que procesan en el servidor', 'clicktools' ) ),
 					array( 'server_max_mb', 'number', __( 'Tamaño máximo por archivo (MB)', 'clicktools' ) ),
 					array( 'server_timeout', 'number', __( 'Tiempo máximo por conversión (segundos)', 'clicktools' ) ),
-					array( 'server_rate_hour', 'number', __( 'Conversiones por hora y visitante', 'clicktools' ) ),
+					array( 'server_rate_hour', 'number', __( 'Conversiones por hora y visitante', 'clicktools' ), __( '0 = sin límite (no recomendado en un sitio público).', 'clicktools' ) ),
 					array( 'path_libreoffice', 'text', __( 'Ruta de LibreOffice (soffice)', 'clicktools' ), __( 'Vacío = detección automática. Solo rutas absolutas, sin argumentos.', 'clicktools' ) ),
 					array( 'path_ghostscript', 'text', __( 'Ruta de Ghostscript (gs)', 'clicktools' ) ),
 					array( 'path_qpdf', 'text', __( 'Ruta de qpdf', 'clicktools' ) ),
@@ -252,6 +252,9 @@ class Settings_Page {
 			echo '<tr><td>' . esc_html( $engine['label'] ) . '</td><td>' . ( $engine['path'] ? '<span class="ct-admin-ok">' . esc_html__( 'Disponible', 'clicktools' ) . '</span> <code>' . esc_html( $engine['path'] ) . '</code>' : '<span class="ct-admin-ko">' . esc_html__( 'No encontrado', 'clicktools' ) . '</span>' ) . '</td></tr>';
 		}
 		echo '</tbody></table>';
+		$upload = wp_max_upload_size();
+		/* translators: %s: tamaño */
+		echo '<p class="description">' . esc_html( sprintf( __( 'Límite de subida de PHP en este servidor: %s. El tamaño máximo efectivo es el menor entre este valor y el que indiques abajo.', 'clicktools' ), size_format( $upload ) ) ) . '</p>';
 	}
 
 	/**

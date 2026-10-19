@@ -454,7 +454,7 @@
 			});
 			if (!opts.multiple && ok.length > 1) { ok = ok.slice(0, 1); }
 			if (rejected.length) { CT.toast(sprintf(__('Formato no admitido: %s'), rejected.slice(0, 3).join(', ')), 'error'); }
-			if (big.length) { CT.toast(sprintf(__('Supera el límite de %d MB: %s'), maxMb, big.slice(0, 3).join(', ')), 'error'); }
+			if (big.length) { CT.toast(sprintf(__('Supera el límite de %1$d MB: %2$s'), maxMb, big.slice(0, 3).join(', ')), 'error'); }
 			if (ok.length) { opts.onFiles(ok); }
 			input.value = '';
 		};

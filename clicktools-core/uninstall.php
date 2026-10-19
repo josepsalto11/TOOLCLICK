@@ -39,6 +39,8 @@ foreach ( array( 'clicktools_settings', 'clicktools_tool_overrides', 'clicktools
 	delete_option( $clicktools_option );
 }
 delete_transient( 'clicktools_popularity' );
+// Contadores temporales de límite de uso (caducan solos, pero se limpian igualmente).
+$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '\\_transient\\_ct\\_rl\\_%' OR option_name LIKE '\\_transient\\_timeout\\_ct\\_rl\\_%'" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 
 // Directorio temporal.
 $clicktools_uploads = wp_upload_dir( null, false );

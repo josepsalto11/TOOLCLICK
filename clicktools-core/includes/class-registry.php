@@ -369,16 +369,18 @@ class Registry {
 	 * @return bool
 	 */
 	public static function is_public( array $tool ) {
-		if ( empty( $tool['enabled'] ) ) {
-			return false;
+		$public = false;
+		if ( ! empty( $tool['enabled'] ) ) {
+			if ( in_array( $tool['status'], array( 'live', 'beta' ), true ) ) {
+				$public = true;
+			} elseif ( 'server' === $tool['status'] ) {
+				$public = Engines::tool_available( $tool );
+			}
 		}
-		if ( in_array( $tool['status'], array( 'live', 'beta' ), true ) ) {
-			return true;
-		}
-		if ( 'server' === $tool['status'] ) {
-			return Engines::tool_available( $tool );
-		}
-		return false;
+		/**
+		 * Filtro clicktools_tool_is_public: permite a una extensión ocultar o mostrar herramientas.
+		 */
+		return (bool) apply_filters( 'clicktools_tool_is_public', $public, $tool );
 	}
 
 	/**

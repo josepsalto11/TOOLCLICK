@@ -118,7 +118,9 @@ class Assets {
 		$view   = clicktools_current_view();
 		$config = self::base_config();
 
-		if ( in_array( $view, array( 'catalog', 'favorites', 'history' ), true ) || ( is_front_page() && Templates::is_home_page() ) ) {
+		// El catálogo filtra en el momento, así que lleva el índice incluido. En el resto de páginas
+		// (portada, favoritos, historial…) se pide a la API solo cuando hace falta.
+		if ( 'catalog' === $view ) {
 			$config['catalog']   = Registry::search_index();
 			$config['toolIcons'] = Registry::search_icons();
 		}
@@ -200,7 +202,11 @@ class Assets {
 	 */
 	public static function tool_config( array $tool ) {
 		$cats = Registry::categories();
-		return array(
+		/**
+		 * Filtro clicktools_tool_config: datos que recibe el motor JavaScript de la herramienta.
+		 * Punto de extensión para complementos (por ejemplo, límites distintos para usuarios registrados).
+		 */
+		return apply_filters( 'clicktools_tool_config', array(
 			'slug'       => $tool['slug'],
 			'cat'        => $tool['cat'],
 			'catName'    => $cats[ $tool['cat'] ]['name'],
@@ -212,7 +218,7 @@ class Assets {
 			'config'     => $tool['config'],
 			'processing' => $tool['processing'],
 			'server'     => 'server' === $tool['processing'] ? Engines::client_info( $tool ) : null,
-		);
+		), $tool );
 	}
 
 	/**

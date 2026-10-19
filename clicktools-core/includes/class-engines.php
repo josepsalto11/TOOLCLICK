@@ -184,6 +184,32 @@ class Engines {
 	}
 
 	/**
+	 * Límites de procesamiento en servidor para una herramienta.
+	 *
+	 * Filtro clicktools_server_limits: permite a una extensión (por ejemplo, una futura versión
+	 * Pro con cuentas) ajustar tamaño máximo, usos por hora y tiempo máximo.
+	 *
+	 * @param array $tool Herramienta.
+	 * @return array{max_mb:int,rate_hour:int,timeout:int}
+	 */
+	public static function limits( array $tool ) {
+		$limits = apply_filters(
+			'clicktools_server_limits',
+			array(
+				'max_mb'    => (int) clicktools_setting( 'server_max_mb', 25 ),
+				'rate_hour' => (int) clicktools_setting( 'server_rate_hour', 20 ),
+				'timeout'   => (int) clicktools_setting( 'server_timeout', 120 ),
+			),
+			$tool
+		);
+		return array(
+			'max_mb'    => max( 1, (int) $limits['max_mb'] ),
+			'rate_hour' => max( 0, (int) $limits['rate_hour'] ),
+			'timeout'   => max( 5, (int) $limits['timeout'] ),
+		);
+	}
+
+	/**
 	 * Información para el cliente.
 	 *
 	 * @param array $tool Herramienta.
@@ -194,7 +220,7 @@ class Engines {
 		$op  = isset( $ops[ $tool['key'] ] ) ? $ops[ $tool['key'] ] : null;
 		return array(
 			'available' => self::tool_available( $tool ),
-			'maxMb'     => (int) clicktools_setting( 'server_max_mb', 25 ),
+			'maxMb'     => self::limits( $tool )['max_mb'],
 			'accept'    => $op ? $op['ext'] : '',
 			'endpoint'  => esc_url_raw( rest_url( 'clicktools/v1/process/' . $tool['slug'] ) ),
 		);
@@ -237,7 +263,8 @@ class Engines {
 		if ( is_wp_error( $check ) ) {
 			return $check;
 		}
-		if ( ! Security::rate_limit( 'process', (int) clicktools_setting( 'server_rate_hour', 20 ) ) ) {
+		$limits = self::limits( $tool );
+		if ( ! Security::rate_limit( 'process', $limits['rate_hour'] ) ) {
 			return new \WP_Error( 'ct_rate', __( 'Has alcanzado el límite de procesamientos por hora. Inténtalo más tarde.', 'clicktools' ), array( 'status' => 429 ) );
 		}
 		$ops   = self::operations();
@@ -247,7 +274,7 @@ class Engines {
 		if ( ! $file || ! empty( $file['error'] ) || ! is_uploaded_file( $file['tmp_name'] ) ) {
 			return new \WP_Error( 'ct_upload', __( 'No se ha recibido el archivo. Comprueba su tamaño e inténtalo de nuevo.', 'clicktools' ), array( 'status' => 400 ) );
 		}
-		$max = (int) clicktools_setting( 'server_max_mb', 25 ) * MB_IN_BYTES;
+		$max = $limits['max_mb'] * MB_IN_BYTES;
 		if ( (int) $file['size'] <= 0 || (int) $file['size'] > $max ) {
 			return new \WP_Error( 'ct_size', __( 'El archivo supera el tamaño máximo permitido en el servidor.', 'clicktools' ), array( 'status' => 413 ) );
 		}
@@ -414,7 +441,7 @@ class Engines {
 				return new \WP_Error( 'ct_op', __( 'Operación no admitida.', 'clicktools' ), array( 'status' => 400 ) );
 		}
 
-		$run = self::run( $cmd, $env, (int) clicktools_setting( 'server_timeout', 120 ), $dir );
+		$run = self::run( $cmd, $env, $limits['timeout'], $dir );
 		if ( is_wp_error( $run ) ) {
 			return $run;
 		}
