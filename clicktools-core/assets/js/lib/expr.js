@@ -12,8 +12,12 @@
 		min: -1, max: -1, pow: 2, root: 2
 	};
 	var CONSTS = { pi: Math.PI, 'π': Math.PI, e: Math.E, tau: 2 * Math.PI };
+	// Solo propiedades propias: evita que «constructor», «toString»… se resuelvan desde el prototipo.
+	var own = function (o, k) { return Object.prototype.hasOwnProperty.call(o, k); };
 
 	function ExprError(msg, pos) { this.message = msg; this.pos = pos; this.name = 'ExprError'; }
+	ExprError.prototype = Object.create(Error.prototype);
+	ExprError.prototype.constructor = ExprError;
 
 	function tokenize(src) {
 		var s = String(src).replace(/×/g, '*').replace(/÷/g, '/').replace(/−/g, '-').replace(/√/g, 'sqrt');
@@ -96,7 +100,7 @@
 			if (t.t === 'id') {
 				var name = t.v;
 				var lower = name.toLowerCase();
-				if (isOp(peek(), '(') && FUNCS[lower] !== undefined) {
+				if (isOp(peek(), '(') && own(FUNCS, lower)) {
 					next();
 					var args = [];
 					if (!isOp(peek(), ')')) {
@@ -109,11 +113,11 @@
 					if (!args.length) { throw new ExprError('La función ' + name + ' necesita argumentos', t.p); }
 					return { k: 'fn', f: lower, args: args };
 				}
-				if (FUNCS[lower] !== undefined && !opts.vars) {
+				if (own(FUNCS, lower) && !opts.vars) {
 					// sin 30 → sin(30)
 					return { k: 'fn', f: lower, args: [power()] };
 				}
-				if (CONSTS[lower] !== undefined || CONSTS[name] !== undefined) { return { k: 'num', v: CONSTS[lower] !== undefined ? CONSTS[lower] : CONSTS[name] }; }
+				if (own(CONSTS, lower) || own(CONSTS, name)) { return { k: 'num', v: own(CONSTS, lower) ? CONSTS[lower] : CONSTS[name] }; }
 				if (opts.vars && opts.vars.indexOf(name) >= 0) { return { k: 'var', v: name }; }
 				throw new ExprError('Nombre desconocido: «' + name + '»', t.p);
 			}
@@ -143,7 +147,7 @@
 			switch (n.k) {
 				case 'num': return n.v;
 				case 'var':
-					if (!scope || !isFinite(scope[n.v])) { throw new ExprError('Falta el valor de «' + n.v + '»'); }
+					if (!scope || !own(scope, n.v) || !isFinite(scope[n.v])) { throw new ExprError('Falta el valor de «' + n.v + '»'); }
 					return scope[n.v];
 				case 'neg': return -ev(n.a);
 				case 'pct': return ev(n.a) / 100;
