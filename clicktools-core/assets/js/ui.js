@@ -656,6 +656,21 @@
 	};
 
 	/** Utilidad para errores con instrucciones. */
+	/** Aviso sonoro breve (tres pitidos) con Web Audio. */
+	CT.beep = function () {
+		try {
+			var Ctx = window.AudioContext || window.webkitAudioContext;
+			var ctx = new Ctx();
+			[0, 0.35, 0.7].forEach(function (t) {
+				var o = ctx.createOscillator(), g = ctx.createGain();
+				o.frequency.value = 880; o.connect(g); g.connect(ctx.destination);
+				g.gain.setValueAtTime(0.0001, ctx.currentTime + t);
+				g.gain.exponentialRampToValueAtTime(0.3, ctx.currentTime + t + 0.02);
+				g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + t + 0.3);
+				o.start(ctx.currentTime + t); o.stop(ctx.currentTime + t + 0.32);
+			});
+		} catch (e) { /* sin audio */ }
+	};
 	CT.fail = function (target, err, hint) {
 		var msg = (err && err.message) ? err.message : String(err || __('Se ha producido un error inesperado.'));
 		if (/encrypt|password/i.test(msg)) { msg = __('El documento está protegido con contraseña.'); hint = hint || __('Desbloquéalo primero (con autorización) y vuelve a intentarlo.'); }

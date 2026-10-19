@@ -11,3 +11,7 @@ body.ct-body { background: #fff !important; color: #000 !important; font-size: 1
 .ct-calendar td.is-today { background: none !important; color: #000 !important; outline: 1px solid #000; }
 a { color: #000 !important; text-decoration: none !important; }
 body.ct-printing-doc .ct-app > :not(.ct-print-area) { display: none !important; }
+body.ct-printing-doc .ct-tool-hero, body.ct-printing-doc .ct-privacy { display: none !important; }
+.ct-doc { border: 0 !important; padding: 0 !important; box-shadow: none !important; }
+.ct-doc-stack .ct-doc + .ct-doc { margin-top: 12mm; padding-top: 10mm !important; border-top: 1px dashed #999 !important; }
+.ct-doc__lines th { background: #f0f0f4 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }

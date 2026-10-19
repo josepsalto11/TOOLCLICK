@@ -49,7 +49,7 @@ class Assets {
 			'files'      => array( 'file' => 'engines/files.js', 'deps' => array( 'lib-zip', 'lib-imgmeta', 'lib-csv' ) ),
 			'lists'      => array( 'file' => 'engines/lists.js', 'deps' => array( 'lib-csv' ) ),
 			'prod'       => array( 'file' => 'engines/prod.js', 'deps' => array( 'lib-csv' ) ),
-			'biz'        => array( 'file' => 'engines/biz.js', 'deps' => array() ),
+			'biz'        => array( 'file' => 'engines/biz.js', 'deps' => array( 'lib-csv', 'lists' ) ),
 			'server'     => array( 'file' => 'engines/server.js', 'deps' => array() ),
 			'guide'      => array( 'file' => 'engines/guide.js', 'deps' => array() ),
 		);

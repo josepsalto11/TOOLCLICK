@@ -574,21 +574,7 @@
 	};
 
 	/* ---------- Temporizador y cronómetro ---------- */
-	function beep() {
-		try {
-			var Ctx = window.AudioContext || window.webkitAudioContext;
-			var ctx = new Ctx();
-			[0, 0.35, 0.7].forEach(function (t) {
-				var o = ctx.createOscillator(), g = ctx.createGain();
-				o.frequency.value = 880; o.connect(g); g.connect(ctx.destination);
-				g.gain.setValueAtTime(0.0001, ctx.currentTime + t);
-				g.gain.exponentialRampToValueAtTime(0.3, ctx.currentTime + t + 0.02);
-				g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + t + 0.3);
-				o.start(ctx.currentTime + t); o.stop(ctx.currentTime + t + 0.32);
-			});
-		} catch (e) { /* sin audio */ }
-	}
-	CT.beep = beep;
+
 
 	tools.timer = function (el) {
 		var hh = ui.field({ label: __('Horas'), type: 'number', integer: true, value: 0, min: 0 });
@@ -602,7 +588,7 @@
 		var stop = function () { clearInterval(int); int = null; document.title = baseTitle; };
 		var tick = function () {
 			var left = endAt - Date.now();
-			if (left <= 0) { stop(); remaining = 0; show(0); status.textContent = __('¡Tiempo cumplido!'); beep(); CT.track('done'); if (window.Notification && Notification.permission === 'granted') { try { new Notification(__('Temporizador terminado')); } catch (e) { /* ignorado */ } } startBtn.querySelector('span').textContent = __('Iniciar'); return; }
+			if (left <= 0) { stop(); remaining = 0; show(0); status.textContent = __('¡Tiempo cumplido!'); CT.beep(); CT.track('done'); if (window.Notification && Notification.permission === 'granted') { try { new Notification(__('Temporizador terminado')); } catch (e) { /* ignorado */ } } startBtn.querySelector('span').textContent = __('Iniciar'); return; }
 			show(left); document.title = display.textContent + ' · ' + baseTitle;
 		};
 		var startBtn = ui.button(__('Iniciar'), { variant: 'primary', icon: 'play', onClick: function () {
@@ -759,7 +745,7 @@
 			items.forEach(function (it) {
 				if (!it.done && it.t <= Date.now()) {
 					it.done = true; changed = true;
-					beep();
+					CT.beep();
 					CT.toast(__('Recordatorio:') + ' ' + it.x);
 					if (supported && Notification.permission === 'granted') { try { new Notification(it.x); } catch (e) { /* ignorado */ } }
 				}
