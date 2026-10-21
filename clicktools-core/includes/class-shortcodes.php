@@ -1,6 +1,6 @@
 <?php
 /**
- * Shortcodes para usar componentes de ClickTools dentro de páginas y entradas.
+ * Shortcodes para usar componentes de HerramientasClave dentro de páginas y entradas.
  *
  * [clicktools_tool slug="calcular-iva"]   Inserta una herramienta.
  * [clicktools_tools cat="pdf" limit="6"]   Rejilla de herramientas.
@@ -35,6 +35,8 @@ class Shortcodes {
 		add_shortcode( 'clicktools_owner', array( __CLASS__, 'owner' ) );
 		add_shortcode( 'clicktools_services', array( __CLASS__, 'services' ) );
 		add_shortcode( 'clicktools_storage_list', array( __CLASS__, 'storage_list' ) );
+		add_shortcode( 'clicktools_link', array( __CLASS__, 'link' ) );
+		add_shortcode( 'clicktools_legal_notice', array( __CLASS__, 'legal_notice' ) );
 	}
 
 	/**
@@ -158,21 +160,54 @@ class Shortcodes {
 	 */
 	public static function owner( $atts ) {
 		$atts    = shortcode_atts( array( 'field' => 'owner_name' ), $atts );
-		$allowed = array( 'owner_name', 'owner_nif', 'owner_address', 'owner_email', 'owner_registry', 'privacy_email', 'hosting_provider', 'legal_updated', 'brand_name' );
+		$allowed = array( 'owner_name', 'owner_nif', 'owner_address', 'owner_email', 'owner_registry', 'privacy_email', 'hosting_provider', 'legal_updated', 'brand_name', 'site_domain' );
 		if ( ! in_array( $atts['field'], $allowed, true ) ) {
 			return '';
+		}
+		if ( 'site_domain' === $atts['field'] ) {
+			// El dominio real del sitio (sin «www.»), para no depender de un dato escrito a mano.
+			return esc_html( preg_replace( '/^www\./', '', (string) wp_parse_url( home_url(), PHP_URL_HOST ) ) );
 		}
 		$value = trim( (string) clicktools_setting( $atts['field'], '' ) );
 		if ( '' === $value ) {
 			if ( 'legal_updated' === $atts['field'] ) {
 				return esc_html( date_i18n( get_option( 'date_format' ) ) );
 			}
-			return '<mark class="ct-placeholder" title="' . esc_attr__( 'Completa este dato en ClickTools > Ajustes > Datos legales', 'clicktools' ) . '">[' . esc_html__( 'Pendiente de completar por el titular', 'clicktools' ) . ']</mark>';
+			return '<mark class="ct-placeholder" title="' . esc_attr__( 'Completa este dato en HerramientasClave > Ajustes > Datos legales', 'clicktools' ) . '">[' . esc_html__( 'Pendiente de completar por el titular', 'clicktools' ) . ']</mark>';
 		}
 		if ( false !== strpos( $atts['field'], 'email' ) ) {
 			return '<a href="mailto:' . esc_attr( antispambot( $value ) ) . '">' . esc_html( antispambot( $value ) ) . '</a>';
 		}
 		return nl2br( esc_html( $value ) );
+	}
+
+	/**
+	 * Enlace a una página creada por el plugin: [clicktools_link page="contact"]texto[/clicktools_link].
+	 *
+	 * @param array  $atts    Atributos.
+	 * @param string $content Texto del enlace.
+	 * @return string
+	 */
+	public static function link( $atts, $content = '' ) {
+		$atts = shortcode_atts( array( 'page' => 'contact' ), $atts );
+		$url  = clicktools_page_url( sanitize_key( $atts['page'] ) );
+		$text = '' !== trim( (string) $content ) ? $content : __( 'formulario de contacto', 'clicktools' );
+		if ( ! $url ) {
+			return esc_html( $text );
+		}
+		return '<a href="' . esc_url( $url ) . '">' . esc_html( $text ) . '</a>';
+	}
+
+	/**
+	 * Aviso de «plantilla orientativa»: solo se muestra mientras falten datos legales del titular.
+	 *
+	 * @return string
+	 */
+	public static function legal_notice() {
+		if ( ! Settings::missing_legal_fields() ) {
+			return '';
+		}
+		return '<p><em>' . esc_html__( 'Plantilla orientativa: el titular del sitio debe revisarla, completar los datos marcados y adaptarla a su situación real antes de publicar. No constituye asesoramiento jurídico.', 'clicktools' ) . '</em></p>';
 	}
 
 	/**
@@ -203,7 +238,7 @@ class Shortcodes {
 	}
 
 	/**
-	 * Claves de almacenamiento local que usa ClickTools.
+	 * Claves de almacenamiento local que usa HerramientasClave.
 	 *
 	 * @return string
 	 */

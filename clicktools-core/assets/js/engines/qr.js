@@ -1,5 +1,5 @@
 /*!
- * ClickTools — generador de códigos QR estáticos (PNG y SVG), con colores, logotipo y lotes.
+ * HerramientasClave — generador de códigos QR estáticos (PNG y SVG), con colores, logotipo y lotes.
  * Usa la biblioteca qrcode-generator (MIT), cargada bajo demanda.
  */
 (function () {

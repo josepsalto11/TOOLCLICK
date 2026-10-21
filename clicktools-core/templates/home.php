@@ -166,7 +166,7 @@ clicktools_template( 'shell/header' );
 	<div class="ct-container ct-container--narrow">
 		<h2 id="ct-home-faq" class="ct-section__title ct-center"><?php esc_html_e( 'Preguntas frecuentes', 'clicktools' ); ?></h2>
 		<div class="ct-faq">
-			<details class="ct-faq__item"><summary><?php esc_html_e( '¿ClickTools es gratis?', 'clicktools' ); ?></summary><p><?php esc_html_e( 'Sí. Todas las herramientas publicadas se pueden usar gratis y sin crear una cuenta.', 'clicktools' ); ?></p></details>
+			<details class="ct-faq__item"><summary><?php esc_html_e( '¿HerramientasClave es gratis?', 'clicktools' ); ?></summary><p><?php esc_html_e( 'Sí. Todas las herramientas publicadas se pueden usar gratis y sin crear una cuenta.', 'clicktools' ); ?></p></details>
 			<details class="ct-faq__item"><summary><?php esc_html_e( '¿Mis archivos se suben a internet?', 'clicktools' ); ?></summary><p><?php esc_html_e( 'En la mayoría de herramientas no: el procesamiento ocurre en tu navegador. Las herramientas que necesitan un servidor lo indican antes de empezar y eliminan el archivo al terminar.', 'clicktools' ); ?></p></details>
 			<details class="ct-faq__item"><summary><?php esc_html_e( '¿Funciona en el móvil?', 'clicktools' ); ?></summary><p><?php esc_html_e( 'Sí. El diseño se adapta a cualquier pantalla y puedes seleccionar archivos y descargar resultados desde el móvil. En archivos muy grandes, la memoria del dispositivo puede ser un límite.', 'clicktools' ); ?></p></details>
 			<details class="ct-faq__item"><summary><?php esc_html_e( '¿Puedo guardar mis herramientas favoritas?', 'clicktools' ); ?></summary><p><?php esc_html_e( 'Sí. Pulsa «Añadir a favoritos» en cualquier herramienta. Se guardan solo en tu navegador.', 'clicktools' ); ?></p></details>

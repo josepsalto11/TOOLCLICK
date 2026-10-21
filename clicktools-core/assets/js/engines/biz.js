@@ -1,5 +1,5 @@
 /*!
- * ClickTools — documentos para negocio: presupuestos, facturas, recibos y
+ * HerramientasClave — documentos para negocio: presupuestos, facturas, recibos y
  * conversión de listas de productos. Todo se calcula en céntimos y en el
  * navegador; los datos del emisor solo se guardan si el usuario lo activa.
  */
@@ -222,8 +222,8 @@
 						if (pages.length > 1) { var s = pdfSafe(CT.sprintf(__('Página %d de %d'), k + 1, pages.length)); p.drawText(s, { x: W - MG - F.widthOfTextAtSize(s, 8), y: 24, size: 8, font: F, color: soft }); }
 					});
 					pdf.setTitle(pdfSafe((kind === 'invoice' ? __('Factura') : __('Presupuesto')) + ' ' + (doc.number || '')));
-					pdf.setCreator('ClickTools');
-					pdf.setProducer('ClickTools (pdf-lib)');
+					pdf.setCreator('HerramientasClave');
+					pdf.setProducer('HerramientasClave (pdf-lib)');
 					return pdf.save();
 				});
 			});
@@ -335,7 +335,7 @@
 			CT.readFile(f, 'text').then(function (txt) {
 				var data = JSON.parse(txt);
 				var d = data && data.doc;
-				if (!d || !Array.isArray(d.lines)) { throw new Error(__('El archivo no contiene un documento de ClickTools.')); }
+				if (!d || !Array.isArray(d.lines)) { throw new Error(__('El archivo no contiene un documento de HerramientasClave.')); }
 				issuer.set(d.issuer); client.set(d.client);
 				number.input.value = d.number || ''; date.input.value = d.date || today(); due.input.value = d.due || '';
 				payment.input.value = d.payment || ''; notes.input.value = d.notes || ''; irpf.input.value = String(d.irpf || '0'); re.input.checked = !!d.re;
@@ -359,7 +359,7 @@
 		el.appendChild(h('h3', { class: 'ct-subtitle', text: __('Vista previa') }));
 		el.appendChild(preview);
 		if (kind === 'invoice') {
-			el.appendChild(ui.alert('info', __('Plantilla orientativa. Revisa que la factura incluya los datos obligatorios de tu caso (número correlativo, fechas, NIF y domicilio de ambas partes, desglose de impuestos, menciones especiales si hay exención) y comprueba si estás obligado a usar un programa de facturación que cumpla la normativa vigente o la factura electrónica. ClickTools no envía nada a Hacienda ni guarda tus facturas.')));
+			el.appendChild(ui.alert('info', __('Plantilla orientativa. Revisa que la factura incluya los datos obligatorios de tu caso (número correlativo, fechas, NIF y domicilio de ambas partes, desglose de impuestos, menciones especiales si hay exención) y comprueba si estás obligado a usar un programa de facturación que cumpla la normativa vigente o la factura electrónica. HerramientasClave no envía nada a Hacienda ni guarda tus facturas.')));
 		}
 		update();
 	}

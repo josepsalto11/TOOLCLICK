@@ -125,17 +125,35 @@ function wp(code) { if (!WP || !WPCLI) return null; return execFileSync('php', [
     const robots = await (await fetch(BASE + '/robots.txt')).text();
     assert(/Sitemap:/i.test(robots), robots);
   });
+  await test('Marca y datos del titular en el aviso legal y la privacidad', async p => {
+    await p.goto(BASE + '/aviso-legal/', { waitUntil: 'networkidle' });
+    const t = (await p.textContent('main')).replace(/\s+/g, ' ');
+    const host = new URL(BASE).hostname.replace(/^www\./, '');
+    for (const s of ['Titular del sitio web', 'datos del titular de ' + host, 'Titular: Eric Gustavo Vasquez Aviles', 'NIF: 48167034C', 'Domicilio: Calle Camelias, 5, Llinars del Vallès', 'Correo electrónico: g.team.shock@gmail.com', 'Nombre comercial: HerramientasClave', 'formulario de contacto']) {
+      assert(t.includes(s), 'falta «' + s + '»: ' + t.slice(0, 400));
+    }
+    assert(await p.getAttribute('main a[href*="contacto"]', 'href'), 'sin enlace a contacto');
+    assert(!/Pendiente de completar|Plantilla orientativa|ClickTools/.test(t), 'quedan marcadores o el nombre anterior');
+    assert((await p.title()).endsWith('HerramientasClave'), await p.title());
+    await p.goto(BASE + '/privacidad/', { waitUntil: 'networkidle' });
+    const pr = (await p.textContent('main')).replace(/\s+/g, ' ');
+    assert(pr.includes('Nombre comercial: HerramientasClave') && pr.includes('48167034C'), pr.slice(0, 300));
+    await p.goto(BASE + '/', { waitUntil: 'networkidle' });
+    assert((await p.textContent('.ct-logo')).trim() === 'HerramientasClave', 'logo');
+  });
   await test('Página 404 con buscador', async p => {
     const r = await p.goto(BASE + '/pdf/no-existe/', { waitUntil: 'networkidle' });
     assert(r.status() === 404 && await p.$('[data-ct-search]'), 'sin 404 útil');
   }, { allowHttpErrors: true });
-  await test('Móvil (390 px): sin desbordamiento horizontal ni errores', async p => {
+  await test('Móvil (360 px): sin desbordamiento horizontal ni errores', async p => {
     for (const path of ['/', '/herramientas/', '/pdf/unir-pdf/', '/calculadoras/calcular-iva/', '/empresas/plantilla-factura/', '/fechas/calendario/', '/productividad/planificador-semanal/', '/aviso-legal/']) {
+      // El nombre de la marca debe verse entero en la cabecera.
       await p.goto(BASE + path, { waitUntil: 'networkidle' });
+      assert(await p.$eval('.ct-logo__text', e => e.scrollWidth <= e.clientWidth), path + ': nombre cortado');
       const over = await p.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
       assert(over <= 1, path + ' desborda ' + over + 'px');
     }
-  }, { viewport: { width: 390, height: 844 }, context: { isMobile: true, hasTouch: true } });
+  }, { viewport: { width: 360, height: 800 }, context: { isMobile: true, hasTouch: true } });
   await test('Modo oscuro: el botón cambia el tema y se recuerda', async p => {
     await p.goto(BASE + '/', { waitUntil: 'networkidle' });
     await p.click('[data-ct-theme-toggle]');

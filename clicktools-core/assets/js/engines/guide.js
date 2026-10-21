@@ -1,5 +1,5 @@
 /*!
- * ClickTools — guías interactivas con lista de comprobación (el contenido viene de PHP, traducible).
+ * HerramientasClave — guías interactivas con lista de comprobación (el contenido viene de PHP, traducible).
  */
 (function () {
 	'use strict';

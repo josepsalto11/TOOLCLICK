@@ -1,5 +1,5 @@
 /*!
- * ClickTools — productividad: listas, planificadores, prioridades, Pomodoro, tablas y turnos.
+ * HerramientasClave — productividad: listas, planificadores, prioridades, Pomodoro, tablas y turnos.
  * El guardado en este navegador es opcional y se puede desactivar o borrar en cualquier momento.
  */
 (function () {

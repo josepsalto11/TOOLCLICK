@@ -1,5 +1,5 @@
 /*!
- * ClickTools — calculadoras personalizadas creadas desde el panel (fórmulas seguras, sin eval).
+ * HerramientasClave — calculadoras personalizadas creadas desde el panel (fórmulas seguras, sin eval).
  */
 (function () {
 	'use strict';

@@ -49,7 +49,7 @@ class SEO {
 	}
 
 	/**
-	 * ¿Debe ClickTools imprimir sus propias etiquetas SEO?
+	 * ¿Debe HerramientasClave imprimir sus propias etiquetas SEO?
 	 *
 	 * @return bool
 	 */
@@ -65,7 +65,7 @@ class SEO {
 	}
 
 	/**
-	 * Datos SEO de la vista actual de ClickTools.
+	 * Datos SEO de la vista actual de HerramientasClave.
 	 *
 	 * @return array|null title, desc, canonical, crumbs, tool, noindex
 	 */
@@ -76,7 +76,7 @@ class SEO {
 		}
 		$data  = null;
 		$view  = clicktools_current_view();
-		$brand = clicktools_setting( 'brand_name', 'ClickTools' );
+		$brand = clicktools_setting( 'brand_name', 'HerramientasClave' );
 		$home  = array(
 			'name' => __( 'Inicio', 'clicktools' ),
 			'url'  => home_url( '/' ),
@@ -89,7 +89,7 @@ class SEO {
 			case 'catalog':
 				$data = array(
 					'title'     => __( 'Todas las herramientas online gratuitas', 'clicktools' ),
-					'desc'      => __( 'Catálogo completo de herramientas gratuitas de ClickTools: PDF, imágenes, texto, calculadoras, conversores, QR, fechas y más. Sin registro y desde el navegador.', 'clicktools' ),
+					'desc'      => __( 'Catálogo completo de herramientas gratuitas de HerramientasClave: PDF, imágenes, texto, calculadoras, conversores, QR, fechas y más. Sin registro y desde el navegador.', 'clicktools' ),
 					'canonical' => Registry::catalog_url(),
 					'crumbs'    => array( $home, $all ),
 				);
@@ -171,6 +171,9 @@ class SEO {
 		} elseif ( is_front_page() && Templates::is_home_page() ) {
 			$parts['title'] = clicktools_setting( 'brand_name' ) . ': ' . clicktools_setting( 'slogan' );
 			unset( $parts['site'], $parts['tagline'] );
+		} elseif ( isset( $parts['site'] ) && '' !== (string) clicktools_setting( 'brand_name' ) ) {
+			// Resto de páginas (legales, blog…): la marca configurada en lugar del nombre del sitio de WordPress.
+			$parts['site'] = clicktools_setting( 'brand_name' );
 		}
 		return $parts;
 	}

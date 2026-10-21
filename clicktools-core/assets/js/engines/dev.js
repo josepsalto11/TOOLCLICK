@@ -1,5 +1,5 @@
 /*!
- * ClickTools — utilidades de desarrollo web. El código introducido nunca se ejecuta
+ * HerramientasClave — utilidades de desarrollo web. El código introducido nunca se ejecuta
  * ni se envía: solo se analiza como texto. Las expresiones regulares se prueban en un
  * Web Worker con tiempo límite para evitar bloqueos.
  */
@@ -44,7 +44,7 @@
 
 	tools.json = function (el, tool) {
 		var mode = (tool.config && tool.config.mode) || 'format';
-		var input = ui.textInput({ label: __('JSON de entrada'), mono: true, rows: 12, value: '{"nombre":"ClickTools","herramientas":120,"gratis":true,"categorias":["pdf","imagenes","texto"],"autor":{"pais":"España"}}', accept: '.json,application/json,text/plain' });
+		var input = ui.textInput({ label: __('JSON de entrada'), mono: true, rows: 12, value: '{"nombre":"HerramientasClave","herramientas":120,"gratis":true,"categorias":["pdf","imagenes","texto"],"autor":{"pais":"España"}}', accept: '.json,application/json,text/plain' });
 		var indent = ui.field({ label: __('Sangría'), type: 'select', value: '2', options: [{ value: '2', label: __('2 espacios') }, { value: '4', label: __('4 espacios') }, { value: 'tab', label: __('Tabulador') }] });
 		var sort = ui.field({ type: 'checkbox', label: __('Ordenar las claves alfabéticamente'), value: false });
 		var status = h('div', { 'aria-live': 'polite' });
@@ -473,7 +473,7 @@
 
 	tools.meta = function (el) {
 		var f = {};
-		[['title', __('Título de la página'), 'Calcular IVA online: añadir y quitar IVA | ClickTools', 60], ['desc', __('Descripción'), 'Calculadora de IVA gratis: suma o quita el IVA de un precio con los tipos 21 %, 10 % y 4 %.', 155], ['url', __('URL canónica'), 'https://example.com/calculadoras/calcular-iva/'], ['image', __('Imagen para redes (URL)'), 'https://example.com/imagen-social.png'], ['site', __('Nombre del sitio'), 'ClickTools']].forEach(function (d) {
+		[['title', __('Título de la página'), 'Calcular IVA online: añadir y quitar IVA | HerramientasClave', 60], ['desc', __('Descripción'), 'Calculadora de IVA gratis: suma o quita el IVA de un precio con los tipos 21 %, 10 % y 4 %.', 155], ['url', __('URL canónica'), 'https://example.com/calculadoras/calcular-iva/'], ['image', __('Imagen para redes (URL)'), 'https://example.com/imagen-social.png'], ['site', __('Nombre del sitio'), 'HerramientasClave']].forEach(function (d) {
 			f[d[0]] = ui.field({ label: d[1], type: d[0] === 'desc' ? 'textarea' : 'text', rows: 3, value: d[2] });
 			if (d[3]) { var c = h('span', { class: 'ct-chip' }); f[d[0]].el.querySelector('label').append(' ', c); f[d[0]].counter = c; f[d[0]].limit = d[3]; }
 		});

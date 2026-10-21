@@ -1,5 +1,5 @@
 /*!
- * ClickTools — herramientas de archivos: identificación, renombrado masivo, inventarios
+ * HerramientasClave — herramientas de archivos: identificación, renombrado masivo, inventarios
  * y comparación de carpetas. Solo se leen los archivos que el usuario selecciona.
  */
 (function () {

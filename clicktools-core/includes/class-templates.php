@@ -1,9 +1,9 @@
 <?php
 /**
- * Selección de plantillas y "carcasa" visual propia de ClickTools.
+ * Selección de plantillas y "carcasa" visual propia de HerramientasClave.
  *
  * El plugin incluye una carcasa completa (cabecera, pie y estilos) para que el
- * sitio funcione con cualquier tema. Puede limitarse a las rutas de ClickTools
+ * sitio funcione con cualquier tema. Puede limitarse a las rutas de HerramientasClave
  * desde Ajustes (opción "site_shell").
  *
  * @package ClickTools
@@ -29,7 +29,7 @@ class Templates {
 	}
 
 	/**
-	 * Indica si la petición actual se renderiza con la carcasa de ClickTools.
+	 * Indica si la petición actual se renderiza con la carcasa de HerramientasClave.
 	 *
 	 * @return bool
 	 */
@@ -87,7 +87,7 @@ class Templates {
 	}
 
 	/**
-	 * La portada estática es la página de inicio creada por ClickTools.
+	 * La portada estática es la página de inicio creada por HerramientasClave.
 	 *
 	 * @return bool
 	 */
@@ -139,8 +139,8 @@ class Templates {
 	public static function register_menus() {
 		register_nav_menus(
 			array(
-				'clicktools-header' => __( 'ClickTools: menú principal (opcional)', 'clicktools' ),
-				'clicktools-footer' => __( 'ClickTools: enlaces del pie (opcional)', 'clicktools' ),
+				'clicktools-header' => __( 'HerramientasClave: menú principal (opcional)', 'clicktools' ),
+				'clicktools-footer' => __( 'HerramientasClave: enlaces del pie (opcional)', 'clicktools' ),
 			)
 		);
 	}

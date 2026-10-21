@@ -1,6 +1,6 @@
 <?php
 /**
- * Cabecera de la carcasa de ClickTools.
+ * Cabecera de la carcasa de HerramientasClave.
  *
  * @package ClickTools
  */
@@ -10,7 +10,7 @@ use ClickTools\Registry;
 defined( 'ABSPATH' ) || exit;
 
 $clicktools_cats  = Registry::categories_with_tools();
-$clicktools_brand = clicktools_setting( 'brand_name', 'ClickTools' );
+$clicktools_brand = clicktools_setting( 'brand_name', 'HerramientasClave' );
 $clicktools_blog  = clicktools_page_url( 'blog' );
 ?><!doctype html>
 <html <?php language_attributes(); ?>>

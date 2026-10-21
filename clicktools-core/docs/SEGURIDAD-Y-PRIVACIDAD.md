@@ -5,7 +5,7 @@ convierte el sitio en «completamente seguro» ni garantiza por sí solo el cump
 depende también del alojamiento, de los plugins que instales, de los proveedores que actives y de cómo
 gestiones los datos.
 
-## Qué datos trata ClickTools
+## Qué datos trata HerramientasClave
 
 | Dato | Dónde | Cuándo | Conservación |
 |---|---|---|---|
@@ -20,7 +20,7 @@ gestiones los datos.
 | Estadísticas agregadas | Base de datos | Solo si el administrador activa la analítica | Plazo configurable (400 días por defecto) |
 | Hash diario de la IP | Transitorio de WordPress | Para limitar abusos | 1 hora; la IP no se guarda |
 
-ClickTools no usa cookies propias. Lo que guarda en el navegador está listado en la política de cookies
+HerramientasClave no usa cookies propias. Lo que guarda en el navegador está listado en la política de cookies
 mediante el shortcode `[clicktools_storage_list]`.
 
 ## Medidas implementadas

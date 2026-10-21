@@ -69,6 +69,7 @@ class Installer {
 		if ( get_option( 'clicktools_db_version' ) !== Analytics::DB_VERSION ) {
 			Analytics::install();
 		}
+		self::migrate_brand();
 		self::create_pages();
 		self::schedule();
 		update_option( 'clicktools_version', CLICKTOOLS_VERSION );
@@ -76,10 +77,80 @@ class Installer {
 	}
 
 	/**
+	 * 1.1.0: el sitio pasa a llamarse HerramientasClave y se incorporan los datos del titular.
+	 *
+	 * - Cambia el nombre de marca si seguía el anterior («ClickTools»).
+	 * - Rellena con los valores por defecto los datos legales que estuvieran vacíos (nunca sustituye
+	 *   uno ya escrito).
+	 * - Regenera las páginas creadas por el plugin que no se han editado desde su creación; en las
+	 *   editadas solo sustituye el nombre anterior por el nuevo.
+	 */
+	public static function migrate_brand() {
+		if ( get_option( 'clicktools_brand_migrated' ) ) {
+			return;
+		}
+		$defaults = Settings::defaults();
+		$current  = Settings::all();
+		$changes  = array();
+		if ( in_array( (string) $current['brand_name'], array( '', 'ClickTools' ), true ) ) {
+			$changes['brand_name'] = $defaults['brand_name'];
+		}
+		foreach ( array( 'owner_name', 'owner_nif', 'owner_address', 'owner_email', 'privacy_email' ) as $key ) {
+			if ( '' === trim( (string) $current[ $key ] ) && '' !== $defaults[ $key ] ) {
+				$changes[ $key ] = $defaults[ $key ];
+			}
+		}
+		if ( $changes ) {
+			Settings::update( $changes );
+		}
+		$brand = Settings::get( 'brand_name', $defaults['brand_name'] );
+		if ( 'ClickTools' === get_option( 'blogname' ) ) {
+			update_option( 'blogname', $brand );
+		}
+		$defs  = self::page_definitions();
+		foreach ( (array) get_option( 'clicktools_pages', array() ) as $key => $id ) {
+			$post = get_post( (int) $id );
+			if ( ! $post || 'page' !== $post->post_type || ! isset( $defs[ $key ] ) ) {
+				continue;
+			}
+			$ours = false !== strpos( $post->post_content, 'ClickTools' ) || false !== strpos( $post->post_content, '[clicktools_' );
+			if ( ! $ours ) {
+				continue;
+			}
+			$untouched = $post->post_modified_gmt === $post->post_date_gmt;
+			$update    = array( 'ID' => $post->ID );
+			if ( $untouched ) {
+				$update['post_content'] = $defs[ $key ]['content'];
+			} elseif ( false !== strpos( $post->post_content, 'ClickTools' ) ) {
+				$update['post_content'] = str_replace( 'ClickTools', $brand, $post->post_content );
+			}
+			if ( false !== strpos( $post->post_title, 'ClickTools' ) ) {
+				$update['post_title'] = str_replace( 'ClickTools', $brand, $post->post_title );
+			}
+			if ( count( $update ) > 1 ) {
+				// Los contenidos ya vienen saneados del propio plugin: se guardan sin filtros de kses.
+				kses_remove_filters();
+				wp_update_post( wp_slash( $update ) );
+				kses_init_filters();
+			}
+		}
+		update_option( 'clicktools_brand_migrated', 1 );
+	}
+
+	/**
+	 * Definiciones de las páginas (se cargan en un ámbito propio: el archivo define variables auxiliares).
+	 *
+	 * @return array
+	 */
+	private static function page_definitions() {
+		return require CLICKTOOLS_DIR . 'data/pages.php';
+	}
+
+	/**
 	 * Crea las páginas necesarias si no existen (no sobrescribe páginas existentes).
 	 */
 	public static function create_pages() {
-		$defs  = require CLICKTOOLS_DIR . 'data/pages.php';
+		$defs  = self::page_definitions();
 		$pages = (array) get_option( 'clicktools_pages', array() );
 
 		foreach ( $defs as $key => $def ) {
@@ -125,7 +196,7 @@ class Installer {
 	}
 
 	/**
-	 * Fuerza la portada y el blog de ClickTools (acción manual desde el panel).
+	 * Fuerza la portada y el blog de HerramientasClave (acción manual desde el panel).
 	 */
 	public static function use_clicktools_front() {
 		$pages = (array) get_option( 'clicktools_pages', array() );

@@ -50,7 +50,7 @@ foreach ( $clicktools_langs as $clicktools_l ) {
 	}
 }
 ?>
-<details class="ct-lang">
+<details class="ct-lang<?php echo count( $clicktools_langs ) < 2 ? ' ct-lang--single' : ''; ?>">
 	<summary class="ct-icon-btn" aria-label="<?php echo esc_attr( sprintf( /* translators: %s: código de idioma */ __( 'Idioma: %s. Cambiar idioma', 'clicktools' ), $clicktools_current ) ); ?>">
 		<?php echo clicktools_icon( 'languages', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 		<span class="ct-lang__code"><?php echo esc_html( $clicktools_current ); ?></span>

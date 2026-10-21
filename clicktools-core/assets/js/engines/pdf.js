@@ -1,5 +1,5 @@
 /*!
- * ClickTools — herramientas PDF en el navegador con pdf-lib (MIT) y pdf.js (Apache-2.0).
+ * HerramientasClave — herramientas PDF en el navegador con pdf-lib (MIT) y pdf.js (Apache-2.0).
  * Los documentos no se suben a ningún servidor. Las bibliotecas se cargan bajo demanda.
  */
 (function () {
@@ -30,7 +30,7 @@
 			});
 		});
 	}
-	function newDoc(L) { return L.PDFDocument.create().then(function (d) { d.setProducer('ClickTools'); d.setCreator('ClickTools'); return d; }); }
+	function newDoc(L) { return L.PDFDocument.create().then(function (d) { d.setProducer('HerramientasClave'); d.setCreator('HerramientasClave'); return d; }); }
 	function save(doc) { return doc.save({ useObjectStreams: true }).then(function (b) { return new Blob([b], { type: 'application/pdf' }); }); }
 	function jsDoc(bytes, password) {
 		return pdfJs().then(function (lib) {

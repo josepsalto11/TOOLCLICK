@@ -1,5 +1,5 @@
 /*!
- * ClickTools — calculadoras de hogar, energía, transporte, datos, multimedia y almacenamiento.
+ * HerramientasClave — calculadoras de hogar, energía, transporte, datos, multimedia y almacenamiento.
  * Los precios (kWh, agua, combustible) los introduce siempre el usuario.
  */
 (function () {

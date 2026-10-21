@@ -46,7 +46,7 @@ $clicktools_table = static function ( $title, array $rows, $kind = 'tool' ) {
 	<h1><?php esc_html_e( 'Estadísticas', 'clicktools' ); ?></h1>
 	<?php if ( ! clicktools_setting( 'analytics_enabled' ) ) : ?>
 		<div class="notice notice-info inline"><p>
-			<?php esc_html_e( 'La analítica propia está desactivada. Cuando la actives, ClickTools contará de forma agregada (por herramienta y día, sin cookies ni datos personales) las visitas, los usos completados y los errores.', 'clicktools' ); ?>
+			<?php esc_html_e( 'La analítica propia está desactivada. Cuando la actives, HerramientasClave contará de forma agregada (por herramienta y día, sin cookies ni datos personales) las visitas, los usos completados y los errores.', 'clicktools' ); ?>
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=clicktools-settings&tab=privacy' ) ); ?>"><?php esc_html_e( 'Activar en Ajustes', 'clicktools' ); ?></a>
 		</p></div>
 	<?php endif; ?>

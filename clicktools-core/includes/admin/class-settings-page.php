@@ -30,7 +30,7 @@ class Settings_Page {
 					array( 'brand_name', 'text', __( 'Nombre de la marca', 'clicktools' ) ),
 					array( 'slogan', 'text', __( 'Eslogan principal', 'clicktools' ) ),
 					array( 'slogan_secondary', 'text', __( 'Eslogan secundario', 'clicktools' ) ),
-					array( 'site_shell', 'checkbox', __( 'Usar la plantilla de ClickTools en todo el sitio', 'clicktools' ), __( 'Recomendado. Si lo desactivas, las herramientas se muestran dentro de tu tema y puede que debas ajustar estilos.', 'clicktools' ) ),
+					array( 'site_shell', 'checkbox', __( 'Usar la plantilla de HerramientasClave en todo el sitio', 'clicktools' ), __( 'Recomendado. Si lo desactivas, las herramientas se muestran dentro de tu tema y puede que debas ajustar estilos.', 'clicktools' ) ),
 					array( 'show_blog_in_header', 'checkbox', __( 'Mostrar el enlace al blog en la cabecera', 'clicktools' ) ),
 					array( 'feature_favorites', 'checkbox', __( 'Permitir marcar herramientas como favoritas (se guardan en el navegador del visitante)', 'clicktools' ) ),
 					array( 'feature_history', 'checkbox', __( 'Ofrecer historial local opcional (desactivado para cada visitante hasta que lo active)', 'clicktools' ) ),
@@ -39,7 +39,7 @@ class Settings_Page {
 			),
 			'legal'    => array(
 				'label'  => __( 'Datos legales', 'clicktools' ),
-				'intro'  => __( 'Estos datos se insertan en el aviso legal, la política de privacidad y la de cookies. Rellénalos con información real del titular del sitio; ClickTools no los inventa. Revisa los textos legales con un profesional si tienes dudas.', 'clicktools' ),
+				'intro'  => __( 'Estos datos se insertan en el aviso legal, la política de privacidad y la de cookies. Rellénalos con información real del titular del sitio; HerramientasClave no los inventa. Revisa los textos legales con un profesional si tienes dudas.', 'clicktools' ),
 				'fields' => array(
 					array( 'owner_name', 'text', __( 'Titular (nombre o razón social)', 'clicktools' ) ),
 					array( 'owner_nif', 'text', __( 'NIF/CIF', 'clicktools' ) ),
@@ -84,9 +84,9 @@ class Settings_Page {
 						'consent_mode',
 						'select',
 						__( 'Gestión del consentimiento', 'clicktools' ),
-						__( 'Con «externa», ClickTools no muestra su banner y asume que tu plataforma de consentimiento carga los anuncios según la elección del visitante.', 'clicktools' ),
+						__( 'Con «externa», HerramientasClave no muestra su banner y asume que tu plataforma de consentimiento carga los anuncios según la elección del visitante.', 'clicktools' ),
 						array(
-							'builtin'  => __( 'Banner de ClickTools', 'clicktools' ),
+							'builtin'  => __( 'Banner de HerramientasClave', 'clicktools' ),
 							'external' => __( 'Plataforma externa (por ejemplo, la CMP de Google)', 'clicktools' ),
 						),
 					),
@@ -112,8 +112,8 @@ class Settings_Page {
 					array(
 						'seo_output',
 						'select',
-						__( 'Etiquetas SEO de ClickTools', 'clicktools' ),
-						__( 'En «automático», ClickTools no imprime sus metadatos si detecta Yoast SEO, Rank Math u otro plugin SEO, y les pasa los títulos y descripciones de las herramientas.', 'clicktools' ),
+						__( 'Etiquetas SEO de HerramientasClave', 'clicktools' ),
+						__( 'En «automático», HerramientasClave no imprime sus metadatos si detecta Yoast SEO, Rank Math u otro plugin SEO, y les pasa los títulos y descripciones de las herramientas.', 'clicktools' ),
 						array(
 							'auto' => __( 'Automático', 'clicktools' ),
 							'on'   => __( 'Siempre', 'clicktools' ),
@@ -141,7 +141,7 @@ class Settings_Page {
 						),
 					),
 					array( 'language_urls', 'textarea', __( 'Direcciones de cada idioma', 'clicktools' ), __( 'Una por línea: código y URL, por ejemplo «ca https://ejemplo.com/ca/».', 'clicktools' ) ),
-					array( 'delete_on_uninstall', 'checkbox', __( 'Borrar los datos de ClickTools al desinstalar el plugin', 'clicktools' ), __( 'Ajustes, mensajes y estadísticas. Las páginas y entradas creadas se conservan.', 'clicktools' ) ),
+					array( 'delete_on_uninstall', 'checkbox', __( 'Borrar los datos de HerramientasClave al desinstalar el plugin', 'clicktools' ), __( 'Ajustes, mensajes y estadísticas. Las páginas y entradas creadas se conservan.', 'clicktools' ) ),
 				),
 			),
 		);
@@ -158,7 +158,7 @@ class Settings_Page {
 			$tab = 'general';
 		}
 		$values = Settings::all();
-		echo '<div class="wrap ct-admin"><h1>' . esc_html__( 'Ajustes de ClickTools', 'clicktools' ) . '</h1>';
+		echo '<div class="wrap ct-admin"><h1>' . esc_html__( 'Ajustes de HerramientasClave', 'clicktools' ) . '</h1>';
 		echo '<nav class="nav-tab-wrapper" aria-label="' . esc_attr__( 'Secciones de ajustes', 'clicktools' ) . '">';
 		foreach ( $tabs as $key => $def ) {
 			$url = add_query_arg( array( 'page' => 'clicktools-settings', 'tab' => $key ), admin_url( 'admin.php' ) );

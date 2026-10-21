@@ -193,7 +193,7 @@ class Messages {
 		wp_mail(
 			$to,
 			/* translators: %s: tipo de mensaje */
-			sprintf( __( '[ClickTools] Nuevo mensaje: %s', 'clicktools' ), $types[ $type ] ),
+			sprintf( __( '[HerramientasClave] Nuevo mensaje: %s', 'clicktools' ), $types[ $type ] ),
 			sprintf(
 				/* translators: 1: asunto, 2: enlace de revisión */
 				__( "Asunto: %1\$s\n\nRevísalo en el panel: %2\$s", 'clicktools' ),

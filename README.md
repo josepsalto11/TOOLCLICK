@@ -1,8 +1,8 @@
-# ClickTools
+# HerramientasClave
 
 Plataforma de herramientas online para WordPress: «Todo lo que necesitas, en un clic».
 
-Un único plugin, **ClickTools Core** (`clicktools-core/`), con 276 herramientas en 13 categorías (PDF,
+Un único plugin, **HerramientasClave Core** (`clicktools-core/`), con 276 herramientas en 13 categorías (PDF,
 imágenes, vídeo y audio, texto, calculadoras, conversores, desarrollo, seguridad, QR, fechas, archivos,
 productividad y empresas), plantilla visual propia, buscador, favoritos, formularios, SEO técnico,
 consentimiento y panel de administración. La mayoría de herramientas procesan los archivos en el navegador.

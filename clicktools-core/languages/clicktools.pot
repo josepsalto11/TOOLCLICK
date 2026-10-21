@@ -1,21 +1,21 @@
-# Copyright (C) 2026 ClickTools
+# Copyright (C) 2026 HerramientasClave
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: ClickTools Core 1.0.0\n"
+"Project-Id-Version: HerramientasClave Core 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-19T09:39:12+00:00\n"
+"POT-Creation-Date: 2026-10-21T15:29:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
 #. Plugin Name of the plugin
 #: clicktools-core.php
-msgid "ClickTools Core"
+msgid "HerramientasClave Core"
 msgstr ""
 
 #. Description of the plugin
@@ -25,13 +25,13 @@ msgstr ""
 
 #. Author of the plugin
 #: clicktools-core.php
-msgid "ClickTools"
+msgid "HerramientasClave"
 msgstr ""
 
 #. translators: 1: versión mínima de PHP, 2: versión mínima de WordPress
 #: clicktools-core.php:34
 #, php-format
-msgid "ClickTools Core necesita PHP %1$s y WordPress %2$s o superiores. El plugin no se ha cargado."
+msgid "HerramientasClave Core necesita PHP %1$s y WordPress %2$s o superiores. El plugin no se ha cargado."
 msgstr ""
 
 #: data/categories.php:12
@@ -241,11 +241,7 @@ msgstr ""
 msgid "Calculadoras y plantillas para el día a día de un negocio. Las plantillas de documentos son orientativas y no sustituyen el asesoramiento fiscal."
 msgstr ""
 
-#: data/pages.php:30
-msgid "Plantilla orientativa preparada por ClickTools. El titular del sitio debe revisarla, completarla y adaptarla a su situación real antes de publicar. No constituye asesoramiento jurídico."
-msgstr ""
-
-#: data/pages.php:41
+#: data/pages.php:47
 #: includes/admin/views/dashboard.php:33
 #: includes/class-seo.php:81
 #: templates/page.php:17
@@ -253,105 +249,105 @@ msgstr ""
 msgid "Inicio"
 msgstr ""
 
-#: data/pages.php:46
+#: data/pages.php:52
 #: templates/archive.php:15
 #: templates/shell/footer.php:57
 #: templates/shell/header.php:103
 msgid "Blog y tutoriales"
 msgstr ""
 
-#: data/pages.php:51
+#: data/pages.php:57
 #: templates/shell/footer.php:15
 msgid "Centro de ayuda"
 msgstr ""
 
-#: data/pages.php:53
-msgid "Aquí encontrarás respuestas a las dudas más habituales sobre el funcionamiento de ClickTools. Si no encuentras lo que buscas, escríbenos desde la página de contacto."
-msgstr ""
-
-#: data/pages.php:54
-msgid "Cómo usar una herramienta"
-msgstr ""
-
-#: data/pages.php:57
-msgid "Busca la herramienta con el buscador o navega por categorías."
-msgstr ""
-
-#: data/pages.php:58
-msgid "Introduce los datos o selecciona tus archivos (puedes arrastrarlos a la zona indicada)."
-msgstr ""
-
 #: data/pages.php:59
-msgid "Ajusta las opciones y pulsa el botón principal."
+msgid "Aquí encontrarás respuestas a las dudas más habituales sobre el funcionamiento de HerramientasClave. Si no encuentras lo que buscas, escríbenos desde la página de contacto."
 msgstr ""
 
 #: data/pages.php:60
-msgid "Revisa el resultado y descárgalo o cópialo."
+msgid "Cómo usar una herramienta"
 msgstr ""
 
 #: data/pages.php:63
+msgid "Busca la herramienta con el buscador o navega por categorías."
+msgstr ""
+
+#: data/pages.php:64
+msgid "Introduce los datos o selecciona tus archivos (puedes arrastrarlos a la zona indicada)."
+msgstr ""
+
+#: data/pages.php:65
+msgid "Ajusta las opciones y pulsa el botón principal."
+msgstr ""
+
+#: data/pages.php:66
+msgid "Revisa el resultado y descárgalo o cópialo."
+msgstr ""
+
+#: data/pages.php:69
 #: templates/home.php:167
 #: templates/tool.php:90
 msgid "Preguntas frecuentes"
 msgstr ""
 
-#: data/pages.php:64
+#: data/pages.php:70
 msgid "¿Tengo que registrarme?"
 msgstr ""
 
-#: data/pages.php:64
+#: data/pages.php:70
 msgid "No. Todas las herramientas gratuitas funcionan sin cuenta."
 msgstr ""
 
-#: data/pages.php:65
+#: data/pages.php:71
 msgid "¿Se suben mis archivos a algún servidor?"
 msgstr ""
 
-#: data/pages.php:65
+#: data/pages.php:71
 msgid "La mayoría de herramientas procesan los archivos directamente en tu navegador y no los envían a ningún servidor. Las pocas que necesitan un servidor lo indican claramente antes de empezar, y el archivo se elimina al terminar."
 msgstr ""
 
-#: data/pages.php:66
+#: data/pages.php:72
 msgid "¿Hay límite de tamaño?"
 msgstr ""
 
-#: data/pages.php:66
+#: data/pages.php:72
 msgid "En el procesamiento local el límite depende de la memoria de tu dispositivo. Cada herramienta indica sus límites orientativos."
 msgstr ""
 
-#: data/pages.php:67
+#: data/pages.php:73
 msgid "¿Qué son los favoritos y el historial?"
 msgstr ""
 
-#: data/pages.php:67
+#: data/pages.php:73
 msgid "Puedes marcar herramientas como favoritas y activar un historial opcional. Ambos se guardan solo en tu navegador y puedes borrarlos cuando quieras."
 msgstr ""
 
-#: data/pages.php:68
+#: data/pages.php:74
 msgid "¿Por qué una herramienta no funciona en mi navegador?"
 msgstr ""
 
-#: data/pages.php:68
+#: data/pages.php:74
 msgid "Algunas funciones dependen de capacidades del navegador (por ejemplo, ciertos formatos de imagen). Consulta la página de estado del servicio para ver qué admite tu navegador y usa una versión actualizada."
 msgstr ""
 
-#: data/pages.php:69
+#: data/pages.php:75
 msgid "¿Los resultados de las calculadoras tienen validez oficial?"
 msgstr ""
 
-#: data/pages.php:69
+#: data/pages.php:75
 msgid "No. Son cálculos orientativos basados en los datos que introduces. Para decisiones fiscales, legales o financieras consulta a un profesional."
 msgstr ""
 
-#: data/pages.php:70
+#: data/pages.php:76
 msgid "¿No encuentras una herramienta?"
 msgstr ""
 
-#: data/pages.php:71
+#: data/pages.php:77
 msgid "Cuéntanos qué necesitas en la página «¿Qué herramienta necesitas?». Revisamos todas las sugerencias."
 msgstr ""
 
-#: data/pages.php:74
+#: data/pages.php:80
 #: includes/admin/views/dashboard.php:36
 #: includes/class-messages.php:39
 #: templates/shell/footer.php:16
@@ -359,375 +355,389 @@ msgstr ""
 msgid "Contacto"
 msgstr ""
 
-#: data/pages.php:76
+#: data/pages.php:82
 msgid "Escríbenos para dudas, propuestas de colaboración o cuestiones sobre privacidad. Respondemos al correo que indiques."
 msgstr ""
 
-#: data/pages.php:78
+#: data/pages.php:84
 msgid "Correo de contacto:"
 msgstr ""
 
-#: data/pages.php:81
+#: data/pages.php:87
 #: includes/admin/views/dashboard.php:37
 #: templates/shell/footer.php:17
 msgid "Sobre nosotros"
 msgstr ""
 
-#: data/pages.php:83
-msgid "ClickTools es una colección de herramientas online gratuitas para estudiantes, particulares, profesionales, autónomos y pequeñas empresas. Nuestro objetivo es sencillo: que entres, encuentres la herramienta, hagas tu tarea y obtengas el resultado sin complicaciones."
+#: data/pages.php:89
+msgid "HerramientasClave es una colección de herramientas online gratuitas para estudiantes, particulares, profesionales, autónomos y pequeñas empresas. Nuestro objetivo es sencillo: que entres, encuentres la herramienta, hagas tu tarea y obtengas el resultado sin complicaciones."
 msgstr ""
 
-#: data/pages.php:84
+#: data/pages.php:90
 msgid "Nuestros principios"
 msgstr ""
 
-#: data/pages.php:87
+#: data/pages.php:93
 msgid "Utilidad real:"
 msgstr ""
 
-#: data/pages.php:87
+#: data/pages.php:93
 msgid "cada herramienta publicada funciona de verdad; si algo no es viable, no lo anunciamos."
 msgstr ""
 
-#: data/pages.php:88
+#: data/pages.php:94
 msgid "Privacidad:"
 msgstr ""
 
-#: data/pages.php:88
+#: data/pages.php:94
 msgid "siempre que es posible, tus archivos se procesan en tu propio navegador."
 msgstr ""
 
-#: data/pages.php:89
+#: data/pages.php:95
 msgid "Transparencia:"
 msgstr ""
 
-#: data/pages.php:89
+#: data/pages.php:95
 msgid "indicamos los límites de cada herramienta y cuándo un resultado es orientativo."
 msgstr ""
 
-#: data/pages.php:90
+#: data/pages.php:96
 msgid "Accesibilidad:"
 msgstr ""
 
-#: data/pages.php:90
+#: data/pages.php:96
 msgid "diseñamos para teclado, lectores de pantalla y cualquier dispositivo."
 msgstr ""
 
-#: data/pages.php:93
+#: data/pages.php:99
 msgid "Responsable del sitio:"
 msgstr ""
 
-#: data/pages.php:96
+#: data/pages.php:102
 #: templates/home.php:182
 msgid "¿Qué herramienta necesitas?"
 msgstr ""
 
-#: data/pages.php:98
-msgid "Cuéntanos qué herramienta te gustaría encontrar en ClickTools y qué problema quieres resolver. Revisamos cada sugerencia de forma manual y priorizamos las más útiles. Las sugerencias no se publican."
+#: data/pages.php:104
+msgid "Cuéntanos qué herramienta te gustaría encontrar en HerramientasClave y qué problema quieres resolver. Revisamos cada sugerencia de forma manual y priorizamos las más útiles. Las sugerencias no se publican."
 msgstr ""
 
-#: data/pages.php:102
+#: data/pages.php:108
 #: templates/shell/footer.php:63
 msgid "Comunicar un error"
 msgstr ""
 
-#: data/pages.php:104
+#: data/pages.php:110
 msgid "¿Algo no ha funcionado como esperabas? Describe qué hiciste, qué esperabas y qué ocurrió. No adjuntes ni pegues contenido privado de tus documentos."
 msgstr ""
 
-#: data/pages.php:108
+#: data/pages.php:114
 msgid "Política de privacidad"
 msgstr ""
 
-#: data/pages.php:111
-#: data/pages.php:148
-#: data/pages.php:164
+#: data/pages.php:117
+#: data/pages.php:155
+#: data/pages.php:171
 msgid "Última actualización:"
 msgstr ""
 
-#: data/pages.php:112
+#: data/pages.php:118
 msgid "1. Responsable del tratamiento"
 msgstr ""
 
-#: data/pages.php:115
-#: data/pages.php:192
+#: data/pages.php:121
+#: data/pages.php:200
 msgid "Titular:"
 msgstr ""
 
-#: data/pages.php:116
-#: data/pages.php:193
-msgid "NIF/CIF:"
-msgstr ""
-
-#: data/pages.php:117
-#: data/pages.php:194
-msgid "Domicilio:"
-msgstr ""
-
-#: data/pages.php:118
-msgid "Correo para cuestiones de privacidad:"
-msgstr ""
-
-#: data/pages.php:121
-msgid "2. Principio general: tus archivos se quedan en tu dispositivo"
-msgstr ""
-
 #: data/pages.php:122
-msgid "La mayoría de herramientas de ClickTools (calculadoras, texto, conversores, QR, imágenes, PDF y otras) funcionan íntegramente en tu navegador. Los archivos y textos que utilizas no se envían a nuestros servidores ni a terceros."
+#: data/pages.php:201
+msgid "NIF:"
 msgstr ""
 
 #: data/pages.php:123
-msgid "Si alguna herramienta necesita procesar el archivo en el servidor, lo indica de forma visible antes de empezar. En ese caso, el archivo se recibe por una conexión cifrada, se procesa en un directorio temporal y se elimina en cuanto se devuelve el resultado. No se conserva una copia."
+#: data/pages.php:202
+msgid "Domicilio:"
 msgstr ""
 
 #: data/pages.php:124
-msgid "3. Qué datos tratamos y con qué finalidad"
+msgid "Correo para cuestiones de privacidad:"
 msgstr ""
 
-#: data/pages.php:127
-msgid "Formularios de sugerencias, errores y contacto:"
-msgstr ""
-
-#: data/pages.php:127
-msgid "el asunto y el mensaje que escribas y, solo si lo facilitas, tu correo electrónico para responderte. Base jurídica: tu consentimiento (art. 6.1.a RGPD) y nuestro interés legítimo en mejorar el servicio (art. 6.1.f RGPD)."
+#: data/pages.php:125
+#: data/pages.php:204
+msgid "Nombre comercial:"
 msgstr ""
 
 #: data/pages.php:128
-msgid "Registros técnicos del servidor:"
-msgstr ""
-
-#: data/pages.php:128
-msgid "el proveedor de alojamiento puede registrar datos técnicos de conexión (como la dirección IP) por seguridad. Base jurídica: interés legítimo en la seguridad del servicio."
+msgid "2. Principio general: tus archivos se quedan en tu dispositivo"
 msgstr ""
 
 #: data/pages.php:129
-msgid "Servicios activos en este sitio:"
+msgid "La mayoría de herramientas de HerramientasClave (calculadoras, texto, conversores, QR, imágenes, PDF y otras) funcionan íntegramente en tu navegador. Los archivos y textos que utilizas no se envían a nuestros servidores ni a terceros."
 msgstr ""
 
-#: data/pages.php:132
-msgid "4. Almacenamiento local en tu navegador"
+#: data/pages.php:130
+msgid "Si alguna herramienta necesita procesar el archivo en el servidor, lo indica de forma visible antes de empezar. En ese caso, el archivo se recibe por una conexión cifrada, se procesa en un directorio temporal y se elimina en cuanto se devuelve el resultado. No se conserva una copia."
 msgstr ""
 
-#: data/pages.php:133
-msgid "Algunas funciones guardan información únicamente en tu navegador (almacenamiento local), nunca en nuestros servidores:"
+#: data/pages.php:131
+msgid "3. Qué datos tratamos y con qué finalidad"
+msgstr ""
+
+#: data/pages.php:134
+msgid "Formularios de sugerencias, errores y contacto:"
+msgstr ""
+
+#: data/pages.php:134
+msgid "el asunto y el mensaje que escribas y, solo si lo facilitas, tu correo electrónico para responderte. Base jurídica: tu consentimiento (art. 6.1.a RGPD) y nuestro interés legítimo en mejorar el servicio (art. 6.1.f RGPD)."
 msgstr ""
 
 #: data/pages.php:135
-msgid "Puedes borrar estos datos desde la propia herramienta, desde la página de historial o desde la configuración de tu navegador."
+msgid "Registros técnicos del servidor:"
+msgstr ""
+
+#: data/pages.php:135
+msgid "el proveedor de alojamiento puede registrar datos técnicos de conexión (como la dirección IP) por seguridad. Base jurídica: interés legítimo en la seguridad del servicio."
 msgstr ""
 
 #: data/pages.php:136
-msgid "5. Conservación"
-msgstr ""
-
-#: data/pages.php:137
-msgid "Los mensajes recibidos se conservan como máximo durante el plazo configurado por el titular y se eliminan automáticamente después. Los archivos procesados en servidor no se conservan."
-msgstr ""
-
-#: data/pages.php:138
-msgid "6. Destinatarios y transferencias"
+msgid "Servicios activos en este sitio:"
 msgstr ""
 
 #: data/pages.php:139
-msgid "No cedemos datos a terceros salvo obligación legal. Proveedor de alojamiento:"
-msgstr ""
-
-#: data/pages.php:139
-msgid "Si se activan servicios de terceros (por ejemplo, publicidad), se detallan en el apartado 3 y en la política de cookies."
+msgid "4. Almacenamiento local en tu navegador"
 msgstr ""
 
 #: data/pages.php:140
-msgid "7. Tus derechos"
+msgid "Algunas funciones guardan información únicamente en tu navegador (almacenamiento local), nunca en nuestros servidores:"
 msgstr ""
 
-#: data/pages.php:141
-msgid "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a"
+#: data/pages.php:142
+msgid "Puedes borrar estos datos desde la propia herramienta, desde la página de historial o desde la configuración de tu navegador."
 msgstr ""
 
-#: data/pages.php:141
-msgid "También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es)."
+#: data/pages.php:143
+msgid "5. Conservación"
+msgstr ""
+
+#: data/pages.php:144
+msgid "Los mensajes recibidos se conservan como máximo durante el plazo configurado por el titular y se eliminan automáticamente después. Los archivos procesados en servidor no se conservan."
 msgstr ""
 
 #: data/pages.php:145
+msgid "6. Destinatarios y transferencias"
+msgstr ""
+
+#: data/pages.php:146
+msgid "No cedemos datos a terceros salvo obligación legal. Proveedor de alojamiento:"
+msgstr ""
+
+#: data/pages.php:146
+msgid "Si se activan servicios de terceros (por ejemplo, publicidad), se detallan en el apartado 3 y en la política de cookies."
+msgstr ""
+
+#: data/pages.php:147
+msgid "7. Tus derechos"
+msgstr ""
+
+#: data/pages.php:148
+msgid "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a"
+msgstr ""
+
+#: data/pages.php:148
+msgid "También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es)."
+msgstr ""
+
+#: data/pages.php:152
 #: templates/shell/footer.php:23
 msgid "Política de cookies"
 msgstr ""
 
-#: data/pages.php:149
+#: data/pages.php:156
 msgid "Qué utilizamos"
 msgstr ""
 
-#: data/pages.php:150
-msgid "ClickTools no instala cookies propias de análisis ni de publicidad. Para recordar tus preferencias (tema, favoritos, historial opcional, elección de consentimiento) usamos el almacenamiento local del navegador, que solo se lee en tu dispositivo:"
+#: data/pages.php:157
+msgid "HerramientasClave no instala cookies propias de análisis ni de publicidad. Para recordar tus preferencias (tema, favoritos, historial opcional, elección de consentimiento) usamos el almacenamiento local del navegador, que solo se lee en tu dispositivo:"
 msgstr ""
 
-#: data/pages.php:152
+#: data/pages.php:159
 msgid "WordPress puede instalar cookies técnicas a usuarios que inician sesión en el panel de administración."
 msgstr ""
 
-#: data/pages.php:153
+#: data/pages.php:160
 msgid "Servicios de terceros"
 msgstr ""
 
-#: data/pages.php:155
+#: data/pages.php:162
 msgid "Los servicios de terceros que requieren consentimiento no se cargan hasta que lo aceptas. Puedes cambiar tu elección en cualquier momento desde el enlace «Configurar privacidad» del pie de página."
 msgstr ""
 
-#: data/pages.php:156
+#: data/pages.php:163
 msgid "Cómo eliminar los datos"
 msgstr ""
 
-#: data/pages.php:157
+#: data/pages.php:164
 msgid "Puedes borrar el almacenamiento local y las cookies desde la configuración de tu navegador. Si lo haces, se perderán tus favoritos y preferencias."
 msgstr ""
 
-#: data/pages.php:161
+#: data/pages.php:168
 #: includes/admin/views/dashboard.php:42
 #: templates/shell/footer.php:24
 msgid "Términos de uso"
 msgstr ""
 
-#: data/pages.php:165
+#: data/pages.php:172
 msgid "1. Objeto"
 msgstr ""
 
-#: data/pages.php:166
-msgid "Estos términos regulan el uso del sitio web ClickTools, titularidad de"
-msgstr ""
-
-#: data/pages.php:166
-msgid "Al utilizar el sitio aceptas estos términos."
-msgstr ""
-
-#: data/pages.php:167
-msgid "2. Uso de las herramientas"
-msgstr ""
-
-#: data/pages.php:170
-msgid "Las herramientas se ofrecen gratuitamente y «tal cual», sin garantía de disponibilidad continua."
-msgstr ""
-
-#: data/pages.php:171
-msgid "Los resultados de calculadoras, conversores y estimaciones son orientativos. Comprueba los resultados importantes antes de usarlos en decisiones fiscales, legales, financieras o técnicas."
-msgstr ""
-
-#: data/pages.php:172
-msgid "Las plantillas de documentos (facturas, presupuestos, recibos u otras) son modelos orientativos y no garantizan el cumplimiento de requisitos fiscales o legales concretos."
+#: data/pages.php:173
+msgid "Estos términos regulan el uso del sitio web HerramientasClave, titularidad de"
 msgstr ""
 
 #: data/pages.php:173
-msgid "Eres responsable de tener los derechos necesarios sobre los archivos que procesas. No utilices las herramientas para eludir protecciones de documentos ajenos."
+msgid "Al utilizar el sitio aceptas estos términos."
 msgstr ""
 
 #: data/pages.php:174
-msgid "Está prohibido usar el sitio de forma abusiva, automatizada o que pueda dañar el servicio o a terceros."
+msgid "2. Uso de las herramientas"
 msgstr ""
 
 #: data/pages.php:177
-msgid "3. Responsabilidad"
+msgid "Las herramientas se ofrecen gratuitamente y «tal cual», sin garantía de disponibilidad continua."
 msgstr ""
 
 #: data/pages.php:178
-msgid "Conserva siempre una copia de tus archivos originales. En la medida permitida por la ley, el titular no responde de pérdidas de datos o daños derivados del uso de las herramientas."
+msgid "Los resultados de calculadoras, conversores y estimaciones son orientativos. Comprueba los resultados importantes antes de usarlos en decisiones fiscales, legales, financieras o técnicas."
 msgstr ""
 
 #: data/pages.php:179
-msgid "4. Propiedad intelectual"
+msgid "Las plantillas de documentos (facturas, presupuestos, recibos u otras) son modelos orientativos y no garantizan el cumplimiento de requisitos fiscales o legales concretos."
 msgstr ""
 
 #: data/pages.php:180
-msgid "El diseño, los textos y el código del sitio pertenecen a su titular o se usan con licencia. Las bibliotecas de código abierto empleadas mantienen sus licencias respectivas."
+msgid "Eres responsable de tener los derechos necesarios sobre los archivos que procesas. No utilices las herramientas para eludir protecciones de documentos ajenos."
 msgstr ""
 
 #: data/pages.php:181
-msgid "5. Legislación aplicable"
+msgid "Está prohibido usar el sitio de forma abusiva, automatizada o que pueda dañar el servicio o a terceros."
 msgstr ""
 
-#: data/pages.php:182
-msgid "Estos términos se rigen por la legislación española, sin perjuicio de los derechos que la normativa de consumidores reconozca a los usuarios."
+#: data/pages.php:184
+msgid "3. Responsabilidad"
+msgstr ""
+
+#: data/pages.php:185
+msgid "Conserva siempre una copia de tus archivos originales. En la medida permitida por la ley, el titular no responde de pérdidas de datos o daños derivados del uso de las herramientas."
 msgstr ""
 
 #: data/pages.php:186
+msgid "4. Propiedad intelectual"
+msgstr ""
+
+#: data/pages.php:187
+msgid "El diseño, los textos y el código del sitio pertenecen a su titular o se usan con licencia. Las bibliotecas de código abierto empleadas mantienen sus licencias respectivas."
+msgstr ""
+
+#: data/pages.php:188
+msgid "5. Legislación aplicable"
+msgstr ""
+
+#: data/pages.php:189
+msgid "Estos términos se rigen por la legislación española, sin perjuicio de los derechos que la normativa de consumidores reconozca a los usuarios."
+msgstr ""
+
+#: data/pages.php:193
 #: includes/admin/views/dashboard.php:43
 #: templates/shell/footer.php:21
 msgid "Aviso legal"
 msgstr ""
 
-#: data/pages.php:189
-msgid "En cumplimiento del artículo 10 de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), se informa de los siguientes datos:"
+#: data/pages.php:196
+msgid "Titular del sitio web"
 msgstr ""
 
-#: data/pages.php:195
+#: data/pages.php:197
+msgid "En cumplimiento de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI), estos son los datos del titular de"
+msgstr ""
+
+#: data/pages.php:203
 msgid "Correo electrónico:"
 msgstr ""
 
-#: data/pages.php:196
-msgid "Datos registrales (si procede):"
+#: data/pages.php:207
+msgid "También puedes escribirnos a través del"
 msgstr ""
 
-#: data/pages.php:199
+#: data/pages.php:207
+#: includes/class-shortcodes.php:194
+msgid "formulario de contacto"
+msgstr ""
+
+#: data/pages.php:208
 msgid "Condiciones de uso"
 msgstr ""
 
-#: data/pages.php:200
+#: data/pages.php:209
 msgid "El uso del sitio implica la aceptación de los Términos de uso y de la Política de privacidad."
 msgstr ""
 
-#: data/pages.php:204
+#: data/pages.php:213
 #: includes/admin/views/dashboard.php:44
 #: templates/shell/footer.php:18
 msgid "Accesibilidad"
 msgstr ""
 
-#: data/pages.php:206
-msgid "ClickTools se diseña con el objetivo de cumplir las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2 en su nivel AA. Este objetivo se revisa de forma continua; no declaramos una conformidad total mientras no se haya completado una auditoría independiente."
+#: data/pages.php:215
+msgid "HerramientasClave se diseña con el objetivo de cumplir las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2 en su nivel AA. Este objetivo se revisa de forma continua; no declaramos una conformidad total mientras no se haya completado una auditoría independiente."
 msgstr ""
 
-#: data/pages.php:207
+#: data/pages.php:216
 msgid "Medidas aplicadas"
 msgstr ""
 
-#: data/pages.php:210
+#: data/pages.php:219
 msgid "Estructura semántica de encabezados y regiones."
 msgstr ""
 
-#: data/pages.php:211
+#: data/pages.php:220
 msgid "Navegación completa por teclado y foco visible."
 msgstr ""
 
-#: data/pages.php:212
+#: data/pages.php:221
 msgid "Etiquetas asociadas a todos los campos y mensajes de error descriptivos."
 msgstr ""
 
-#: data/pages.php:213
+#: data/pages.php:222
 msgid "Resultados anunciados a los lectores de pantalla."
 msgstr ""
 
-#: data/pages.php:214
+#: data/pages.php:223
 msgid "Contraste de color revisado en modo claro y oscuro."
 msgstr ""
 
-#: data/pages.php:215
+#: data/pages.php:224
 msgid "Respeto de la preferencia de movimiento reducido del sistema."
 msgstr ""
 
-#: data/pages.php:218
+#: data/pages.php:227
 msgid "Limitaciones conocidas"
 msgstr ""
 
-#: data/pages.php:221
+#: data/pages.php:230
 msgid "La reordenación de páginas y el recorte de imágenes mediante arrastre tienen alternativas con botones y campos numéricos."
 msgstr ""
 
-#: data/pages.php:222
+#: data/pages.php:231
 msgid "Las vistas previas de documentos PDF e imágenes son visuales; el contenido de texto puede extraerse con las herramientas correspondientes."
 msgstr ""
 
-#: data/pages.php:225
+#: data/pages.php:234
 msgid "Comunicar un problema de accesibilidad"
 msgstr ""
 
-#: data/pages.php:226
+#: data/pages.php:235
 msgid "Si encuentras una barrera, escríbenos desde la página de contacto o a"
 msgstr ""
 
@@ -8297,7 +8307,7 @@ msgstr ""
 
 #: includes/admin/class-admin.php:59
 #: includes/admin/views/dashboard.php:64
-msgid "Panel de ClickTools"
+msgid "Panel de HerramientasClave"
 msgstr ""
 
 #: includes/admin/class-admin.php:59
@@ -8333,7 +8343,7 @@ msgstr ""
 
 #: includes/admin/class-admin.php:69
 #: includes/admin/class-settings-page.php:161
-msgid "Ajustes de ClickTools"
+msgid "Ajustes de HerramientasClave"
 msgstr ""
 
 #: includes/admin/class-admin.php:69
@@ -8350,7 +8360,7 @@ msgid "Abrir enlaces permanentes"
 msgstr ""
 
 #: includes/admin/class-admin.php:145
-msgid "ClickTools está activo."
+msgid "HerramientasClave está activo."
 msgstr ""
 
 #: includes/admin/class-admin.php:145
@@ -8390,7 +8400,7 @@ msgid "Calculadora eliminada."
 msgstr ""
 
 #: includes/admin/class-admin.php:161
-msgid "La portada y la página del blog de ClickTools están configuradas."
+msgid "La portada y la página del blog de HerramientasClave están configuradas."
 msgstr ""
 
 #: includes/admin/class-admin.php:162
@@ -8946,7 +8956,7 @@ msgid "Eslogan secundario"
 msgstr ""
 
 #: includes/admin/class-settings-page.php:33
-msgid "Usar la plantilla de ClickTools en todo el sitio"
+msgid "Usar la plantilla de HerramientasClave en todo el sitio"
 msgstr ""
 
 #: includes/admin/class-settings-page.php:33
@@ -8978,7 +8988,7 @@ msgid "Datos legales"
 msgstr ""
 
 #: includes/admin/class-settings-page.php:42
-msgid "Estos datos se insertan en el aviso legal, la política de privacidad y la de cookies. Rellénalos con información real del titular del sitio; ClickTools no los inventa. Revisa los textos legales con un profesional si tienes dudas."
+msgid "Estos datos se insertan en el aviso legal, la política de privacidad y la de cookies. Rellénalos con información real del titular del sitio; HerramientasClave no los inventa. Revisa los textos legales con un profesional si tienes dudas."
 msgstr ""
 
 #: includes/admin/class-settings-page.php:44
@@ -9120,11 +9130,11 @@ msgid "Gestión del consentimiento"
 msgstr ""
 
 #: includes/admin/class-settings-page.php:87
-msgid "Con «externa», ClickTools no muestra su banner y asume que tu plataforma de consentimiento carga los anuncios según la elección del visitante."
+msgid "Con «externa», HerramientasClave no muestra su banner y asume que tu plataforma de consentimiento carga los anuncios según la elección del visitante."
 msgstr ""
 
 #: includes/admin/class-settings-page.php:89
-msgid "Banner de ClickTools"
+msgid "Banner de HerramientasClave"
 msgstr ""
 
 #: includes/admin/class-settings-page.php:90
@@ -9185,11 +9195,11 @@ msgid "SEO"
 msgstr ""
 
 #: includes/admin/class-settings-page.php:115
-msgid "Etiquetas SEO de ClickTools"
+msgid "Etiquetas SEO de HerramientasClave"
 msgstr ""
 
 #: includes/admin/class-settings-page.php:116
-msgid "En «automático», ClickTools no imprime sus metadatos si detecta Yoast SEO, Rank Math u otro plugin SEO, y les pasa los títulos y descripciones de las herramientas."
+msgid "En «automático», HerramientasClave no imprime sus metadatos si detecta Yoast SEO, Rank Math u otro plugin SEO, y les pasa los títulos y descripciones de las herramientas."
 msgstr ""
 
 #: includes/admin/class-settings-page.php:118
@@ -9253,7 +9263,7 @@ msgid "Una por línea: código y URL, por ejemplo «ca https://ejemplo.com/ca/»
 msgstr ""
 
 #: includes/admin/class-settings-page.php:144
-msgid "Borrar los datos de ClickTools al desinstalar el plugin"
+msgid "Borrar los datos de HerramientasClave al desinstalar el plugin"
 msgstr ""
 
 #: includes/admin/class-settings-page.php:144
@@ -9641,7 +9651,7 @@ msgid "Indicar fecha"
 msgstr ""
 
 #: includes/admin/views/dashboard.php:95
-msgid "Portada de ClickTools como página de inicio"
+msgid "Portada de HerramientasClave como página de inicio"
 msgstr ""
 
 #: includes/admin/views/dashboard.php:96
@@ -9661,7 +9671,7 @@ msgid "Revisar lectura"
 msgstr ""
 
 #: includes/admin/views/dashboard.php:103
-msgid "Usar la portada de ClickTools"
+msgid "Usar la portada de HerramientasClave"
 msgstr ""
 
 #: includes/admin/views/dashboard.php:103
@@ -9673,7 +9683,7 @@ msgid "Crear las páginas que falten"
 msgstr ""
 
 #: includes/admin/views/dashboard.php:111
-msgid "Páginas de ClickTools"
+msgid "Páginas de HerramientasClave"
 msgstr ""
 
 #: includes/admin/views/dashboard.php:129
@@ -9757,7 +9767,7 @@ msgid "(páginas generales)"
 msgstr ""
 
 #: includes/admin/views/stats.php:49
-msgid "La analítica propia está desactivada. Cuando la actives, ClickTools contará de forma agregada (por herramienta y día, sin cookies ni datos personales) las visitas, los usos completados y los errores."
+msgid "La analítica propia está desactivada. Cuando la actives, HerramientasClave contará de forma agregada (por herramienta y día, sin cookies ni datos personales) las visitas, los usos completados y los errores."
 msgstr ""
 
 #: includes/admin/views/stats.php:50
@@ -9879,7 +9889,7 @@ msgstr ""
 msgid "El procesamiento ha superado el tiempo máximo. Prueba con un archivo más pequeño."
 msgstr ""
 
-#: includes/class-installer.php:153
+#: includes/class-installer.php:224
 msgid "Guías y tutoriales"
 msgstr ""
 
@@ -9981,7 +9991,7 @@ msgstr ""
 #. translators: %s: tipo de mensaje
 #: includes/class-messages.php:196
 #, php-format
-msgid "[ClickTools] Nuevo mensaje: %s"
+msgid "[HerramientasClave] Nuevo mensaje: %s"
 msgstr ""
 
 #. translators: 1: asunto, 2: enlace de revisión
@@ -10089,7 +10099,7 @@ msgid "Todas las herramientas online gratuitas"
 msgstr ""
 
 #: includes/class-seo.php:92
-msgid "Catálogo completo de herramientas gratuitas de ClickTools: PDF, imágenes, texto, calculadoras, conversores, QR, fechas y más. Sin registro y desde el navegador."
+msgid "Catálogo completo de herramientas gratuitas de HerramientasClave: PDF, imágenes, texto, calculadoras, conversores, QR, fechas y más. Sin registro y desde el navegador."
 msgstr ""
 
 #: includes/class-seo.php:127
@@ -10131,7 +10141,7 @@ msgstr ""
 msgid "Estado de las herramientas, motores de procesamiento y compatibilidad de tu navegador."
 msgstr ""
 
-#: includes/class-seo.php:217
+#: includes/class-seo.php:220
 msgid "Convierte, comprime, calcula y organiza tus archivos con herramientas rápidas, sencillas y seguras. Gratis, sin registro y desde el navegador."
 msgstr ""
 
@@ -10151,62 +10161,66 @@ msgstr ""
 msgid "Correo para privacidad"
 msgstr ""
 
-#: includes/class-shortcodes.php:170
-msgid "Completa este dato en ClickTools > Ajustes > Datos legales"
+#: includes/class-shortcodes.php:176
+msgid "Completa este dato en HerramientasClave > Ajustes > Datos legales"
 msgstr ""
 
-#: includes/class-shortcodes.php:170
+#: includes/class-shortcodes.php:176
 msgid "Pendiente de completar por el titular"
 msgstr ""
 
-#: includes/class-shortcodes.php:186
+#: includes/class-shortcodes.php:210
+msgid "Plantilla orientativa: el titular del sitio debe revisarla, completar los datos marcados y adaptarla a su situación real antes de publicar. No constituye asesoramiento jurídico."
+msgstr ""
+
+#: includes/class-shortcodes.php:221
 msgid "Publicidad de Google AdSense (Google Ireland Ltd.). Solo se carga tras tu consentimiento y puede usar cookies para mostrar y medir anuncios. Más información: policies.google.com/technologies/ads."
 msgstr ""
 
 #. translators: %s: dominio del servicio de analítica
-#: includes/class-shortcodes.php:191
+#: includes/class-shortcodes.php:226
 #, php-format
 msgid "Analítica externa servida desde %s. Solo se carga tras tu consentimiento."
 msgstr ""
 
-#: includes/class-shortcodes.php:194
+#: includes/class-shortcodes.php:229
 msgid "Estadísticas propias agregadas y sin cookies: contamos visitas, usos completados y errores por herramienta, sin guardar IP, identificadores ni el contenido de tus archivos."
 msgstr ""
 
-#: includes/class-shortcodes.php:197
+#: includes/class-shortcodes.php:232
 msgid "Procesamiento en servidor para algunas herramientas concretas, que lo indican antes de empezar. Los archivos se eliminan al terminar."
 msgstr ""
 
-#: includes/class-shortcodes.php:200
+#: includes/class-shortcodes.php:235
 msgid "Actualmente no hay servicios de terceros, analítica ni procesamiento en servidor activos."
 msgstr ""
 
-#: includes/class-shortcodes.php:212
+#: includes/class-shortcodes.php:247
 msgid "Tema claro u oscuro elegido."
 msgstr ""
 
-#: includes/class-shortcodes.php:213
+#: includes/class-shortcodes.php:248
 msgid "Herramientas marcadas como favoritas."
 msgstr ""
 
-#: includes/class-shortcodes.php:214
+#: includes/class-shortcodes.php:249
 msgid "Historial de herramientas usadas (solo si lo activas)."
 msgstr ""
 
-#: includes/class-shortcodes.php:215
+#: includes/class-shortcodes.php:250
 msgid "Tu elección sobre servicios de terceros."
 msgstr ""
 
-#: includes/class-shortcodes.php:216
+#: includes/class-shortcodes.php:251
 msgid "Datos de herramientas de organización (listas, planificadores, temporizadores) cuando eliges guardarlos en este navegador."
 msgstr ""
 
 #: includes/class-templates.php:142
-msgid "ClickTools: menú principal (opcional)"
+msgid "HerramientasClave: menú principal (opcional)"
 msgstr ""
 
 #: includes/class-templates.php:143
-msgid "ClickTools: enlaces del pie (opcional)"
+msgid "HerramientasClave: enlaces del pie (opcional)"
 msgstr ""
 
 #: templates/404.php:46
@@ -10496,7 +10510,7 @@ msgid "Ver el blog"
 msgstr ""
 
 #: templates/home.php:169
-msgid "¿ClickTools es gratis?"
+msgid "¿HerramientasClave es gratis?"
 msgstr ""
 
 #: templates/home.php:169
@@ -10826,7 +10840,7 @@ msgstr ""
 #. translators: %s: versión
 #: templates/status.php:41
 #, php-format
-msgid "Versión de ClickTools: %s"
+msgid "Versión de HerramientasClave: %s"
 msgstr ""
 
 #: templates/status.php:46
@@ -11351,7 +11365,7 @@ msgid "El archivo es demasiado grande."
 msgstr ""
 
 #: assets/js/engines/biz.js:338
-msgid "El archivo no contiene un documento de ClickTools."
+msgid "El archivo no contiene un documento de HerramientasClave."
 msgstr ""
 
 #: assets/js/engines/biz.js:344
@@ -11382,7 +11396,7 @@ msgid "Vista previa"
 msgstr ""
 
 #: assets/js/engines/biz.js:362
-msgid "Plantilla orientativa. Revisa que la factura incluya los datos obligatorios de tu caso (número correlativo, fechas, NIF y domicilio de ambas partes, desglose de impuestos, menciones especiales si hay exención) y comprueba si estás obligado a usar un programa de facturación que cumpla la normativa vigente o la factura electrónica. ClickTools no envía nada a Hacienda ni guarda tus facturas."
+msgid "Plantilla orientativa. Revisa que la factura incluya los datos obligatorios de tu caso (número correlativo, fechas, NIF y domicilio de ambas partes, desglose de impuestos, menciones especiales si hay exención) y comprueba si estás obligado a usar un programa de facturación que cumpla la normativa vigente o la factura electrónica. HerramientasClave no envía nada a Hacienda ni guarda tus facturas."
 msgstr ""
 
 #: assets/js/engines/biz.js:372

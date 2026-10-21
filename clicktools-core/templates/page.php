@@ -1,6 +1,6 @@
 <?php
 /**
- * Páginas de WordPress (ayuda, contacto, legales...) con la carcasa de ClickTools.
+ * Páginas de WordPress (ayuda, contacto, legales...) con la carcasa de HerramientasClave.
  *
  * @package ClickTools
  */

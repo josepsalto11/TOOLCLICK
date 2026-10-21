@@ -1,4 +1,4 @@
-/* ClickTools — estilos de impresión (calendarios, listas, facturas, presupuestos). */
+/* HerramientasClave — estilos de impresión (calendarios, listas, facturas, presupuestos). */
 @page { margin: 14mm; }
 .ct-header, .ct-footer, .ct-crumbs, .ct-tool-hero__actions, .ct-note, .ct-tool-content, .ct-ad, .ct-consent, .ct-toast-region, .ct-palette, .ct-skip, .ct-no-print, .ct-actions, .ct-drop, #wpadminbar { display: none !important; }
 body.ct-body { background: #fff !important; color: #000 !important; font-size: 11pt; }

@@ -1,5 +1,5 @@
 /*!
- * ClickTools — utilidades de vídeo y audio con las API del navegador (sin subir archivos).
+ * HerramientasClave — utilidades de vídeo y audio con las API del navegador (sin subir archivos).
  * Lo que requiere un motor como FFmpeg (convertir vídeo, MP3…) se ofrece aparte y solo
  * si el servidor lo tiene disponible.
  */

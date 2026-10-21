@@ -1,5 +1,5 @@
 /*!
- * ClickTools — calculadora básica y científica con teclado en pantalla y físico.
+ * HerramientasClave — calculadora básica y científica con teclado en pantalla y físico.
  */
 (function () {
 	'use strict';

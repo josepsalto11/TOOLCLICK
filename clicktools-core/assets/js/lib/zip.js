@@ -1,5 +1,5 @@
 /*!
- * ClickTools — creación de archivos ZIP sin compresión (método STORE) en el navegador.
+ * HerramientasClave — creación de archivos ZIP sin compresión (método STORE) en el navegador.
  * Suficiente para agrupar descargas (imágenes y PDF ya están comprimidos).
  */
 (function (root) {

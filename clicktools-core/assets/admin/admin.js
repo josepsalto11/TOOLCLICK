@@ -1,5 +1,5 @@
 /*!
- * ClickTools — utilidades del panel: confirmaciones, contadores de longitud SEO,
+ * HerramientasClave — utilidades del panel: confirmaciones, contadores de longitud SEO,
  * vista previa de iconos y validación en vivo de fórmulas de calculadoras propias.
  */
 (function () {

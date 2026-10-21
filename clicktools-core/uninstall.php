@@ -1,6 +1,6 @@
 <?php
 /**
- * Desinstalación de ClickTools Core.
+ * Desinstalación de HerramientasClave Core.
  *
  * Por seguridad solo borra datos si el administrador activó
  * "Eliminar datos al desinstalar" en Ajustes. Las páginas y entradas creadas
@@ -35,7 +35,7 @@ foreach ( $clicktools_ids as $clicktools_id ) {
 $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}clicktools_stats" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery,WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
 // Opciones.
-foreach ( array( 'clicktools_settings', 'clicktools_tool_overrides', 'clicktools_custom_tools', 'clicktools_pages', 'clicktools_version', 'clicktools_db_version', 'clicktools_routes_hash', 'clicktools_guides_created' ) as $clicktools_option ) {
+foreach ( array( 'clicktools_settings', 'clicktools_tool_overrides', 'clicktools_custom_tools', 'clicktools_pages', 'clicktools_version', 'clicktools_db_version', 'clicktools_routes_hash', 'clicktools_guides_created', 'clicktools_brand_migrated' ) as $clicktools_option ) {
 	delete_option( $clicktools_option );
 }
 delete_transient( 'clicktools_popularity' );

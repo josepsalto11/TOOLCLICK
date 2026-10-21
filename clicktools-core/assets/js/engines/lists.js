@@ -1,5 +1,5 @@
 /*!
- * ClickTools — calculadoras basadas en listas editables: reparto de gastos, presupuestos,
+ * HerramientasClave — calculadoras basadas en listas editables: reparto de gastos, presupuestos,
  * suscripciones, ofertas, consumo de aparatos, proveedores y gastos de viaje.
  * Los datos pueden guardarse opcionalmente en este navegador.
  */

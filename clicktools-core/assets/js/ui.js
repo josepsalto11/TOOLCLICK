@@ -1,5 +1,5 @@
 /*!
- * ClickTools — componentes y utilidades compartidas por los motores de herramientas.
+ * HerramientasClave — componentes y utilidades compartidas por los motores de herramientas.
  */
 (function () {
 	'use strict';

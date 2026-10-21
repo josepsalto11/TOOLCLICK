@@ -13,9 +13,9 @@ Cada carpeta incluye el texto de su licencia. Todas se cargan desde el propio si
 y solo en las páginas que las necesitan.
 
 Programas opcionales del servidor (no incluidos; los instala el administrador): LibreOffice (MPL 2.0),
-Ghostscript (AGPL 3.0), qpdf (Apache 2.0) y FFmpeg (LGPL/GPL según compilación). ClickTools los ejecuta como
+Ghostscript (AGPL 3.0), qpdf (Apache 2.0) y FFmpeg (LGPL/GPL según compilación). HerramientasClave los ejecuta como
 programas independientes. Revisa sus licencias si distribuyes el servidor o el servicio.
 
 «QR Code» es una marca registrada de DENSO WAVE INCORPORATED.
 
-El código propio de ClickTools se distribuye bajo GPL-2.0-or-later, como WordPress.
+El código propio de HerramientasClave se distribuye bajo GPL-2.0-or-later, como WordPress.

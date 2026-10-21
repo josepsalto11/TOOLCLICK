@@ -1,4 +1,4 @@
-# Estado del proyecto — ClickTools 1.0.0
+# Estado del proyecto — HerramientasClave 1.1.0
 
 Clasificación honesta de lo entregado. «Probado» significa que existe una prueba automática ejecutada con
 éxito (ver `PRUEBAS.md`) o una comprobación manual en navegador durante el desarrollo, indicada como tal.
@@ -61,7 +61,7 @@ conocidos), diferencia horaria, dividir cuenta y buscar y reemplazar (corregidas
 
 | Elemento | Qué hace falta |
 |---|---|
-| Datos legales del titular | Completarlos en Ajustes › Datos legales y revisar los textos con un profesional |
+| Datos legales del titular | Incluidos (titular, NIF, domicilio, correo y nombre comercial). Falta el proveedor de alojamiento; revisar los textos con un profesional |
 | Publicidad (AdSense) | Cuenta aprobada, ID de editor e ID de bloques; CMP certificada si se sirven anuncios personalizados en el EEE |
 | Analítica propia | Activarla (desactivada por defecto) y mencionarla en la política de privacidad |
 | Analítica externa | URL del script del proveedor elegido y actualización de la política de cookies |

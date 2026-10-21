@@ -1,6 +1,6 @@
 # Configuración
 
-Todo se configura en **ClickTools › Ajustes**. Esta guía explica cada bloque y qué implica activarlo.
+Todo se configura en **HerramientasClave › Ajustes**. Esta guía explica cada bloque y qué implica activarlo.
 
 ## Datos legales
 
@@ -16,6 +16,12 @@ Los textos de Aviso legal, Privacidad y Cookies usan el shortcode `[clicktools_o
 | `privacy_email` | Correo para ejercer derechos de privacidad |
 | `hosting_provider` | Proveedor de alojamiento (encargado del tratamiento) |
 | `legal_updated` | Fecha de la última revisión |
+| `brand_name` | Nombre comercial (el nombre de la marca, «HerramientasClave») |
+| `site_domain` | Dominio real del sitio, tomado de la dirección de WordPress (no se escribe a mano) |
+
+El aviso legal sigue este formato: «En cumplimiento de la Ley 34/2002 (LSSI), estos son los datos del titular de
+*tu-dominio*», con titular, NIF, domicilio, correo electrónico y nombre comercial, y un enlace al formulario de
+contacto. El aviso «Plantilla orientativa» solo se muestra mientras falte algún dato del titular.
 
 Si un campo está vacío, se muestra un marcador visible «dato pendiente» para que nunca se publique un dato
 inventado. **Los textos son una plantilla orientativa**: no garantizan el cumplimiento normativo de tu caso
@@ -25,7 +31,7 @@ procesamiento en servidor.
 ## Formularios
 
 Los formularios de sugerencias, errores y contacto guardan los mensajes como contenido privado
-(**ClickTools › Mensajes**), con estado (nueva, en revisión, aprobada, planificada, resuelta, descartada) y
+(**HerramientasClave › Mensajes**), con estado (nueva, en revisión, aprobada, planificada, resuelta, descartada) y
 prioridad. Protecciones: token firmado (HMAC) pedido al cargar la página, tiempo mínimo de 3 segundos,
 campo trampa (honeypot) y límite de 5 envíos por hora y visitante (identificado por un hash diario de la IP
 que no se guarda).
@@ -48,14 +54,14 @@ que no se guarda).
 
 La publicidad está **desactivada y sin ningún script** mientras no la actives. Para usar Google AdSense:
 
-1. Necesitas una cuenta de AdSense aprobada para tu dominio. ClickTools no puede comprobarlo ni conseguirlo.
+1. Necesitas una cuenta de AdSense aprobada para tu dominio. HerramientasClave no puede comprobarlo ni conseguirlo.
 2. Indica el ID de editor (`ca-pub-…`) y los ID de los bloques para cada ubicación (portada, herramientas,
    blog, páginas). Una ubicación sin ID no muestra nada.
 3. Elige la gestión del consentimiento:
-   - **Banner de ClickTools**: el script de AdSense solo se pide después de que el visitante acepte la
+   - **Banner de HerramientasClave**: el script de AdSense solo se pide después de que el visitante acepte la
      categoría «Publicidad». Si la rechaza, no se carga nada de Google.
    - **Plataforma externa** (por ejemplo, la CMP certificada de Google, obligatoria para mostrar anuncios
-     personalizados en el EEE): ClickTools no muestra su banner y tu plataforma decide.
+     personalizados en el EEE): HerramientasClave no muestra su banner y tu plataforma decide.
 4. Actualiza la política de cookies para describir los proveedores.
 
 El banner solo aparece cuando hay algún servicio que lo requiere. Los visitantes pueden cambiar su decisión
@@ -84,9 +90,9 @@ Requisitos y seguridad:
 
 ## SEO
 
-- ClickTools genera título, metadescripción, URL canónica, Open Graph y datos estructurados (WebSite,
+- HerramientasClave genera título, metadescripción, URL canónica, Open Graph y datos estructurados (WebSite,
   BreadcrumbList, WebApplication para herramientas, Article para guías). No inventa valoraciones ni reseñas.
-- Con Yoast SEO o Rank Math activos (modo automático), ClickTools no duplica etiquetas y les pasa los
+- Con Yoast SEO o Rank Math activos (modo automático), HerramientasClave no duplica etiquetas y les pasa los
   títulos y descripciones de las herramientas.
 - Mapa del sitio: se integra en el de WordPress (`/wp-sitemap.xml`) con categorías y herramientas visibles.
   Se quita el mapa de usuarios para no exponer nombres de autor.
@@ -107,7 +113,7 @@ Requisitos y seguridad:
 
 ## Gestión de herramientas
 
-En **ClickTools › Herramientas** puedes, sin tocar código:
+En **HerramientasClave › Herramientas** puedes, sin tocar código:
 
 - Activar o desactivar herramientas (una desactivada devuelve 404 y sale del buscador y del mapa del sitio).
 - Destacarlas en la portada y cambiar su prioridad (orden).

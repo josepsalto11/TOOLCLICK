@@ -1,5 +1,5 @@
 /*!
- * ClickTools — motor genérico de calculadoras declarativas.
+ * HerramientasClave — motor genérico de calculadoras declarativas.
  * Cada calculadora define sus campos, su función de cálculo y su fórmula visible.
  */
 (function () {

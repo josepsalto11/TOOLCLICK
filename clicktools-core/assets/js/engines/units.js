@@ -1,5 +1,5 @@
 /*!
- * ClickTools — conversores de unidades. Factores exactos por definición siempre que existen.
+ * HerramientasClave — conversores de unidades. Factores exactos por definición siempre que existen.
  */
 (function () {
 	'use strict';

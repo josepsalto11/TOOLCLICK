@@ -1,5 +1,5 @@
 /*!
- * ClickTools — seguridad y privacidad. Todo se calcula en el navegador: nada se envía.
+ * HerramientasClave — seguridad y privacidad. Todo se calcula en el navegador: nada se envía.
  */
 (function () {
 	'use strict';
@@ -188,7 +188,7 @@
 			}).catch(function (e) { progress.done(); CT.fail(result, e); });
 		};
 		if (textMode) {
-			var t = ui.field({ label: __('Texto'), type: 'textarea', rows: 6, mono: true, value: 'ClickTools' });
+			var t = ui.field({ label: __('Texto'), type: 'textarea', rows: 6, mono: true, value: 'HerramientasClave' });
 			var run = CT.debounce(function () { show('', new TextEncoder().encode(t.input.value).buffer, 0); }, 200);
 			t.input.addEventListener('input', run);
 			expected.input.addEventListener('input', run);

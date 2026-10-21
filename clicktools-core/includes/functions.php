@@ -109,7 +109,7 @@ function clicktools_page_url( $key ) {
 }
 
 /**
- * Indica si la petición actual es una vista de ClickTools.
+ * Indica si la petición actual es una vista de HerramientasClave.
  *
  * @return string Nombre de la vista o cadena vacía.
  */

@@ -1,4 +1,4 @@
-/* ClickTools — estilos del panel de administración. */
+/* HerramientasClave — estilos del panel de administración. */
 .ct-admin-intro { max-width: 820px; font-size: 14px; color: #50575e; }
 .ct-admin-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 16px 0; }
 .ct-admin-card, .ct-admin-box { background: #fff; border: 1px solid #dcdcde; border-radius: 8px; padding: 16px 18px; }

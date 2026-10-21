@@ -1,5 +1,5 @@
 /*!
- * ClickTools — herramientas de imagen con Canvas. Las imágenes no salen del dispositivo.
+ * HerramientasClave — herramientas de imagen con Canvas. Las imágenes no salen del dispositivo.
  * Nota: JPG, WebP y AVIF comprimen con pérdida; PNG no pierde calidad.
  */
 (function () {

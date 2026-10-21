@@ -1,5 +1,5 @@
 /*!
- * ClickTools — calculadoras financieras y de negocio.
+ * HerramientasClave — calculadoras financieras y de negocio.
  * Los importes se redondean al céntimo con aritmética decimal segura (CT.round / CT.money).
  * Los tipos de interés, impuestos y comisiones los introduce siempre el usuario.
  */

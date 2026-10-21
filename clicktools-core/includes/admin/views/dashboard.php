@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel principal de ClickTools.
+ * Panel principal de HerramientasClave.
  *
  * @package ClickTools
  */
@@ -61,7 +61,7 @@ $clicktools_check = static function ( $ok, $text, $link = '', $label = '' ) {
 };
 ?>
 <div class="wrap ct-admin">
-	<h1><?php esc_html_e( 'Panel de ClickTools', 'clicktools' ); ?></h1>
+	<h1><?php esc_html_e( 'Panel de HerramientasClave', 'clicktools' ); ?></h1>
 	<p class="ct-admin-intro"><?php echo esc_html( clicktools_setting( 'slogan' ) ); ?> · <?php echo esc_html( sprintf( /* translators: %s: versión */ __( 'Versión %s', 'clicktools' ), CLICKTOOLS_VERSION ) ); ?></p>
 
 	<div class="ct-admin-cards">
@@ -92,7 +92,7 @@ $clicktools_check = static function ( $ok, $text, $link = '', $label = '' ) {
 				$clicktools_check( $clicktools_pretty, __( 'Enlaces permanentes «bonitos» activados', 'clicktools' ), admin_url( 'options-permalink.php' ), __( 'Configurar', 'clicktools' ) );
 				$clicktools_check( ! $clicktools_missing, $clicktools_missing ? sprintf( /* translators: %s: lista de campos */ __( 'Datos legales del titular (faltan: %s)', 'clicktools' ), implode( ', ', $clicktools_missing ) ) : __( 'Datos legales del titular completos', 'clicktools' ), admin_url( 'admin.php?page=clicktools-settings&tab=legal' ), __( 'Completar', 'clicktools' ) );
 				$clicktools_check( '' !== (string) clicktools_setting( 'legal_updated' ), __( 'Textos legales revisados (fecha de actualización indicada)', 'clicktools' ), admin_url( 'admin.php?page=clicktools-settings&tab=legal' ), __( 'Indicar fecha', 'clicktools' ) );
-				$clicktools_check( $clicktools_front, __( 'Portada de ClickTools como página de inicio', 'clicktools' ) );
+				$clicktools_check( $clicktools_front, __( 'Portada de HerramientasClave como página de inicio', 'clicktools' ) );
 				$clicktools_check( ! $clicktools_ads || '' !== (string) clicktools_setting( 'adsense_client' ), __( 'Publicidad desactivada o configurada con su ID', 'clicktools' ), admin_url( 'admin.php?page=clicktools-settings&tab=ads' ), __( 'Revisar', 'clicktools' ) );
 				$clicktools_check( (bool) get_option( 'blog_public' ), __( 'El sitio permite la indexación en buscadores', 'clicktools' ), admin_url( 'options-reading.php' ), __( 'Revisar lectura', 'clicktools' ) );
 				?>
@@ -100,7 +100,7 @@ $clicktools_check = static function ( $ok, $text, $link = '', $label = '' ) {
 			<div class="ct-admin-actions">
 				<?php
 				if ( ! $clicktools_front ) {
-					Admin::action_button( 'use_front', __( 'Usar la portada de ClickTools', 'clicktools' ), 'button button-primary', __( 'Se cambiará la página de inicio y la del blog en Ajustes › Lectura. ¿Continuar?', 'clicktools' ) );
+					Admin::action_button( 'use_front', __( 'Usar la portada de HerramientasClave', 'clicktools' ), 'button button-primary', __( 'Se cambiará la página de inicio y la del blog en Ajustes › Lectura. ¿Continuar?', 'clicktools' ) );
 				}
 				Admin::action_button( 'create_pages', __( 'Crear las páginas que falten', 'clicktools' ) );
 				?>
@@ -108,7 +108,7 @@ $clicktools_check = static function ( $ok, $text, $link = '', $label = '' ) {
 		</div>
 
 		<div class="ct-admin-box">
-			<h2><?php esc_html_e( 'Páginas de ClickTools', 'clicktools' ); ?></h2>
+			<h2><?php esc_html_e( 'Páginas de HerramientasClave', 'clicktools' ); ?></h2>
 			<table class="widefat striped">
 				<tbody>
 				<?php

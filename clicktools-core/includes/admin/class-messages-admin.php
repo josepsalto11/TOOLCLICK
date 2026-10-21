@@ -60,7 +60,7 @@ class Messages_Admin {
 	}
 
 	/**
-	 * Mantiene abierto el menú de ClickTools en las pantallas de mensajes.
+	 * Mantiene abierto el menú de HerramientasClave en las pantallas de mensajes.
 	 *
 	 * @param string $parent Menú padre.
 	 * @return string

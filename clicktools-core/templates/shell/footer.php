@@ -1,6 +1,6 @@
 <?php
 /**
- * Pie de la carcasa de ClickTools.
+ * Pie de la carcasa de HerramientasClave.
  *
  * @package ClickTools
  */
@@ -10,7 +10,7 @@ use ClickTools\Consent;
 
 defined( 'ABSPATH' ) || exit;
 
-$clicktools_brand = clicktools_setting( 'brand_name', 'ClickTools' );
+$clicktools_brand = clicktools_setting( 'brand_name', 'HerramientasClave' );
 $clicktools_links = array(
 	'help'          => __( 'Centro de ayuda', 'clicktools' ),
 	'contact'       => __( 'Contacto', 'clicktools' ),

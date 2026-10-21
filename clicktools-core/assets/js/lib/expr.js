@@ -1,5 +1,5 @@
 /*!
- * ClickTools — analizador y evaluador seguro de expresiones matemáticas.
+ * HerramientasClave — analizador y evaluador seguro de expresiones matemáticas.
  * No usa eval ni Function: construye un árbol sintáctico y lo evalúa.
  * Soporta + − × ÷ ^ %, !, paréntesis, multiplicación implícita, constantes y funciones.
  */

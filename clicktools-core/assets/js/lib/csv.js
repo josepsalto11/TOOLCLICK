@@ -1,5 +1,5 @@
 /*!
- * ClickTools — CSV (RFC 4180) con detección de separador.
+ * HerramientasClave — CSV (RFC 4180) con detección de separador.
  */
 (function (root) {
 	'use strict';

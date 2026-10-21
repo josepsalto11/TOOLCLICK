@@ -1,5 +1,5 @@
 /*!
- * ClickTools — interfaz común de herramientas que procesan el archivo en el servidor.
+ * HerramientasClave — interfaz común de herramientas que procesan el archivo en el servidor.
  * Solo se publican si el administrador las activa y el motor existe en el alojamiento.
  */
 (function () {
@@ -49,7 +49,7 @@
 			var file = null;
 			var panel = h('div', { class: 'ct-panel' });
 			var f = options(tool.key, panel);
-			var consent = ui.field({ type: 'checkbox', label: CT.sprintf(__('Entiendo que el archivo se enviará al servidor de %s para procesarlo y que se eliminará al terminar.'), CT.cfg.brand || 'ClickTools'), value: false });
+			var consent = ui.field({ type: 'checkbox', label: CT.sprintf(__('Entiendo que el archivo se enviará al servidor de %s para procesarlo y que se eliminará al terminar.'), CT.cfg.brand || 'HerramientasClave'), value: false });
 			var progress = ui.progress();
 			var result = ui.result();
 			var drop = ui.dropzone({ accept: info.accept, maxMb: info.maxMb, hint: CT.sprintf(__('Formatos: %1$s · Máximo %2$d MB.'), info.accept, info.maxMb), onFiles: function (fs) { file = fs[0]; drop.setHint(file.name + ' · ' + CT.fmt.bytes(file.size)); } });

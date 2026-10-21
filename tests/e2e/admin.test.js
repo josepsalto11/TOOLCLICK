@@ -100,6 +100,7 @@ async function admin(p, path) {
   await test('Ajustes: datos legales aparecen en el aviso legal; correo inválido se rechaza', async p => {
     await login(p);
     await admin(p, 'admin.php?page=clicktools-settings&tab=legal');
+    const original = await p.inputValue('#ct-owner_name');
     await p.fill('#ct-owner_name', 'Titular de Prueba');
     await p.fill('#ct-owner_email', 'no-es-un-correo');
     // El navegador ya bloquea el envío por el tipo email; se desactiva para probar la validación del servidor.
@@ -109,9 +110,11 @@ async function admin(p, path) {
     assert(await p.inputValue('#ct-owner_name') === 'Titular de Prueba', 'no guardó el nombre');
     await p.goto(BASE + '/aviso-legal/');
     assert((await p.textContent('main')).includes('Titular de Prueba'), 'el aviso legal no muestra el titular');
+    // Se restaura el valor anterior para no alterar el sitio.
     await admin(p, 'admin.php?page=clicktools-settings&tab=legal');
-    await p.fill('#ct-owner_name', '');
+    await p.fill('#ct-owner_name', original);
     await Promise.all([p.waitForNavigation(), p.click('#submit')]);
+    assert(await p.inputValue('#ct-owner_name') === original, 'no se restauró el titular');
   });
 
   await test('Mensajes: un envío del formulario aparece en el panel y se puede revisar', async p => {

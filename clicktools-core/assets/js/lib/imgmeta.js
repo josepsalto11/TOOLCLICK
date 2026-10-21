@@ -1,5 +1,5 @@
 /*!
- * ClickTools — metadatos de imagen sin recomprimir: lectura EXIF básica, eliminación
+ * HerramientasClave — metadatos de imagen sin recomprimir: lectura EXIF básica, eliminación
  * de metadatos en JPEG/PNG/WebP, dimensiones desde la cabecera y ajuste de DPI.
  */
 (function (root) {

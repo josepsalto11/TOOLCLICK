@@ -38,7 +38,7 @@ clicktools_template( 'shell/header' );
 				);
 				?>
 			</li>
-			<li><span class="ct-dot ct-dot--ok" aria-hidden="true"></span><?php echo esc_html( sprintf( /* translators: %s: versión */ __( 'Versión de ClickTools: %s', 'clicktools' ), CLICKTOOLS_VERSION ) ); ?></li>
+			<li><span class="ct-dot ct-dot--ok" aria-hidden="true"></span><?php echo esc_html( sprintf( /* translators: %s: versión */ __( 'Versión de HerramientasClave: %s', 'clicktools' ), CLICKTOOLS_VERSION ) ); ?></li>
 		</ul>
 	</section>
 

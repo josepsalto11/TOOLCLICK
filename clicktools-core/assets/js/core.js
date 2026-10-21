@@ -1,5 +1,5 @@
 /*!
- * ClickTools — núcleo común (todas las páginas).
+ * HerramientasClave — núcleo común (todas las páginas).
  * Tema, menús, buscador, favoritos, historial opcional, catálogo, formularios,
  * consentimiento, analítica agregada opcional y montaje de herramientas.
  */

@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name:       ClickTools Core
+ * Plugin Name:       HerramientasClave Core
  * Description:       Plataforma de herramientas online (PDF, imágenes, texto, calculadoras, conversores, QR, fechas, desarrollo, seguridad, archivos, productividad y empresas). Incluye catálogo, buscador, páginas SEO por herramienta, plantilla visual propia, formularios, consentimiento y administración. «Todo lo que necesitas, en un clic».
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 6.4
  * Requires PHP:      7.4
- * Author:            ClickTools
+ * Author:            HerramientasClave
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       clicktools
@@ -16,7 +16,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'CLICKTOOLS_VERSION', '1.0.0' );
+define( 'CLICKTOOLS_VERSION', '1.1.0' );
 define( 'CLICKTOOLS_FILE', __FILE__ );
 define( 'CLICKTOOLS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CLICKTOOLS_URL', plugin_dir_url( __FILE__ ) );
@@ -31,7 +31,7 @@ if ( version_compare( PHP_VERSION, CLICKTOOLS_MIN_PHP, '<' ) || version_compare(
 			echo esc_html(
 				sprintf(
 					/* translators: 1: versión mínima de PHP, 2: versión mínima de WordPress */
-					__( 'ClickTools Core necesita PHP %1$s y WordPress %2$s o superiores. El plugin no se ha cargado.', 'clicktools' ),
+					__( 'HerramientasClave Core necesita PHP %1$s y WordPress %2$s o superiores. El plugin no se ha cargado.', 'clicktools' ),
 					CLICKTOOLS_MIN_PHP,
 					CLICKTOOLS_MIN_WP
 				)

@@ -31,16 +31,16 @@ class Settings {
 	public static function defaults() {
 		return array(
 			// Marca.
-			'brand_name'             => 'ClickTools',
+			'brand_name'             => 'HerramientasClave',
 			'slogan'                 => __( 'Todo lo que necesitas, en un clic', 'clicktools' ),
 			'slogan_secondary'       => __( 'Herramientas útiles. Resultados rápidos', 'clicktools' ),
-			// Identidad legal: debe completarla el propietario antes de publicar.
-			'owner_name'             => '',
-			'owner_nif'              => '',
-			'owner_address'          => '',
-			'owner_email'            => '',
+			// Identidad legal del titular (facilitada por el propietario; editable en Ajustes › Datos legales).
+			'owner_name'             => 'Eric Gustavo Vasquez Aviles',
+			'owner_nif'              => '48167034C',
+			'owner_address'          => 'Calle Camelias, 5, Llinars del Vallès',
+			'owner_email'            => 'g.team.shock@gmail.com',
 			'owner_registry'         => '',
-			'privacy_email'          => '',
+			'privacy_email'          => 'g.team.shock@gmail.com',
 			'hosting_provider'       => '',
 			'legal_updated'          => '',
 			// Contacto y formularios.

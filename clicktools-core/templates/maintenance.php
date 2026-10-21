@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$clicktools_brand = clicktools_setting( 'brand_name', 'ClickTools' );
+$clicktools_brand = clicktools_setting( 'brand_name', 'HerramientasClave' );
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>

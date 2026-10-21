@@ -27,7 +27,8 @@ $ul = static function ( array $items ) {
 $sc = static function ( $code ) {
 	return "<!-- wp:shortcode -->\n" . $code . "\n<!-- /wp:shortcode -->\n\n";
 };
-$notice = $p( '<em>' . __( 'Plantilla orientativa preparada por ClickTools. El titular del sitio debe revisarla, completarla y adaptarla a su situación real antes de publicar. No constituye asesoramiento jurídico.', 'clicktools' ) . '</em>' );
+// Aviso de plantilla: solo se ve mientras falten datos del titular (ver Shortcodes::legal_notice()).
+$notice = $sc( '[clicktools_legal_notice]' );
 
 $owner   = '[clicktools_owner field="owner_name"]';
 $nif     = '[clicktools_owner field="owner_nif"]';
@@ -35,6 +36,11 @@ $address = '[clicktools_owner field="owner_address"]';
 $email   = '[clicktools_owner field="owner_email"]';
 $pemail  = '[clicktools_owner field="privacy_email"]';
 $updated = '[clicktools_owner field="legal_updated"]';
+$brand   = '[clicktools_owner field="brand_name"]';
+$domain  = '[clicktools_owner field="site_domain"]';
+$b       = static function ( $label ) {
+	return '<strong>' . $label . '</strong>';
+};
 
 return array(
 	'home'          => array(
@@ -50,7 +56,7 @@ return array(
 	'help'          => array(
 		'title'   => __( 'Centro de ayuda', 'clicktools' ),
 		'slug'    => 'ayuda',
-		'content' => $p( __( 'Aquí encontrarás respuestas a las dudas más habituales sobre el funcionamiento de ClickTools. Si no encuentras lo que buscas, escríbenos desde la página de contacto.', 'clicktools' ) )
+		'content' => $p( __( 'Aquí encontrarás respuestas a las dudas más habituales sobre el funcionamiento de HerramientasClave. Si no encuentras lo que buscas, escríbenos desde la página de contacto.', 'clicktools' ) )
 			. $h2( __( 'Cómo usar una herramienta', 'clicktools' ) )
 			. $ul(
 				array(
@@ -80,7 +86,7 @@ return array(
 	'about'         => array(
 		'title'   => __( 'Sobre nosotros', 'clicktools' ),
 		'slug'    => 'sobre-nosotros',
-		'content' => $p( __( 'ClickTools es una colección de herramientas online gratuitas para estudiantes, particulares, profesionales, autónomos y pequeñas empresas. Nuestro objetivo es sencillo: que entres, encuentres la herramienta, hagas tu tarea y obtengas el resultado sin complicaciones.', 'clicktools' ) )
+		'content' => $p( __( 'HerramientasClave es una colección de herramientas online gratuitas para estudiantes, particulares, profesionales, autónomos y pequeñas empresas. Nuestro objetivo es sencillo: que entres, encuentres la herramienta, hagas tu tarea y obtengas el resultado sin complicaciones.', 'clicktools' ) )
 			. $h2( __( 'Nuestros principios', 'clicktools' ) )
 			. $ul(
 				array(
@@ -95,7 +101,7 @@ return array(
 	'suggest'       => array(
 		'title'   => __( '¿Qué herramienta necesitas?', 'clicktools' ),
 		'slug'    => 'sugerir-herramienta',
-		'content' => $p( __( 'Cuéntanos qué herramienta te gustaría encontrar en ClickTools y qué problema quieres resolver. Revisamos cada sugerencia de forma manual y priorizamos las más útiles. Las sugerencias no se publican.', 'clicktools' ) )
+		'content' => $p( __( 'Cuéntanos qué herramienta te gustaría encontrar en HerramientasClave y qué problema quieres resolver. Revisamos cada sugerencia de forma manual y priorizamos las más útiles. Las sugerencias no se publican.', 'clicktools' ) )
 			. $sc( '[clicktools_form type="suggestion"]' ),
 	),
 	'bug'           => array(
@@ -112,14 +118,15 @@ return array(
 			. $h2( __( '1. Responsable del tratamiento', 'clicktools' ) )
 			. $ul(
 				array(
-					__( 'Titular:', 'clicktools' ) . ' ' . $owner,
-					__( 'NIF/CIF:', 'clicktools' ) . ' ' . $nif,
-					__( 'Domicilio:', 'clicktools' ) . ' ' . $address,
-					__( 'Correo para cuestiones de privacidad:', 'clicktools' ) . ' ' . $pemail,
+					$b( __( 'Titular:', 'clicktools' ) ) . ' ' . $owner,
+					$b( __( 'NIF:', 'clicktools' ) ) . ' ' . $nif,
+					$b( __( 'Domicilio:', 'clicktools' ) ) . ' ' . $address,
+					$b( __( 'Correo para cuestiones de privacidad:', 'clicktools' ) ) . ' ' . $pemail,
+					$b( __( 'Nombre comercial:', 'clicktools' ) ) . ' ' . $brand,
 				)
 			)
 			. $h2( __( '2. Principio general: tus archivos se quedan en tu dispositivo', 'clicktools' ) )
-			. $p( __( 'La mayoría de herramientas de ClickTools (calculadoras, texto, conversores, QR, imágenes, PDF y otras) funcionan íntegramente en tu navegador. Los archivos y textos que utilizas no se envían a nuestros servidores ni a terceros.', 'clicktools' ) )
+			. $p( __( 'La mayoría de herramientas de HerramientasClave (calculadoras, texto, conversores, QR, imágenes, PDF y otras) funcionan íntegramente en tu navegador. Los archivos y textos que utilizas no se envían a nuestros servidores ni a terceros.', 'clicktools' ) )
 			. $p( __( 'Si alguna herramienta necesita procesar el archivo en el servidor, lo indica de forma visible antes de empezar. En ese caso, el archivo se recibe por una conexión cifrada, se procesa en un directorio temporal y se elimina en cuanto se devuelve el resultado. No se conserva una copia.', 'clicktools' ) )
 			. $h2( __( '3. Qué datos tratamos y con qué finalidad', 'clicktools' ) )
 			. $ul(
@@ -147,7 +154,7 @@ return array(
 		'content' => $notice
 			. $p( __( 'Última actualización:', 'clicktools' ) . ' ' . $updated )
 			. $h2( __( 'Qué utilizamos', 'clicktools' ) )
-			. $p( __( 'ClickTools no instala cookies propias de análisis ni de publicidad. Para recordar tus preferencias (tema, favoritos, historial opcional, elección de consentimiento) usamos el almacenamiento local del navegador, que solo se lee en tu dispositivo:', 'clicktools' ) )
+			. $p( __( 'HerramientasClave no instala cookies propias de análisis ni de publicidad. Para recordar tus preferencias (tema, favoritos, historial opcional, elección de consentimiento) usamos el almacenamiento local del navegador, que solo se lee en tu dispositivo:', 'clicktools' ) )
 			. $sc( '[clicktools_storage_list]' )
 			. $p( __( 'WordPress puede instalar cookies técnicas a usuarios que inician sesión en el panel de administración.', 'clicktools' ) )
 			. $h2( __( 'Servicios de terceros', 'clicktools' ) )
@@ -163,7 +170,7 @@ return array(
 		'content' => $notice
 			. $p( __( 'Última actualización:', 'clicktools' ) . ' ' . $updated )
 			. $h2( __( '1. Objeto', 'clicktools' ) )
-			. $p( __( 'Estos términos regulan el uso del sitio web ClickTools, titularidad de', 'clicktools' ) . ' ' . $owner . '. ' . __( 'Al utilizar el sitio aceptas estos términos.', 'clicktools' ) )
+			. $p( __( 'Estos términos regulan el uso del sitio web HerramientasClave, titularidad de', 'clicktools' ) . ' ' . $owner . '. ' . __( 'Al utilizar el sitio aceptas estos términos.', 'clicktools' ) )
 			. $h2( __( '2. Uso de las herramientas', 'clicktools' ) )
 			. $ul(
 				array(
@@ -186,16 +193,18 @@ return array(
 		'title'   => __( 'Aviso legal', 'clicktools' ),
 		'slug'    => 'aviso-legal',
 		'content' => $notice
-			. $p( __( 'En cumplimiento del artículo 10 de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), se informa de los siguientes datos:', 'clicktools' ) )
+			. $h2( __( 'Titular del sitio web', 'clicktools' ) )
+			. $p( __( 'En cumplimiento de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI), estos son los datos del titular de', 'clicktools' ) . ' <strong>' . $domain . '</strong>:' )
 			. $ul(
 				array(
-					__( 'Titular:', 'clicktools' ) . ' ' . $owner,
-					__( 'NIF/CIF:', 'clicktools' ) . ' ' . $nif,
-					__( 'Domicilio:', 'clicktools' ) . ' ' . $address,
-					__( 'Correo electrónico:', 'clicktools' ) . ' ' . $email,
-					__( 'Datos registrales (si procede):', 'clicktools' ) . ' [clicktools_owner field="owner_registry"]',
+					$b( __( 'Titular:', 'clicktools' ) ) . ' ' . $owner,
+					$b( __( 'NIF:', 'clicktools' ) ) . ' ' . $nif,
+					$b( __( 'Domicilio:', 'clicktools' ) ) . ' ' . $address,
+					$b( __( 'Correo electrónico:', 'clicktools' ) ) . ' ' . $email,
+					$b( __( 'Nombre comercial:', 'clicktools' ) ) . ' ' . $brand,
 				)
 			)
+			. $p( __( 'También puedes escribirnos a través del', 'clicktools' ) . ' [clicktools_link page="contact"]' . __( 'formulario de contacto', 'clicktools' ) . '[/clicktools_link].' )
 			. $h2( __( 'Condiciones de uso', 'clicktools' ) )
 			. $p( __( 'El uso del sitio implica la aceptación de los Términos de uso y de la Política de privacidad.', 'clicktools' ) ),
 		'order'   => 93,
@@ -203,7 +212,7 @@ return array(
 	'accessibility' => array(
 		'title'   => __( 'Accesibilidad', 'clicktools' ),
 		'slug'    => 'accesibilidad',
-		'content' => $p( __( 'ClickTools se diseña con el objetivo de cumplir las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2 en su nivel AA. Este objetivo se revisa de forma continua; no declaramos una conformidad total mientras no se haya completado una auditoría independiente.', 'clicktools' ) )
+		'content' => $p( __( 'HerramientasClave se diseña con el objetivo de cumplir las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2 en su nivel AA. Este objetivo se revisa de forma continua; no declaramos una conformidad total mientras no se haya completado una auditoría independiente.', 'clicktools' ) )
 			. $h2( __( 'Medidas aplicadas', 'clicktools' ) )
 			. $ul(
 				array(

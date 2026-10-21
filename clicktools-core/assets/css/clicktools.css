@@ -1,5 +1,5 @@
 /*!
- * ClickTools — sistema de diseño
+ * HerramientasClave — sistema de diseño
  * Variables globales, modo claro/oscuro, componentes y utilidades.
  * Tipografía del sistema (sin fuentes externas: más rápido y sin transferencias a terceros).
  */
@@ -737,3 +737,18 @@ fieldset.ct-fieldset legend { font-weight: 600; font-size: var(--ct-fs-sm); marg
 /* La vista previa del documento imita papel: siempre fondo blanco, también en modo oscuro. */
 .ct-doc .ct-table, .ct-doc .ct-table td, .ct-doc .ct-table tr { background: #fff; }
 .ct-doc .ct-table thead th { background: #f3f1ff; color: #15151d; }
+
+/* Cabecera compacta en móviles estrechos: el nombre de la marca es largo. */
+@media (max-width: 480px) {
+	.ct-header__inner { gap: 8px; }
+	.ct-header__actions { gap: 0; }
+	.ct-logo { gap: 8px; font-size: 1rem; min-width: 0; }
+	.ct-logo__mark { width: 30px; height: 30px; border-radius: 9px; flex: none; }
+	.ct-logo__mark svg { width: 17px; height: 17px; }
+	.ct-logo__text { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	.ct-header .ct-icon-btn, .ct-search-trigger { width: 36px; min-width: 36px; }
+	.ct-lang__code { display: none; }
+}
+@media (max-width: 350px) { .ct-logo__mark { display: none; } }
+/* Con un solo idioma, el selector no aporta nada en pantallas estrechas. */
+@media (max-width: 400px) { .ct-lang--single { display: none; } }

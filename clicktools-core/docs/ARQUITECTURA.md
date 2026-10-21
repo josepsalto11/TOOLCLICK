@@ -164,7 +164,9 @@ junto a cada campo, permite copiar el resultado y exportar tablas a CSV. Los imp
 | `[clicktools_categories]` | Rejilla de categorías |
 | `[clicktools_search]` | Buscador |
 | `[clicktools_form type="suggestion\|bug\|contact"]` | Formularios |
-| `[clicktools_owner field="owner_name"]` | Dato legal del titular (marca «dato pendiente» si falta) |
+| `[clicktools_owner field="owner_name"]` | Dato legal del titular (marca «dato pendiente» si falta); también `brand_name` y `site_domain` |
+| `[clicktools_link page="contact"]texto[/clicktools_link]` | Enlace a una página creada por el plugin |
+| `[clicktools_legal_notice]` | Aviso de plantilla, visible solo mientras falten datos del titular |
 | `[clicktools_services]` | Lista real de servicios de terceros activos (para la política de cookies) |
 | `[clicktools_storage_list]` | Lista de datos que se guardan en el navegador |
 

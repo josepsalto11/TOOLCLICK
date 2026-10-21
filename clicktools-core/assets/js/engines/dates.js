@@ -1,5 +1,5 @@
 /*!
- * ClickTools — fechas, calendarios, horas, zonas horarias, temporizador y cronómetro.
+ * HerramientasClave — fechas, calendarios, horas, zonas horarias, temporizador y cronómetro.
  * Las fechas se calculan como días civiles (UTC) para evitar errores por cambios de hora.
  */
 (function () {

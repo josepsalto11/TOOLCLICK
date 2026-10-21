@@ -1,5 +1,5 @@
 /*!
- * ClickTools — diferencias entre secuencias (algoritmo de Myers, O(ND)).
+ * HerramientasClave — diferencias entre secuencias (algoritmo de Myers, O(ND)).
  */
 (function (root) {
 	'use strict';

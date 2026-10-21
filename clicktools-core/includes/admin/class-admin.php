@@ -1,6 +1,6 @@
 <?php
 /**
- * Panel de administración de ClickTools.
+ * Panel de administración de HerramientasClave.
  *
  * @package ClickTools
  */
@@ -55,8 +55,8 @@ class Admin {
 	 */
 	public static function menu() {
 		$icon = 'data:image/svg+xml;base64,' . base64_encode( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#a7aaad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></svg>' ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
-		add_menu_page( 'ClickTools', 'ClickTools', self::CAP, self::SLUG, array( __CLASS__, 'page_dashboard' ), $icon, 58 );
-		add_submenu_page( self::SLUG, __( 'Panel de ClickTools', 'clicktools' ), __( 'Panel', 'clicktools' ), self::CAP, self::SLUG, array( __CLASS__, 'page_dashboard' ) );
+		add_menu_page( 'HerramientasClave', 'HerramientasClave', self::CAP, self::SLUG, array( __CLASS__, 'page_dashboard' ), $icon, 58 );
+		add_submenu_page( self::SLUG, __( 'Panel de HerramientasClave', 'clicktools' ), __( 'Panel', 'clicktools' ), self::CAP, self::SLUG, array( __CLASS__, 'page_dashboard' ) );
 		$hook = add_submenu_page( self::SLUG, __( 'Herramientas', 'clicktools' ), __( 'Herramientas', 'clicktools' ), self::CAP, 'clicktools-tools', array( Tools_Admin::class, 'page' ) );
 		if ( $hook ) {
 			add_action( 'load-' . $hook, array( Tools_Admin::class, 'load' ) );
@@ -66,11 +66,11 @@ class Admin {
 		$label = __( 'Mensajes', 'clicktools' ) . ( $new ? ' <span class="awaiting-mod">' . (int) $new . '</span>' : '' );
 		add_submenu_page( self::SLUG, __( 'Mensajes', 'clicktools' ), $label, self::CAP, 'edit.php?post_type=' . Messages::CPT );
 		add_submenu_page( self::SLUG, __( 'Estadísticas', 'clicktools' ), __( 'Estadísticas', 'clicktools' ), self::CAP, 'clicktools-stats', array( __CLASS__, 'page_stats' ) );
-		add_submenu_page( self::SLUG, __( 'Ajustes de ClickTools', 'clicktools' ), __( 'Ajustes', 'clicktools' ), self::CAP, 'clicktools-settings', array( Settings_Page::class, 'page' ) );
+		add_submenu_page( self::SLUG, __( 'Ajustes de HerramientasClave', 'clicktools' ), __( 'Ajustes', 'clicktools' ), self::CAP, 'clicktools-settings', array( Settings_Page::class, 'page' ) );
 	}
 
 	/**
-	 * ¿Es una pantalla de ClickTools?
+	 * ¿Es una pantalla de HerramientasClave?
 	 *
 	 * @return bool
 	 */
@@ -114,7 +114,7 @@ class Admin {
 	}
 
 	/**
-	 * Marca las páginas creadas por ClickTools en el listado de páginas.
+	 * Marca las páginas creadas por HerramientasClave en el listado de páginas.
 	 *
 	 * @param array    $states Estados.
 	 * @param \WP_Post $post   Página.
@@ -123,7 +123,7 @@ class Admin {
 	public static function post_states( $states, $post ) {
 		$pages = (array) get_option( 'clicktools_pages', array() );
 		if ( in_array( (int) $post->ID, array_map( 'intval', $pages ), true ) ) {
-			$states['clicktools'] = 'ClickTools';
+			$states['clicktools'] = 'HerramientasClave';
 		}
 		return $states;
 	}
@@ -138,14 +138,14 @@ class Admin {
 		$screen = get_current_screen();
 		$own    = self::is_own_screen();
 		if ( '' === (string) get_option( 'permalink_structure' ) ) {
-			echo '<div class="notice notice-error"><p><strong>ClickTools:</strong> ' . esc_html__( 'Las direcciones de las herramientas necesitan enlaces permanentes «bonitos». Elige cualquier estructura distinta de «Simple» en Ajustes › Enlaces permanentes.', 'clicktools' ) . ' <a href="' . esc_url( admin_url( 'options-permalink.php' ) ) . '">' . esc_html__( 'Abrir enlaces permanentes', 'clicktools' ) . '</a></p></div>';
+			echo '<div class="notice notice-error"><p><strong>HerramientasClave:</strong> ' . esc_html__( 'Las direcciones de las herramientas necesitan enlaces permanentes «bonitos». Elige cualquier estructura distinta de «Simple» en Ajustes › Enlaces permanentes.', 'clicktools' ) . ' <a href="' . esc_url( admin_url( 'options-permalink.php' ) ) . '">' . esc_html__( 'Abrir enlaces permanentes', 'clicktools' ) . '</a></p></div>';
 		}
 		if ( get_transient( 'clicktools_activated' ) ) {
 			delete_transient( 'clicktools_activated' );
-			echo '<div class="notice notice-success is-dismissible"><p><strong>' . esc_html__( 'ClickTools está activo.', 'clicktools' ) . '</strong> ' . esc_html__( 'Se han creado las páginas básicas y las guías del blog como borradores. Revisa el panel para completar los datos legales antes de publicar el sitio.', 'clicktools' ) . ' <a href="' . esc_url( admin_url( 'admin.php?page=clicktools' ) ) . '">' . esc_html__( 'Ir al panel', 'clicktools' ) . '</a></p></div>';
+			echo '<div class="notice notice-success is-dismissible"><p><strong>' . esc_html__( 'HerramientasClave está activo.', 'clicktools' ) . '</strong> ' . esc_html__( 'Se han creado las páginas básicas y las guías del blog como borradores. Revisa el panel para completar los datos legales antes de publicar el sitio.', 'clicktools' ) . ' <a href="' . esc_url( admin_url( 'admin.php?page=clicktools' ) ) . '">' . esc_html__( 'Ir al panel', 'clicktools' ) . '</a></p></div>';
 		}
 		if ( ( $own || ( $screen && in_array( $screen->id, array( 'dashboard', 'plugins' ), true ) ) ) && Settings::missing_legal_fields() ) {
-			echo '<div class="notice notice-warning"><p><strong>ClickTools:</strong> ' . esc_html__( 'Faltan datos del titular para los textos legales (aviso legal, privacidad). Las páginas legales muestran avisos hasta que los completes.', 'clicktools' ) . ' <a href="' . esc_url( admin_url( 'admin.php?page=clicktools-settings&tab=legal' ) ) . '">' . esc_html__( 'Completar datos legales', 'clicktools' ) . '</a></p></div>';
+			echo '<div class="notice notice-warning"><p><strong>HerramientasClave:</strong> ' . esc_html__( 'Faltan datos del titular para los textos legales (aviso legal, privacidad). Las páginas legales muestran avisos hasta que los completes.', 'clicktools' ) . ' <a href="' . esc_url( admin_url( 'admin.php?page=clicktools-settings&tab=legal' ) ) . '">' . esc_html__( 'Completar datos legales', 'clicktools' ) . '</a></p></div>';
 		}
 		if ( $own && clicktools_setting( 'maintenance' ) ) {
 			echo '<div class="notice notice-info"><p>' . esc_html__( 'El modo mantenimiento está activado: los visitantes ven la página de mantenimiento; tú sigues viendo el sitio porque has iniciado sesión.', 'clicktools' ) . '</p></div>';
@@ -158,7 +158,7 @@ class Admin {
 				'reset'     => __( 'Se han restablecido los valores originales.', 'clicktools' ),
 				'bulk'      => __( 'Acción aplicada a las herramientas seleccionadas.', 'clicktools' ),
 				'deleted'   => __( 'Calculadora eliminada.', 'clicktools' ),
-				'front'     => __( 'La portada y la página del blog de ClickTools están configuradas.', 'clicktools' ),
+				'front'     => __( 'La portada y la página del blog de HerramientasClave están configuradas.', 'clicktools' ),
 				'pages'     => __( 'Se han creado las páginas que faltaban (las existentes no se han modificado).', 'clicktools' ),
 				'purged'    => __( 'Estadísticas borradas.', 'clicktools' ),
 				'invalid'   => __( 'No se ha guardado: revisa los errores.', 'clicktools' ),

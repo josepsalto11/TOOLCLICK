@@ -1,5 +1,5 @@
 /*!
- * ClickTools — generadores. Usan crypto.getRandomValues (aleatoriedad criptográfica)
+ * HerramientasClave — generadores. Usan crypto.getRandomValues (aleatoriedad criptográfica)
  * y nunca envían ni guardan los resultados.
  */
 (function () {

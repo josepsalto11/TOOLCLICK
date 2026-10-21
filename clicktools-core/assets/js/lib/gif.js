@@ -1,5 +1,5 @@
 /*!
- * ClickTools — codificador GIF89a (paleta global de hasta 256 colores, LZW) y
+ * HerramientasClave — codificador GIF89a (paleta global de hasta 256 colores, LZW) y
  * cuantización por corte de la mediana.
  */
 (function (root) {

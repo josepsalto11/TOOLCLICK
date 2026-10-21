@@ -1,5 +1,5 @@
 /*!
- * ClickTools — herramientas de texto. Todo el procesamiento es local.
+ * HerramientasClave — herramientas de texto. Todo el procesamiento es local.
  */
 (function () {
 	'use strict';
@@ -489,7 +489,7 @@
 	tools.base64 = function (el) {
 		var mode, safe;
 		var api = textTool(el, {
-			sample: 'Hola, ClickTools ✓',
+			sample: 'Hola, HerramientasClave ✓',
 			rows: 6, outRows: 6, mono: true,
 			run: function (s, a) {
 				setInfo(a, '');

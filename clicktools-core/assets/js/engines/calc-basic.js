@@ -1,5 +1,5 @@
 /*!
- * ClickTools — calculadoras cotidianas: porcentajes, regla de tres, propinas,
+ * HerramientasClave — calculadoras cotidianas: porcentajes, regla de tres, propinas,
  * estadística, medidas, superficies, volúmenes y materiales.
  */
 (function () {

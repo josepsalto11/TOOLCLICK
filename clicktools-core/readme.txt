@@ -1,10 +1,10 @@
-=== ClickTools Core ===
+=== HerramientasClave Core ===
 Contributors: clicktools
 Tags: herramientas, pdf, imágenes, calculadoras, conversores
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Plataforma de herramientas online gratuitas: PDF, imágenes, vídeo y audio, tex
 
 == Description ==
 
-ClickTools convierte un WordPress en un sitio de herramientas online con 276 herramientas reales en 13 categorías. La gran mayoría funcionan en el navegador del visitante: los archivos no se suben a ningún servidor.
+HerramientasClave convierte un WordPress en un sitio de herramientas online con 276 herramientas reales en 13 categorías. La gran mayoría funcionan en el navegador del visitante: los archivos no se suben a ningún servidor.
 
 * Página propia por herramienta con URL corta, instrucciones, preguntas frecuentes y herramientas relacionadas.
 * Buscador instantáneo, catálogo con filtros, favoritos e historial local opcional.
@@ -30,12 +30,12 @@ Documentación completa en la carpeta `docs/` del plugin: INSTALACION, CONFIGURA
 
 1. Plugins › Añadir nuevo › Subir plugin › selecciona clicktools-core.zip › Instalar ahora › Activar.
 2. Asegúrate de que los enlaces permanentes no están en «Simple».
-3. Ve a ClickTools › Panel y sigue la lista «Antes de publicar el sitio» (datos legales, revisión de textos, guías).
+3. Ve a HerramientasClave › Panel y sigue la lista «Antes de publicar el sitio» (datos legales, revisión de textos, guías).
 
 == Frequently Asked Questions ==
 
 = ¿Necesito un tema concreto? =
-No. ClickTools usa su propia plantilla visual con cualquier tema.
+No. HerramientasClave usa su propia plantilla visual con cualquier tema.
 
 = ¿Los archivos de los visitantes se suben a mi servidor? =
 No, salvo en las herramientas de servidor, que están desactivadas por defecto y piden aceptación expresa antes de enviar el archivo.
@@ -47,6 +47,12 @@ No en una instalación nueva. AdSense y la analítica externa solo se cargan si 
 Por defecto se conservan los datos. Si activas el borrado en Ajustes, se eliminan ajustes, mensajes y estadísticas. Las páginas creadas se conservan siempre.
 
 == Changelog ==
+
+= 1.1.0 =
+* El sitio pasa a llamarse HerramientasClave.
+* Datos del titular incluidos en el aviso legal y la política de privacidad, con nombre comercial y dominio del sitio.
+* Al actualizar desde 1.0.0: se cambia el nombre, se rellenan los datos del titular que estuvieran vacíos y se regeneran las páginas del plugin que no se habían editado (en las editadas solo se cambia el nombre).
+* Cabecera adaptada a móviles estrechos.
 
 = 1.0.0 =
 * Primera versión.
