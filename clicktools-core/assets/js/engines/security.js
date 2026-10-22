@@ -105,7 +105,7 @@
 		var mode = ui.seg({ label: __('Tipo'), value: 'chars', options: [{ value: 'chars', label: __('Contraseña de caracteres') }, { value: 'words', label: __('Frase de palabras') }] });
 		var pool = ui.field({ label: __('Tamaño del conjunto de caracteres'), type: 'select', value: '94', options: [{ value: '10', label: __('Solo números (10)') }, { value: '26', label: __('Minúsculas (26)') }, { value: '36', label: __('Minúsculas y números (36)') }, { value: '52', label: __('Mayúsculas y minúsculas (52)') }, { value: '62', label: __('Letras y números (62)') }, { value: '94', label: __('ASCII imprimible completo (94)') }] });
 		var len = ui.field({ label: __('Longitud (caracteres o palabras)'), type: 'number', integer: true, value: 16 });
-		var wl = ui.field({ label: __('Palabras en la lista'), type: 'number', integer: true, value: 7776, help: __('Diceware usa 7776 palabras; BIP-39, 2048.') });
+		var wl = ui.field({ label: __('Palabras en la lista'), type: 'number', integer: true, value: 7776, help: __('Diceware usa 7.776 palabras; BIP-39, 2.048.') });
 		var gps = ui.field({ label: __('Intentos por segundo del atacante'), type: 'select', value: '1e10', options: [{ value: '10', label: __('10 (en línea, con límites)') }, { value: '1e4', label: '10⁴' }, { value: '1e10', label: __('10¹⁰ (sin conexión, GPU)') }, { value: '1e12', label: __('10¹² (granja de GPU)') }] });
 		var result = ui.result();
 		var run = function () {

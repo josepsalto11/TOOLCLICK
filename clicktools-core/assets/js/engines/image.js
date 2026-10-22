@@ -303,7 +303,7 @@
 				return function () {
 					var o = { mode: mode.get(), w: w.get(), h: hgt.get(), pct: pct.get(), keep: keep.input.checked, fmt: fmtF.input.value, q: q() };
 					[w, hgt, pct].forEach(function (f) { f.error(''); });
-					if (o.mode === 'pct' && !(o.pct > 0 && o.pct <= 1000)) { pct.error(__('Entre 1 y 1000 %.')); return false; }
+					if (o.mode === 'pct' && !(o.pct > 0 && o.pct <= 1000)) { pct.error(__('Entre 1 y 1.000 %.')); return false; }
 					if (o.mode === 'px' && !(o.w > 0) && !(o.h > 0)) { w.error(__('Indica al menos el ancho o el alto.')); return false; }
 					return o;
 				};

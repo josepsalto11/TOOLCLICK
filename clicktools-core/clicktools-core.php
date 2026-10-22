@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       HerramientasClave Core
  * Description:       Plataforma de herramientas online (PDF, imágenes, texto, calculadoras, conversores, QR, fechas, desarrollo, seguridad, archivos, productividad y empresas). Incluye catálogo, buscador, páginas SEO por herramienta, plantilla visual propia, formularios, consentimiento y administración. «Todo lo que necesitas, en un clic».
- * Version:           1.1.0
+ * Version:           1.2.0
  * Requires at least: 6.4
  * Requires PHP:      7.4
  * Author:            HerramientasClave
@@ -16,7 +16,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'CLICKTOOLS_VERSION', '1.1.0' );
+define( 'CLICKTOOLS_VERSION', '1.2.0' );
 define( 'CLICKTOOLS_FILE', __FILE__ );
 define( 'CLICKTOOLS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CLICKTOOLS_URL', plugin_dir_url( __FILE__ ) );

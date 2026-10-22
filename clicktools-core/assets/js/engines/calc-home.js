@@ -337,7 +337,7 @@
 			return {
 				main: { label: __('Tamaño legible'), value: CT.fmt.bytes(b) + ' · ' + CT.fmt.bytes(b, true) },
 				table: { title: __('Equivalencias'), headers: [__('Unidad'), __('Valor')], rows: rows, num: [1] },
-				formula: '1 KB = 1000 B; 1 KiB = 1024 B'
+				formula: '1 KB = 1.000 B; 1 KiB = 1.024 B'
 			};
 		}
 	});

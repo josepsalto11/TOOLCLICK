@@ -15,3 +15,5 @@ body.ct-printing-doc .ct-tool-hero, body.ct-printing-doc .ct-privacy { display: 
 .ct-doc { border: 0 !important; padding: 0 !important; box-shadow: none !important; }
 .ct-doc-stack .ct-doc + .ct-doc { margin-top: 12mm; padding-top: 10mm !important; border-top: 1px dashed #999 !important; }
 .ct-doc__lines th { background: #f0f0f4 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.ct-doc__legal { break-inside: avoid; }
+.ct-doc__box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }

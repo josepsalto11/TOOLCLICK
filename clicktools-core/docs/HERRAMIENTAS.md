@@ -316,7 +316,7 @@ Generado a partir del registro del plugin. «Navegador» = el archivo o los dato
 | Reparto de turnos | `/productividad/reparto-turnos/` | Navegador | Operativa |
 | Temporizador Pomodoro | `/productividad/pomodoro/` | Navegador | Operativa |
 
-## Empresas y autónomos (22)
+## Empresas y autónomos (25)
 
 | Herramienta | URL | Procesamiento | Estado |
 |---|---|---|---|
@@ -335,6 +335,7 @@ Generado a partir del registro del plugin. «Navegador» = el archivo o los dato
 | Coste de adquisición de clientes (CAC) | `/empresas/coste-adquisicion/` | Navegador | Operativa |
 | Costes fijos y variables | `/empresas/costes-fijos-variables/` | Navegador | Operativa |
 | Descuentos comerciales sucesivos | `/empresas/descuento-comercial/` | Navegador | Operativa |
+| Generador de albaranes | `/empresas/generador-albaranes/` | Navegador | Operativa |
 | Generador de facturas | `/empresas/plantilla-factura/` | Navegador | Operativa |
 | Generador de presupuestos | `/empresas/generador-presupuestos/` | Navegador | Operativa |
 | Generador de recibos | `/empresas/generador-recibos/` | Navegador | Operativa |
@@ -342,5 +343,7 @@ Generado a partir del registro del plugin. «Navegador» = el archivo o los dato
 | Peso volumétrico y coste de envío | `/empresas/coste-envio/` | Navegador | Operativa |
 | Rentabilidad de reventa | `/empresas/rentabilidad-reventa/` | Navegador | Operativa |
 | Rentabilidad de un pedido online | `/empresas/rentabilidad-pedido/` | Navegador | Operativa |
+| Validar IBAN | `/empresas/validar-iban/` | Navegador | Operativa |
+| Validar NIF, NIE o CIF | `/empresas/validar-nif/` | Navegador | Operativa |
 
-**Total: 276 herramientas.**
+**Total: 279 herramientas.**

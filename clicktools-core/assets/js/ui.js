@@ -71,9 +71,24 @@
 		mulRate: function (amount, pct) { return CT.round(CT.money.toCents(amount) * pct / 100, 0) / 100; }
 	};
 	var nfCache = {};
+	// En español, la norma de Intl no agrupa los números de 4 cifras («3528,93»). Aquí se agrupan
+	// siempre los miles («3.528,93»), como en el resto de cifras, para que toda la web sea coherente.
+	var GROUP = (function () {
+		try { var g = new Intl.NumberFormat(LOCALE).formatToParts(1234567).filter(function (p) { return p.type === 'group'; })[0]; return g ? g.value : '.'; } catch (e) { return '.'; }
+	})();
+	function groupAlways(parts) {
+		var ints = parts.filter(function (p) { return p.type === 'integer'; });
+		if (ints.length === 1 && ints[0].value.length > 3) {
+			ints[0].value = ints[0].value.replace(/\B(?=(\d{3})+(?!\d))/g, GROUP);
+		}
+		return parts.map(function (p) { return p.value; }).join('');
+	}
 	function nf(opts) {
 		var key = JSON.stringify(opts);
-		if (!nfCache[key]) { nfCache[key] = new Intl.NumberFormat(LOCALE, opts); }
+		if (!nfCache[key]) {
+			var f = new Intl.NumberFormat(LOCALE, opts);
+			nfCache[key] = { format: f.formatToParts ? function (n) { return groupAlways(f.formatToParts(n)); } : function (n) { return f.format(n); } };
+		}
 		return nfCache[key];
 	}
 	CT.fmt = {

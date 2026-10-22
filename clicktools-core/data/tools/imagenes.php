@@ -416,7 +416,7 @@ return array(
 			__( 'Optimiza y descarga el ZIP.', 'clicktools' ),
 		),
 		'faq'      => array(
-			array( __( '¿Qué ancho elijo?', 'clicktools' ), __( 'El ancho máximo al que se muestran en tu web, multiplicado por 2 si quieres nitidez en pantallas de alta densidad (por ejemplo, 1600 px para una imagen de 800 px).', 'clicktools' ) ),
+			array( __( '¿Qué ancho elijo?', 'clicktools' ), __( 'El ancho máximo al que se muestran en tu web, multiplicado por 2 si quieres nitidez en pantallas de alta densidad (por ejemplo, 1.600 px para una imagen de 800 px).', 'clicktools' ) ),
 		),
 	),
 	array(

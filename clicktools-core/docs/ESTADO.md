@@ -1,4 +1,4 @@
-# Estado del proyecto — HerramientasClave 1.1.0
+# Estado del proyecto — HerramientasClave 1.2.0
 
 Clasificación honesta de lo entregado. «Probado» significa que existe una prueba automática ejecutada con
 éxito (ver `PRUEBAS.md`) o una comprobación manual en navegador durante el desarrollo, indicada como tal.
@@ -34,7 +34,7 @@ unir, dividir, extraer, detectar páginas en blanco, extraer texto, comparar, nu
 imágenes a PDF, PDF a imágenes, texto a PDF y metadatos de PDF; detección de PDF dañado y protegido;
 conversión, compresión, redimensionado, recorte, DPI, metadatos EXIF/GPS, imágenes para redes e
 identificación de formato real; propiedades de vídeo, extraer audio, vídeo a GIF, audio a WAV, bitrate;
-factura, presupuesto, recibo, conversor de productos, calculadora de factura, reparto de gastos, lista de
+factura (incluida la de empresa con logotipo, datos registrales y cláusula RGPD, la rectificativa y las menciones especiales), presupuesto, albarán, recibo, validación de NIF/NIE/CIF e IBAN, formato de números con punto de miles, conversor de productos, calculadora de factura, reparto de gastos, lista de
 tareas, contador de tiempo, identificar archivo, renombrar archivos; las 8 herramientas de servidor
 (Word↔PDF, proteger, desbloquear, compresión avanzada, convertir y comprimir vídeo, convertir audio);
 calculadoras propias creadas desde el panel.

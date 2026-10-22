@@ -243,7 +243,7 @@ return array(
 			__( 'Fíjate en la diferencia entre GB (decimal) y GiB (binario).', 'clicktools' ),
 		),
 		'faq'      => array(
-			array( __( '¿1 GB son 1000 o 1024 MB?', 'clicktools' ), __( 'Según el Sistema Internacional, 1 GB son 1000 MB. 1024 MiB forman 1 GiB.', 'clicktools' ) ),
+			array( __( '¿1 GB son 1.000 o 1.024 MB?', 'clicktools' ), __( 'Según el Sistema Internacional, 1 GB son 1.000 MB. 1.024 MiB forman 1 GiB.', 'clicktools' ) ),
 		),
 	),
 	array(
@@ -484,14 +484,14 @@ return array(
 			__( 'Usa las medidas en píxeles para preparar archivos de impresión.', 'clicktools' ),
 		),
 		'faq'      => array(
-			array( __( '¿Cuánto mide un A4?', 'clicktools' ), __( '210 × 297 mm (8,27 × 11,69 pulgadas). A 300 ppp son 2480 × 3508 píxeles.', 'clicktools' ) ),
+			array( __( '¿Cuánto mide un A4?', 'clicktools' ), __( '210 × 297 mm (8,27 × 11,69 pulgadas). A 300 ppp son 2.480 × 3.508 píxeles.', 'clicktools' ) ),
 		),
 	),
 	array(
 		'slug'     => 'numeros-romanos',
 		'cat'      => 'conversores',
 		'name'     => __( 'Conversor de números romanos', 'clicktools' ),
-		'desc'     => __( 'Convierte números a romanos y romanos a números (1 a 3999).', 'clicktools' ),
+		'desc'     => __( 'Convierte números a romanos y romanos a números (1 a 3.999).', 'clicktools' ),
 		'intro'    => __( 'Escribe un número o un número romano y obtén su equivalencia con validación de la notación estándar.', 'clicktools' ),
 		'engine'   => 'units',
 		'key'      => 'romanos',
@@ -500,12 +500,12 @@ return array(
 		'priority' => 38,
 		'keywords' => 'numeros romanos convertir MMXXVI',
 		'steps'    => array(
-			__( 'Escribe un número del 1 al 3999 o un número romano.', 'clicktools' ),
+			__( 'Escribe un número del 1 al 3.999 o un número romano.', 'clicktools' ),
 			__( 'La conversión se hace al instante.', 'clicktools' ),
 			__( 'Copia el resultado.', 'clicktools' ),
 		),
 		'faq'      => array(
-			array( __( '¿Por qué no admite el 4000?', 'clicktools' ), __( 'La notación romana estándar solo llega a 3999 (MMMCMXCIX) sin símbolos especiales.', 'clicktools' ) ),
+			array( __( '¿Por qué no admite el 4.000?', 'clicktools' ), __( 'La notación romana estándar solo llega a 3.999 (MMMCMXCIX) sin símbolos especiales.', 'clicktools' ) ),
 		),
 	),
 );

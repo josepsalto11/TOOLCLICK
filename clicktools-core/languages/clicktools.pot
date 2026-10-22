@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: HerramientasClave Core 1.1.0\n"
+"Project-Id-Version: HerramientasClave Core 1.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-21T15:29:45+00:00\n"
+"POT-Creation-Date: 2026-10-22T07:36:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
@@ -90,7 +90,7 @@ msgstr ""
 #: assets/js/engines/pdf.js:691
 #: assets/js/engines/qr.js:85
 #: assets/js/engines/security.js:191
-#: assets/js/ui.js:485
+#: assets/js/ui.js:500
 msgid "Texto"
 msgstr ""
 
@@ -1997,7 +1997,7 @@ msgid "Escribe el precio del kWh de tu factura."
 msgstr ""
 
 #: data/tools/calculadoras.php:540
-msgid "Un radiador de 1500 W durante 2 horas consume 3 kWh al día; a 0,15 €/kWh cuesta 0,45 € diarios."
+msgid "Un radiador de 1.500 W durante 2 horas consume 3 kWh al día; a 0,15 €/kWh cuesta 0,45 € diarios."
 msgstr ""
 
 #: data/tools/calculadoras.php:543
@@ -2609,11 +2609,11 @@ msgid "Fíjate en la diferencia entre GB (decimal) y GiB (binario)."
 msgstr ""
 
 #: data/tools/conversores.php:246
-msgid "¿1 GB son 1000 o 1024 MB?"
+msgid "¿1 GB son 1.000 o 1.024 MB?"
 msgstr ""
 
 #: data/tools/conversores.php:246
-msgid "Según el Sistema Internacional, 1 GB son 1000 MB. 1024 MiB forman 1 GiB."
+msgid "Según el Sistema Internacional, 1 GB son 1.000 MB. 1.024 MiB forman 1 GiB."
 msgstr ""
 
 #: data/tools/conversores.php:252
@@ -2914,7 +2914,7 @@ msgid "¿Cuánto mide un A4?"
 msgstr ""
 
 #: data/tools/conversores.php:487
-msgid "210 × 297 mm (8,27 × 11,69 pulgadas). A 300 ppp son 2480 × 3508 píxeles."
+msgid "210 × 297 mm (8,27 × 11,69 pulgadas). A 300 ppp son 2.480 × 3.508 píxeles."
 msgstr ""
 
 #: data/tools/conversores.php:493
@@ -2922,7 +2922,7 @@ msgid "Conversor de números romanos"
 msgstr ""
 
 #: data/tools/conversores.php:494
-msgid "Convierte números a romanos y romanos a números (1 a 3999)."
+msgid "Convierte números a romanos y romanos a números (1 a 3.999)."
 msgstr ""
 
 #: data/tools/conversores.php:495
@@ -2930,7 +2930,7 @@ msgid "Escribe un número o un número romano y obtén su equivalencia con valid
 msgstr ""
 
 #: data/tools/conversores.php:503
-msgid "Escribe un número del 1 al 3999 o un número romano."
+msgid "Escribe un número del 1 al 3.999 o un número romano."
 msgstr ""
 
 #: data/tools/conversores.php:504
@@ -2948,11 +2948,11 @@ msgid "Copia el resultado."
 msgstr ""
 
 #: data/tools/conversores.php:508
-msgid "¿Por qué no admite el 4000?"
+msgid "¿Por qué no admite el 4.000?"
 msgstr ""
 
 #: data/tools/conversores.php:508
-msgid "La notación romana estándar solo llega a 3999 (MMMCMXCIX) sin símbolos especiales."
+msgid "La notación romana estándar solo llega a 3.999 (MMMCMXCIX) sin símbolos especiales."
 msgstr ""
 
 #: data/tools/desarrollo.php:14
@@ -3550,558 +3550,681 @@ msgid "Generador de facturas"
 msgstr ""
 
 #: data/tools/empresas.php:15
-msgid "Crea facturas con IVA, IRPF y recargo de equivalencia, descárgalas en PDF o imprímelas."
+msgid "Crea facturas legales con logotipo, IVA, IRPF, recargo de equivalencia, datos registrales y cláusula de protección de datos, y descárgalas en PDF."
 msgstr ""
 
 #: data/tools/empresas.php:16
-msgid "Rellena una factura con tus datos y los del cliente, añade líneas con descuentos y distintos tipos de IVA y descárgala en PDF. Todo se calcula y genera en tu navegador."
+msgid "Rellena una factura completa como autónomo o como empresa: logotipo, datos de ambas partes, líneas con descuentos y varios tipos de IVA, retención de IRPF, menciones especiales, facturas rectificativas y pie legal con los datos registrales y la cláusula de protección de datos. Todo se calcula y genera en tu navegador."
 msgstr ""
 
 #: data/tools/empresas.php:17
-msgid "Las fuentes del PDF admiten el alfabeto latino; otros caracteres se sustituyen."
+msgid "Las fuentes del PDF admiten el alfabeto latino; otros caracteres se sustituyen. El logotipo se reduce a 600×240 px."
 msgstr ""
 
 #: data/tools/empresas.php:27
-msgid "Escribe tus datos de emisor y los del cliente."
+msgid "Elige si facturas como autónomo o como empresa y completa tus datos (y el logotipo, si quieres)."
 msgstr ""
 
 #: data/tools/empresas.php:28
-msgid "Añade las líneas con cantidad, precio, descuento e IVA; elige la retención si aplica."
+msgid "Si eres una sociedad, añade la forma jurídica y los datos del registro donde está inscrita."
 msgstr ""
 
 #: data/tools/empresas.php:29
-msgid "Revisa la vista previa y descarga el PDF o imprímelo."
+msgid "Completa los datos del cliente y las líneas con cantidad, precio, descuento e IVA; elige la retención y la mención especial si aplican."
 msgstr ""
 
-#: data/tools/empresas.php:32
-#: data/tools/empresas.php:57
+#: data/tools/empresas.php:30
+msgid "Revisa los avisos y la vista previa, y descarga el PDF o imprímelo."
+msgstr ""
+
+#: data/tools/empresas.php:33
+#: data/tools/empresas.php:59
+#: data/tools/empresas.php:127
 msgid "¿Se guardan mis datos o los de mis clientes?"
 msgstr ""
 
-#: data/tools/empresas.php:32
-#: data/tools/empresas.php:57
+#: data/tools/empresas.php:33
+#: data/tools/empresas.php:59
+#: data/tools/empresas.php:127
 msgid "No se envían a ningún servidor. Si activas «Guardar en este navegador», solo se recuerdan tus datos de emisor, la forma de pago y el siguiente número, y solo en este dispositivo. Los datos del cliente nunca se guardan."
 msgstr ""
 
-#: data/tools/empresas.php:33
+#: data/tools/empresas.php:34
+msgid "¿Qué datos debe llevar una factura completa?"
+msgstr ""
+
+#: data/tools/empresas.php:34
+msgid "Según el Reglamento de facturación (Real Decreto 1619/2012, art. 6): número y, en su caso, serie; fecha de expedición y, si es distinta, de la operación; nombre o razón social, NIF y domicilio del emisor y del destinatario; descripción de las operaciones; base imponible, tipo y cuota de IVA, y las menciones especiales que correspondan (exenciones, inversión del sujeto pasivo, criterio de caja…). El generador te avisa de los datos que faltan."
+msgstr ""
+
+#: data/tools/empresas.php:35
+msgid "¿Qué añade la opción «Empresa (sociedad)»?"
+msgstr ""
+
+#: data/tools/empresas.php:35
+msgid "Los campos de forma jurídica, registro (por ejemplo, Registro Mercantil de Barcelona), tomo, libro, folio, sección, hoja, inscripción y capital social. Con ellos se imprime al pie de cada página la línea registral que exige el Reglamento del Registro Mercantil (art. 24) para la documentación de las sociedades inscritas."
+msgstr ""
+
+#: data/tools/empresas.php:36
+msgid "¿Para qué sirve la cláusula de protección de datos?"
+msgstr ""
+
+#: data/tools/empresas.php:36
+msgid "Informa al cliente, como exige el RGPD, de quién trata sus datos, para qué, con qué base legal, durante cuánto tiempo y cómo ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad. Se genera con tus datos y puedes modificarla."
+msgstr ""
+
+#: data/tools/empresas.php:37
+msgid "¿Cómo hago una factura rectificativa?"
+msgstr ""
+
+#: data/tools/empresas.php:37
+msgid "Elige «Rectificativa», indica el número y la fecha de la factura que corriges y el motivo. Puedes usar cantidades negativas para las devoluciones. Usa una serie propia para las rectificativas."
+msgstr ""
+
+#: data/tools/empresas.php:38
 msgid "¿Esta factura es válida legalmente?"
 msgstr ""
 
-#: data/tools/empresas.php:33
-msgid "La plantilla incluye los datos habituales de una factura completa, pero tú eres responsable de su contenido y numeración. Comprueba también si estás obligado a usar un programa de facturación que cumpla la normativa vigente o la factura electrónica."
+#: data/tools/empresas.php:38
+msgid "La plantilla incluye los datos obligatorios, pero tú eres responsable de su contenido y numeración. Comprueba también si estás obligado a usar un programa de facturación que cumpla la normativa vigente o la factura electrónica."
 msgstr ""
 
-#: data/tools/empresas.php:34
-msgid "¿Cómo se calculan los impuestos?"
+#: data/tools/empresas.php:44
+msgid "Generador de albaranes"
 msgstr ""
 
-#: data/tools/empresas.php:34
-msgid "Cada línea se calcula en céntimos: cantidad × precio − descuento. El IVA se agrupa por tipo sobre la base de cada grupo y la retención de IRPF se aplica sobre la base imponible total."
+#: data/tools/empresas.php:45
+msgid "Crea albaranes de entrega con logotipo, con o sin precios, y espacio para la firma de quien recibe."
 msgstr ""
 
-#: data/tools/empresas.php:35
-msgid "¿Puedo reutilizar una factura?"
-msgstr ""
-
-#: data/tools/empresas.php:35
-msgid "Sí. Usa «Exportar datos (JSON)» para guardarla en tu equipo y «Importar JSON» para cargarla de nuevo y editarla."
-msgstr ""
-
-#: data/tools/empresas.php:41
-msgid "Generador de presupuestos"
-msgstr ""
-
-#: data/tools/empresas.php:42
-msgid "Prepara presupuestos profesionales con líneas, descuentos e IVA y descárgalos en PDF."
-msgstr ""
-
-#: data/tools/empresas.php:43
-msgid "Crea un presupuesto para un cliente con conceptos, cantidades, descuentos e IVA, fecha de validez y condiciones. Descárgalo en PDF o imprímelo."
-msgstr ""
-
-#: data/tools/empresas.php:52
-msgid "Completa tus datos y los del cliente."
-msgstr ""
-
-#: data/tools/empresas.php:53
-msgid "Añade los conceptos con su precio, descuento e IVA."
+#: data/tools/empresas.php:46
+msgid "Prepara un albarán o nota de entrega con tus datos y los del cliente, las cantidades entregadas y, si quieres, los precios. Incluye espacios para firmar la entrega y la recepción."
 msgstr ""
 
 #: data/tools/empresas.php:54
-msgid "Indica la validez y las condiciones, y descarga el PDF."
+#: data/tools/empresas.php:122
+msgid "Completa tus datos y los del cliente."
 msgstr ""
 
-#: data/tools/empresas.php:58
-msgid "¿Puedo convertir el presupuesto en factura?"
+#: data/tools/empresas.php:55
+msgid "Añade lo que entregas con su cantidad (y el precio si quieres mostrarlo)."
 msgstr ""
 
-#: data/tools/empresas.php:58
-msgid "Exporta el presupuesto en JSON e impórtalo en el generador de facturas: se cargarán las mismas líneas y datos para que solo cambies el número y las fechas."
+#: data/tools/empresas.php:56
+msgid "Descarga el PDF o imprímelo y fírmalo en la entrega."
 msgstr ""
 
-#: data/tools/empresas.php:64
-msgid "Generador de recibos"
+#: data/tools/empresas.php:60
+msgid "¿Un albarán sustituye a la factura?"
 msgstr ""
 
-#: data/tools/empresas.php:65
-msgid "Crea recibos de pago con el importe en letras, listos para imprimir y firmar."
+#: data/tools/empresas.php:60
+msgid "No. El albarán acredita la entrega de la mercancía; la factura es el documento fiscal. Puedes exportar el albarán en JSON e importarlo en el generador de facturas."
 msgstr ""
 
 #: data/tools/empresas.php:66
+msgid "Validar NIF, NIE o CIF"
+msgstr ""
+
+#: data/tools/empresas.php:67
+msgid "Comprueba si un NIF, DNI, NIE o CIF tiene la letra o el dígito de control correctos, uno o en lista."
+msgstr ""
+
+#: data/tools/empresas.php:68
+msgid "Comprueba al momento si un DNI, NIE o CIF español está bien escrito: se calcula su letra o dígito de control con el algoritmo oficial y se indica el tipo de entidad de los CIF."
+msgstr ""
+
+#: data/tools/empresas.php:77
+msgid "Escribe o pega el NIF (o una lista, uno por línea)."
+msgstr ""
+
+#: data/tools/empresas.php:78
+msgid "Consulta si es válido, de qué tipo es y cuál sería el control correcto."
+msgstr ""
+
+#: data/tools/empresas.php:79
+msgid "Si comprobaste una lista, descarga el resultado en CSV."
+msgstr ""
+
+#: data/tools/empresas.php:82
+msgid "¿Comprueba si el NIF existe?"
+msgstr ""
+
+#: data/tools/empresas.php:82
+msgid "No. Solo verifica que el formato y el carácter de control son coherentes. Para saber si un NIF está dado de alta hay que consultarlo en los servicios de la Agencia Tributaria."
+msgstr ""
+
+#: data/tools/empresas.php:83
+msgid "¿Cómo se calcula la letra del DNI?"
+msgstr ""
+
+#: data/tools/empresas.php:83
+msgid "Se divide el número entre 23 y el resto indica la letra en la tabla TRWAGMYFPDXBNJZSQVHLCKE. En los NIE, la X, Y y Z iniciales se sustituyen por 0, 1 y 2."
+msgstr ""
+
+#: data/tools/empresas.php:89
+msgid "Validar IBAN"
+msgstr ""
+
+#: data/tools/empresas.php:90
+msgid "Comprueba los dígitos de control de un IBAN y, en cuentas españolas, los del CCC, y lo muestra bien formateado."
+msgstr ""
+
+#: data/tools/empresas.php:91
+msgid "Comprueba si un número de cuenta IBAN está bien escrito antes de usarlo en una factura o una transferencia: dígitos de control internacionales, longitud por país y, en cuentas españolas, los dígitos de control del CCC."
+msgstr ""
+
+#: data/tools/empresas.php:100
+msgid "Escribe o pega el IBAN (o una lista, uno por línea)."
+msgstr ""
+
+#: data/tools/empresas.php:101
+msgid "Consulta si es válido y sus datos: país, entidad, oficina y cuenta."
+msgstr ""
+
+#: data/tools/empresas.php:102
+msgid "Copia el IBAN ya formateado en grupos de cuatro."
+msgstr ""
+
+#: data/tools/empresas.php:105
+msgid "¿Comprueba si la cuenta existe?"
+msgstr ""
+
+#: data/tools/empresas.php:105
+msgid "No. Verifica la estructura y los dígitos de control; solo el banco puede confirmar que la cuenta existe y a nombre de quién está."
+msgstr ""
+
+#: data/tools/empresas.php:111
+msgid "Generador de presupuestos"
+msgstr ""
+
+#: data/tools/empresas.php:112
+msgid "Prepara presupuestos profesionales con líneas, descuentos e IVA y descárgalos en PDF."
+msgstr ""
+
+#: data/tools/empresas.php:113
+msgid "Crea un presupuesto para un cliente con conceptos, cantidades, descuentos e IVA, fecha de validez y condiciones. Descárgalo en PDF o imprímelo."
+msgstr ""
+
+#: data/tools/empresas.php:123
+msgid "Añade los conceptos con su precio, descuento e IVA."
+msgstr ""
+
+#: data/tools/empresas.php:124
+msgid "Indica la validez y las condiciones, y descarga el PDF."
+msgstr ""
+
+#: data/tools/empresas.php:128
+msgid "¿Puedo convertir el presupuesto en factura?"
+msgstr ""
+
+#: data/tools/empresas.php:128
+msgid "Exporta el presupuesto en JSON e impórtalo en el generador de facturas: se cargarán las mismas líneas y datos para que solo cambies el número y las fechas."
+msgstr ""
+
+#: data/tools/empresas.php:134
+msgid "Generador de recibos"
+msgstr ""
+
+#: data/tools/empresas.php:135
+msgid "Crea recibos de pago con el importe en letras, listos para imprimir y firmar."
+msgstr ""
+
+#: data/tools/empresas.php:136
 msgid "Genera un recibo de pago (alquiler, señal, venta entre particulares…) con el importe escrito en letras y dos ejemplares por hoja para firmar."
 msgstr ""
 
-#: data/tools/empresas.php:74
+#: data/tools/empresas.php:144
 msgid "Indica el importe, quién paga, quién cobra y el concepto."
 msgstr ""
 
-#: data/tools/empresas.php:75
+#: data/tools/empresas.php:145
 msgid "Revisa la vista previa con el importe en letras."
 msgstr ""
 
-#: data/tools/empresas.php:76
+#: data/tools/empresas.php:146
 msgid "Imprime o guarda como PDF y firma los ejemplares."
 msgstr ""
 
-#: data/tools/empresas.php:79
+#: data/tools/empresas.php:149
 msgid "¿Qué valor tiene un recibo?"
 msgstr ""
 
-#: data/tools/empresas.php:79
+#: data/tools/empresas.php:149
 msgid "Es un justificante de que se ha recibido un pago. No sustituye a una factura cuando esta es obligatoria."
 msgstr ""
 
-#: data/tools/empresas.php:85
+#: data/tools/empresas.php:155
 msgid "Conversor de listas de productos y precios"
 msgstr ""
 
-#: data/tools/empresas.php:86
+#: data/tools/empresas.php:156
 msgid "Convierte listas de productos a CSV, JSON, Markdown o HTML y ajusta precios con IVA, subidas y redondeos."
 msgstr ""
 
-#: data/tools/empresas.php:87
+#: data/tools/empresas.php:157
 msgid "Pega o sube una lista de productos con precios y conviértela a otro formato, añadiendo o quitando IVA, aplicando subidas o bajadas y redondeando a ,99 o ,95."
 msgstr ""
 
-#: data/tools/empresas.php:96
+#: data/tools/empresas.php:166
 msgid "Pega la lista o arrastra un CSV."
 msgstr ""
 
-#: data/tools/empresas.php:97
+#: data/tools/empresas.php:167
 msgid "Elige las columnas de nombre y precio y la operación."
 msgstr ""
 
-#: data/tools/empresas.php:98
+#: data/tools/empresas.php:168
 #: data/tools/productividad.php:234
 msgid "Copia o descarga el resultado en el formato que necesites."
 msgstr ""
 
-#: data/tools/empresas.php:104
+#: data/tools/empresas.php:174
 msgid "Calculadora de factura (IVA e IRPF)"
 msgstr ""
 
-#: data/tools/empresas.php:105
+#: data/tools/empresas.php:175
 msgid "Calcula el total de una factura con IVA, retención de IRPF y recargo de equivalencia."
 msgstr ""
 
-#: data/tools/empresas.php:106
+#: data/tools/empresas.php:176
 msgid "Calcula al instante cuánto cobrar en una factura: base imponible, IVA, retención de IRPF y recargo de equivalencia."
 msgstr ""
 
-#: data/tools/empresas.php:114
+#: data/tools/empresas.php:184
 msgid "Introduce la base imponible."
 msgstr ""
 
-#: data/tools/empresas.php:115
+#: data/tools/empresas.php:185
 msgid "Elige el tipo de IVA y la retención."
 msgstr ""
 
-#: data/tools/empresas.php:116
+#: data/tools/empresas.php:186
 msgid "Consulta el desglose y el total a cobrar."
 msgstr ""
 
-#: data/tools/empresas.php:122
+#: data/tools/empresas.php:192
 msgid "Calcular margen de beneficio"
 msgstr ""
 
-#: data/tools/empresas.php:123
+#: data/tools/empresas.php:193
 msgid "Calcula el margen comercial y el markup a partir del coste y el precio de venta."
 msgstr ""
 
-#: data/tools/empresas.php:124
+#: data/tools/empresas.php:194
 msgid "Descubre qué porcentaje del precio de venta es beneficio y cuánto ganas por unidad, a partir del coste y el precio."
 msgstr ""
 
-#: data/tools/empresas.php:132
+#: data/tools/empresas.php:202
 msgid "Introduce el coste del producto."
 msgstr ""
 
-#: data/tools/empresas.php:133
+#: data/tools/empresas.php:203
 msgid "Introduce el precio de venta sin IVA."
 msgstr ""
 
-#: data/tools/empresas.php:134
+#: data/tools/empresas.php:204
 msgid "Consulta el margen, el markup y el beneficio por unidad."
 msgstr ""
 
-#: data/tools/empresas.php:137
+#: data/tools/empresas.php:207
 msgid "¿Qué diferencia hay entre margen y markup?"
 msgstr ""
 
-#: data/tools/empresas.php:137
+#: data/tools/empresas.php:207
 msgid "El margen se calcula sobre el precio de venta y el markup sobre el coste. Un producto que cuesta 50 € y se vende a 100 € tiene un 50 % de margen y un 100 % de markup."
 msgstr ""
 
-#: data/tools/empresas.php:143
+#: data/tools/empresas.php:213
 msgid "Calcular precio de venta"
 msgstr ""
 
-#: data/tools/empresas.php:144
+#: data/tools/empresas.php:214
 msgid "Calcula el precio de venta necesario para conseguir un margen o un markup objetivo."
 msgstr ""
 
-#: data/tools/empresas.php:145
+#: data/tools/empresas.php:215
 msgid "Fija tus precios con criterio: calcula el precio de venta a partir del coste y del margen o markup que quieres conseguir, con IVA opcional."
 msgstr ""
 
-#: data/tools/empresas.php:153
+#: data/tools/empresas.php:223
 msgid "Introduce el coste por unidad."
 msgstr ""
 
-#: data/tools/empresas.php:154
+#: data/tools/empresas.php:224
 msgid "Elige si quieres un margen o un markup y el porcentaje."
 msgstr ""
 
-#: data/tools/empresas.php:155
+#: data/tools/empresas.php:225
 msgid "Consulta el precio sin IVA y con IVA."
 msgstr ""
 
-#: data/tools/empresas.php:161
+#: data/tools/empresas.php:231
 msgid "Convertir markup y margen"
 msgstr ""
 
-#: data/tools/empresas.php:162
+#: data/tools/empresas.php:232
 msgid "Pasa un porcentaje de markup a margen y viceversa con un ejemplo práctico."
 msgstr ""
 
-#: data/tools/empresas.php:163
+#: data/tools/empresas.php:233
 msgid "Convierte un markup (sobre coste) en margen (sobre precio) o al revés, para no confundir los porcentajes al fijar precios."
 msgstr ""
 
-#: data/tools/empresas.php:171
+#: data/tools/empresas.php:241
 #: data/tools/texto.php:377
 msgid "Elige la dirección de la conversión."
 msgstr ""
 
-#: data/tools/empresas.php:172
+#: data/tools/empresas.php:242
 msgid "Introduce el porcentaje."
 msgstr ""
 
-#: data/tools/empresas.php:173
+#: data/tools/empresas.php:243
 msgid "Consulta el equivalente y el ejemplo con un coste."
 msgstr ""
 
-#: data/tools/empresas.php:179
+#: data/tools/empresas.php:249
 msgid "Calcular beneficio neto"
 msgstr ""
 
-#: data/tools/empresas.php:180
+#: data/tools/empresas.php:250
 msgid "Estima el beneficio neto a partir de ingresos, costes, gastos e impuestos."
 msgstr ""
 
-#: data/tools/empresas.php:181
+#: data/tools/empresas.php:251
 msgid "Calcula el beneficio bruto, operativo y neto estimado de un negocio o un periodo a partir de ingresos, costes y un tipo impositivo."
 msgstr ""
 
-#: data/tools/empresas.php:189
+#: data/tools/empresas.php:259
 msgid "Introduce los ingresos sin IVA y el coste de ventas."
 msgstr ""
 
-#: data/tools/empresas.php:190
+#: data/tools/empresas.php:260
 msgid "Añade los gastos operativos y otros gastos."
 msgstr ""
 
-#: data/tools/empresas.php:191
+#: data/tools/empresas.php:261
 msgid "Indica el tipo impositivo estimado y consulta el resultado."
 msgstr ""
 
-#: data/tools/empresas.php:197
+#: data/tools/empresas.php:267
 msgid "Calcular punto de equilibrio"
 msgstr ""
 
-#: data/tools/empresas.php:198
+#: data/tools/empresas.php:268
 msgid "Calcula cuántas unidades o cuánta facturación necesitas para cubrir costes."
 msgstr ""
 
-#: data/tools/empresas.php:199
+#: data/tools/empresas.php:269
 msgid "Averigua a partir de qué volumen de ventas empiezas a ganar dinero con tus costes fijos, el precio y el coste variable por unidad."
 msgstr ""
 
-#: data/tools/empresas.php:207
+#: data/tools/empresas.php:277
 msgid "Introduce los costes fijos del periodo."
 msgstr ""
 
-#: data/tools/empresas.php:208
+#: data/tools/empresas.php:278
 msgid "Indica el precio de venta y el coste variable por unidad."
 msgstr ""
 
-#: data/tools/empresas.php:209
+#: data/tools/empresas.php:279
 msgid "Consulta las unidades y la facturación necesarias."
 msgstr ""
 
-#: data/tools/empresas.php:215
+#: data/tools/empresas.php:285
 msgid "Costes fijos y variables"
 msgstr ""
 
-#: data/tools/empresas.php:216
+#: data/tools/empresas.php:286
 msgid "Calcula el coste total y por unidad separando costes fijos y variables."
 msgstr ""
 
-#: data/tools/empresas.php:217
+#: data/tools/empresas.php:287
 msgid "Calcula cuánto te cuesta producir o vender cada unidad separando los costes fijos de los variables, y el margen si indicas el precio."
 msgstr ""
 
-#: data/tools/empresas.php:225
+#: data/tools/empresas.php:295
 msgid "Introduce los costes fijos mensuales."
 msgstr ""
 
-#: data/tools/empresas.php:226
+#: data/tools/empresas.php:296
 msgid "Indica el coste variable por unidad y las unidades."
 msgstr ""
 
-#: data/tools/empresas.php:227
+#: data/tools/empresas.php:297
 msgid "Consulta el coste total y por unidad."
 msgstr ""
 
-#: data/tools/empresas.php:233
+#: data/tools/empresas.php:303
 msgid "Beneficio por producto"
 msgstr ""
 
-#: data/tools/empresas.php:234
+#: data/tools/empresas.php:304
 msgid "Calcula el beneficio por unidad y total de un producto con envío y comisiones."
 msgstr ""
 
-#: data/tools/empresas.php:235
+#: data/tools/empresas.php:305
 msgid "Calcula cuánto ganas realmente con cada producto restando el coste, el envío, las comisiones y otros gastos."
 msgstr ""
 
-#: data/tools/empresas.php:243
+#: data/tools/empresas.php:313
 msgid "Introduce el precio de venta sin IVA y el coste."
 msgstr ""
 
-#: data/tools/empresas.php:244
+#: data/tools/empresas.php:314
 msgid "Añade envío, comisiones y otros costes."
 msgstr ""
 
-#: data/tools/empresas.php:245
+#: data/tools/empresas.php:315
 msgid "Consulta el beneficio por unidad y total."
 msgstr ""
 
-#: data/tools/empresas.php:251
+#: data/tools/empresas.php:321
 msgid "Rentabilidad de un pedido online"
 msgstr ""
 
-#: data/tools/empresas.php:252
+#: data/tools/empresas.php:322
 msgid "Calcula el beneficio real de un pedido de tienda online con pasarela, envío, captación y devoluciones."
 msgstr ""
 
-#: data/tools/empresas.php:253
+#: data/tools/empresas.php:323
 msgid "Descubre cuánto te queda de cada pedido después de IVA, coste de producto, envío, pasarela de pago, publicidad y devoluciones esperadas."
 msgstr ""
 
-#: data/tools/empresas.php:261
+#: data/tools/empresas.php:331
 msgid "Introduce el importe del pedido con IVA."
 msgstr ""
 
-#: data/tools/empresas.php:262
+#: data/tools/empresas.php:332
 msgid "Añade costes de producto, envío, pago y captación."
 msgstr ""
 
-#: data/tools/empresas.php:263
+#: data/tools/empresas.php:333
 msgid "Consulta el beneficio por pedido."
 msgstr ""
 
-#: data/tools/empresas.php:269
+#: data/tools/empresas.php:339
 msgid "Calculadora de comisiones de marketplace"
 msgstr ""
 
-#: data/tools/empresas.php:270
+#: data/tools/empresas.php:340
 msgid "Calcula el beneficio de una venta en un marketplace tras su comisión y tarifas."
 msgstr ""
 
-#: data/tools/empresas.php:271
+#: data/tools/empresas.php:341
 msgid "Introduce el precio, la comisión porcentual y la tarifa fija de la plataforma y descubre cuánto ganas realmente por venta. Los porcentajes los pones tú según tu plataforma."
 msgstr ""
 
-#: data/tools/empresas.php:279
+#: data/tools/empresas.php:349
 msgid "Introduce el precio de venta y el IVA incluido."
 msgstr ""
 
-#: data/tools/empresas.php:280
+#: data/tools/empresas.php:350
 msgid "Indica la comisión y la tarifa fija de la plataforma."
 msgstr ""
 
-#: data/tools/empresas.php:281
+#: data/tools/empresas.php:351
 msgid "Añade coste y envío y consulta el beneficio."
 msgstr ""
 
-#: data/tools/empresas.php:284
+#: data/tools/empresas.php:354
 msgid "¿Qué comisión cobra cada plataforma?"
 msgstr ""
 
-#: data/tools/empresas.php:284
+#: data/tools/empresas.php:354
 msgid "Varía según la plataforma, la categoría y el plan, y cambia con el tiempo. Consulta las tarifas vigentes de tu plataforma e introdúcelas aquí."
 msgstr ""
 
-#: data/tools/empresas.php:290
+#: data/tools/empresas.php:360
 msgid "Peso volumétrico y coste de envío"
 msgstr ""
 
-#: data/tools/empresas.php:291
+#: data/tools/empresas.php:361
 msgid "Calcula el peso volumétrico y el peso facturable de un paquete, y estima el coste."
 msgstr ""
 
-#: data/tools/empresas.php:292
+#: data/tools/empresas.php:362
 msgid "Calcula el peso volumétrico de un paquete con el divisor de tu transportista y el peso facturable; si indicas la tarifa, estima el coste."
 msgstr ""
 
-#: data/tools/empresas.php:300
+#: data/tools/empresas.php:370
 msgid "Introduce las medidas y el peso real."
 msgstr ""
 
-#: data/tools/empresas.php:301
+#: data/tools/empresas.php:371
 msgid "Elige el divisor volumétrico."
 msgstr ""
 
-#: data/tools/empresas.php:302
+#: data/tools/empresas.php:372
 msgid "Consulta el peso facturable y el coste estimado."
 msgstr ""
 
-#: data/tools/empresas.php:308
+#: data/tools/empresas.php:378
 msgid "Coste de adquisición de clientes (CAC)"
 msgstr ""
 
-#: data/tools/empresas.php:309
+#: data/tools/empresas.php:379
 msgid "Calcula el CAC y, si indicas el margen, si recuperas la inversión con cada cliente."
 msgstr ""
 
-#: data/tools/empresas.php:310
+#: data/tools/empresas.php:380
 msgid "Calcula cuánto te cuesta conseguir cada cliente nuevo y compáralo con el margen que te deja a lo largo de sus compras."
 msgstr ""
 
-#: data/tools/empresas.php:318
+#: data/tools/empresas.php:388
 msgid "Introduce el gasto en marketing y otros costes comerciales."
 msgstr ""
 
-#: data/tools/empresas.php:319
+#: data/tools/empresas.php:389
 msgid "Indica los clientes nuevos conseguidos."
 msgstr ""
 
-#: data/tools/empresas.php:320
+#: data/tools/empresas.php:390
 msgid "Opcionalmente, añade margen y compras medias para ver la recuperación."
 msgstr ""
 
-#: data/tools/empresas.php:326
+#: data/tools/empresas.php:396
 msgid "Calculadora de campañas de publicidad"
 msgstr ""
 
-#: data/tools/empresas.php:327
+#: data/tools/empresas.php:397
 msgid "Estima clics, conversiones, coste por venta y retorno de una campaña CPC o CPM."
 msgstr ""
 
-#: data/tools/empresas.php:328
+#: data/tools/empresas.php:398
 msgid "Calcula los resultados esperados de una campaña a partir del presupuesto, el CPC o CPM, el CTR y la tasa de conversión."
 msgstr ""
 
-#: data/tools/empresas.php:336
+#: data/tools/empresas.php:406
 msgid "Introduce el presupuesto y el modelo de pago."
 msgstr ""
 
-#: data/tools/empresas.php:337
+#: data/tools/empresas.php:407
 msgid "Indica CPC o CPM, CTR y conversión."
 msgstr ""
 
-#: data/tools/empresas.php:338
+#: data/tools/empresas.php:408
 msgid "Consulta clics, conversiones y coste por venta."
 msgstr ""
 
-#: data/tools/empresas.php:344
+#: data/tools/empresas.php:414
 msgid "Calcular comisiones de ventas"
 msgstr ""
 
-#: data/tools/empresas.php:345
+#: data/tools/empresas.php:415
 msgid "Calcula comisiones comerciales con tramos, umbral y fijo o bonus."
 msgstr ""
 
-#: data/tools/empresas.php:346
+#: data/tools/empresas.php:416
 msgid "Calcula la comisión de un comercial con un porcentaje base, un porcentaje superior a partir de un umbral y un fijo o bonus."
 msgstr ""
 
-#: data/tools/empresas.php:354
+#: data/tools/empresas.php:424
 msgid "Introduce las ventas del periodo."
 msgstr ""
 
-#: data/tools/empresas.php:355
+#: data/tools/empresas.php:425
 msgid "Indica la comisión y, si hay, el umbral y la comisión superior."
 msgstr ""
 
-#: data/tools/empresas.php:356
+#: data/tools/empresas.php:426
 msgid "Consulta la comisión total."
 msgstr ""
 
-#: data/tools/empresas.php:362
+#: data/tools/empresas.php:432
 msgid "Descuentos comerciales sucesivos"
 msgstr ""
 
-#: data/tools/empresas.php:363
+#: data/tools/empresas.php:433
 msgid "Calcula el precio neto tras varios descuentos encadenados y el descuento equivalente."
 msgstr ""
 
-#: data/tools/empresas.php:364
+#: data/tools/empresas.php:434
 msgid "Aplica descuentos en cascada (por ejemplo, 20 % + 5 % + 2 %) sobre un precio de tarifa y descubre el descuento real equivalente."
 msgstr ""
 
-#: data/tools/empresas.php:372
+#: data/tools/empresas.php:442
 msgid "Introduce el precio de tarifa."
 msgstr ""
 
-#: data/tools/empresas.php:373
+#: data/tools/empresas.php:443
 msgid "Escribe los descuentos sucesivos."
 msgstr ""
 
-#: data/tools/empresas.php:374
+#: data/tools/empresas.php:444
 msgid "Consulta el precio neto y el descuento equivalente."
 msgstr ""
 
-#: data/tools/empresas.php:377
+#: data/tools/empresas.php:447
 msgid "¿Por qué 20 % + 10 % no es un 30 %?"
 msgstr ""
 
-#: data/tools/empresas.php:377
+#: data/tools/empresas.php:447
 msgid "Porque el segundo descuento se aplica sobre el precio ya rebajado: 100 € − 20 % = 80 €; 80 € − 10 % = 72 €, es decir, un 28 % en total."
 msgstr ""
 
-#: data/tools/empresas.php:383
+#: data/tools/empresas.php:453
 msgid "Rentabilidad de reventa"
 msgstr ""
 
-#: data/tools/empresas.php:384
+#: data/tools/empresas.php:454
 msgid "Calcula el beneficio y la rentabilidad de comprar, reacondicionar y revender un artículo."
 msgstr ""
 
-#: data/tools/empresas.php:385
+#: data/tools/empresas.php:455
 msgid "Calcula si merece la pena revender un artículo: precio de compra, gastos, reparación, comisión de la plataforma y envío."
 msgstr ""
 
-#: data/tools/empresas.php:393
+#: data/tools/empresas.php:463
 msgid "Introduce el precio y los gastos de compra."
 msgstr ""
 
-#: data/tools/empresas.php:394
+#: data/tools/empresas.php:464
 msgid "Añade el precio de venta y los costes de venta."
 msgstr ""
 
-#: data/tools/empresas.php:395
+#: data/tools/empresas.php:465
 msgid "Consulta el beneficio neto y la rentabilidad."
 msgstr ""
 
@@ -5165,7 +5288,7 @@ msgid "¿Qué ancho elijo?"
 msgstr ""
 
 #: data/tools/imagenes.php:419
-msgid "El ancho máximo al que se muestran en tu web, multiplicado por 2 si quieres nitidez en pantallas de alta densidad (por ejemplo, 1600 px para una imagen de 800 px)."
+msgid "El ancho máximo al que se muestran en tu web, multiplicado por 2 si quieres nitidez en pantallas de alta densidad (por ejemplo, 1.600 px para una imagen de 800 px)."
 msgstr ""
 
 #: data/tools/imagenes.php:425
@@ -8520,9 +8643,9 @@ msgid "¿Eliminar esta calculadora? Su página dejará de existir."
 msgstr ""
 
 #: includes/admin/class-custom-tools.php:120
-#: assets/js/engines/biz.js:105
-#: assets/js/engines/biz.js:179
-#: assets/js/engines/biz.js:492
+#: assets/js/engines/biz.js:157
+#: assets/js/engines/biz.js:310
+#: assets/js/engines/biz.js:812
 #: assets/js/engines/calc-money.js:123
 #: assets/js/engines/calc-money.js:303
 #: assets/js/engines/prod.js:342
@@ -8530,7 +8653,9 @@ msgid "Precio"
 msgstr ""
 
 #: includes/admin/class-custom-tools.php:121
-#: assets/js/engines/biz.js:269
+#: assets/js/engines/biz.js:157
+#: assets/js/engines/biz.js:312
+#: assets/js/engines/biz.js:503
 #: assets/js/engines/calc-home.js:330
 #: assets/js/engines/calc-money.js:768
 #: assets/js/engines/dates.js:158
@@ -8549,8 +8674,8 @@ msgstr ""
 
 #: includes/admin/class-custom-tools.php:123
 #: includes/admin/views/stats.php:33
-#: assets/js/engines/biz.js:108
-#: assets/js/engines/biz.js:210
+#: assets/js/engines/biz.js:187
+#: assets/js/engines/biz.js:348
 #: assets/js/engines/calc-basic.js:156
 #: assets/js/engines/calc-home.js:97
 #: assets/js/engines/calc-money.js:49
@@ -8707,7 +8832,7 @@ msgid "Moneda (€)"
 msgstr ""
 
 #: includes/admin/class-custom-tools.php:164
-#: assets/js/engines/biz.js:433
+#: assets/js/engines/biz.js:753
 #: assets/js/engines/calc-basic.js:21
 #: assets/js/engines/calc-money.js:131
 #: assets/js/engines/calculator.js:92
@@ -8806,7 +8931,11 @@ msgstr ""
 
 #: includes/admin/class-custom-tools.php:331
 #: assets/admin/admin.js:68
-#: assets/js/engines/biz.js:440
+#: assets/js/engines/biz.js:760
+#: assets/js/engines/biz.js:860
+#: assets/js/engines/biz.js:861
+#: assets/js/engines/biz.js:891
+#: assets/js/engines/biz.js:892
 #: assets/js/engines/calc-basic.js:33
 #: assets/js/engines/calc-money.js:207
 #: assets/js/engines/dev.js:51
@@ -8815,7 +8944,7 @@ msgstr ""
 #: assets/js/engines/image.js:752
 #: assets/js/engines/prod.js:344
 #: assets/js/engines/text.js:99
-#: assets/js/ui.js:471
+#: assets/js/ui.js:486
 msgid "Resultado"
 msgstr ""
 
@@ -8834,6 +8963,9 @@ msgstr ""
 #: includes/admin/class-messages-admin.php:290
 #: includes/admin/class-tools-admin.php:47
 #: templates/catalog.php:49
+#: assets/js/engines/biz.js:856
+#: assets/js/engines/biz.js:861
+#: assets/js/engines/biz.js:862
 #: assets/js/engines/dev.js:366
 #: assets/js/engines/files.js:115
 #: assets/js/engines/gen.js:395
@@ -10066,7 +10198,7 @@ msgid "Copia el resultado si lo necesitas."
 msgstr ""
 
 #: includes/class-rest.php:166
-#: assets/js/engines/biz.js:526
+#: assets/js/engines/biz.js:906
 #: assets/js/engines/dates.js:779
 #: assets/js/engines/dev.js:522
 #: assets/js/engines/files.js:205
@@ -11076,132 +11208,220 @@ msgid "Se ha producido un error al iniciar la herramienta. Recarga la página."
 msgstr ""
 
 #: assets/js/engines/biz.js:80
-#: assets/js/engines/biz.js:157
-#: assets/js/engines/biz.js:224
+msgid "Factura"
+msgstr ""
+
+#: assets/js/engines/biz.js:80
+msgid "Nº de factura"
+msgstr ""
+
+#: assets/js/engines/biz.js:80
+#: assets/js/engines/biz.js:492
+msgid "Vencimiento"
+msgstr ""
+
+#: assets/js/engines/biz.js:81
 #: assets/js/engines/calc-money.js:666
 msgid "Presupuesto"
 msgstr ""
 
-#: assets/js/engines/biz.js:80
-#: assets/js/engines/biz.js:157
-#: assets/js/engines/biz.js:224
-msgid "Factura"
-msgstr ""
-
-#: assets/js/engines/biz.js:84
-#: assets/js/engines/biz.js:164
-#: assets/js/engines/biz.js:392
-#: assets/js/engines/biz.js:397
-msgid "NIF"
-msgstr ""
-
-#: assets/js/engines/biz.js:88
-#: assets/js/engines/biz.js:158
-#: assets/js/engines/biz.js:263
-msgid "Nº de factura"
-msgstr ""
-
-#: assets/js/engines/biz.js:88
-#: assets/js/engines/biz.js:158
-#: assets/js/engines/biz.js:263
+#: assets/js/engines/biz.js:81
 msgid "Nº de presupuesto"
 msgstr ""
 
-#: assets/js/engines/biz.js:88
-#: assets/js/engines/biz.js:158
-#: assets/js/engines/biz.js:264
-#: assets/js/engines/biz.js:373
-#: assets/js/engines/dates.js:387
-#: assets/js/engines/dates.js:401
-#: assets/js/engines/gen.js:427
-#: assets/js/engines/image.js:535
-#: assets/js/engines/prod.js:89
-#: assets/js/engines/prod.js:172
-msgid "Fecha"
-msgstr ""
-
-#: assets/js/engines/biz.js:89
-#: assets/js/engines/biz.js:159
-#: assets/js/engines/biz.js:265
-msgid "Vencimiento"
-msgstr ""
-
-#: assets/js/engines/biz.js:89
-#: assets/js/engines/biz.js:159
-#: assets/js/engines/biz.js:265
+#: assets/js/engines/biz.js:81
 msgid "Válido hasta"
 msgstr ""
 
+#: assets/js/engines/biz.js:82
+msgid "Albarán"
+msgstr ""
+
+#: assets/js/engines/biz.js:82
+msgid "Nº de albarán"
+msgstr ""
+
+#: assets/js/engines/biz.js:87
+#: assets/js/engines/biz.js:108
+msgid "Registro Mercantil"
+msgstr ""
+
+#: assets/js/engines/biz.js:88
+#: assets/js/engines/biz.js:108
+msgid "Registro de Cooperativas"
+msgstr ""
+
+#: assets/js/engines/biz.js:89
+msgid "Otro registro"
+msgstr ""
+
 #: assets/js/engines/biz.js:94
-#: assets/js/engines/biz.js:199
-#: assets/js/engines/biz.js:304
-#: assets/js/engines/calc-money.js:49
-#: assets/js/engines/calc-money.js:59
-#: assets/js/engines/calc-money.js:72
-msgid "Base imponible"
+#: assets/js/engines/biz.js:751
+#: assets/js/engines/pdf.js:332
+msgid "Ninguna"
+msgstr ""
+
+#: assets/js/engines/biz.js:95
+msgid "Operación exenta de IVA"
+msgstr ""
+
+#: assets/js/engines/biz.js:95
+#, js-format
+msgid "Operación exenta de IVA conforme al %s."
+msgstr ""
+
+#: assets/js/engines/biz.js:95
+msgid "artículo 20 de la Ley 37/1992, del Impuesto sobre el Valor Añadido"
 msgstr ""
 
 #: assets/js/engines/biz.js:96
-#: assets/js/engines/biz.js:201
-#, js-format
-msgid "IVA %s %% sobre %s"
+msgid "Inversión del sujeto pasivo"
+msgstr ""
+
+#: assets/js/engines/biz.js:96
+msgid "Inversión del sujeto pasivo."
 msgstr ""
 
 #: assets/js/engines/biz.js:97
-#: assets/js/engines/biz.js:202
-#, js-format
-msgid "Recargo de equivalencia %s %%"
+msgid "Entrega intracomunitaria exenta"
+msgstr ""
+
+#: assets/js/engines/biz.js:97
+msgid "Entrega intracomunitaria exenta del IVA (artículo 25 de la Ley 37/1992, del Impuesto sobre el Valor Añadido)."
+msgstr ""
+
+#: assets/js/engines/biz.js:98
+msgid "Régimen especial del criterio de caja"
+msgstr ""
+
+#: assets/js/engines/biz.js:98
+msgid "Régimen especial del criterio de caja."
 msgstr ""
 
 #: assets/js/engines/biz.js:99
-#: assets/js/engines/biz.js:204
-#, js-format
-msgid "Retención IRPF %s %%"
+msgid "Facturación por el destinatario"
+msgstr ""
+
+#: assets/js/engines/biz.js:99
+msgid "Facturación por el destinatario."
 msgstr ""
 
 #: assets/js/engines/biz.js:100
-msgid "Vista previa del documento"
+msgid "Otra (texto libre)"
 msgstr ""
 
-#: assets/js/engines/biz.js:103
-#: assets/js/engines/biz.js:166
-msgid "Emisor"
+#: assets/js/engines/biz.js:108
+msgid "el registro correspondiente"
 msgstr ""
 
-#: assets/js/engines/biz.js:103
-#: assets/js/engines/biz.js:166
-msgid "Cliente"
+#: assets/js/engines/biz.js:109
+msgid "de"
 msgstr ""
 
-#: assets/js/engines/biz.js:105
-#: assets/js/engines/biz.js:178
-#: assets/js/engines/biz.js:268
-#: assets/js/engines/biz.js:380
+#: assets/js/engines/biz.js:110
+#: assets/js/engines/biz.js:470
+msgid "Tomo"
+msgstr ""
+
+#: assets/js/engines/biz.js:110
+msgid "Libro"
+msgstr ""
+
+#: assets/js/engines/biz.js:110
+#: assets/js/engines/biz.js:472
+msgid "Folio"
+msgstr ""
+
+#: assets/js/engines/biz.js:110
+#: assets/js/engines/prod.js:120
+msgid "Sección"
+msgstr ""
+
+#: assets/js/engines/biz.js:110
+#: assets/js/engines/biz.js:474
+msgid "Hoja"
+msgstr ""
+
+#: assets/js/engines/biz.js:110
+#: assets/js/engines/biz.js:475
+msgid "Inscripción"
+msgstr ""
+
+#: assets/js/engines/biz.js:112
+#, js-format
+msgid "Inscrita en el %s"
+msgstr ""
+
+#: assets/js/engines/biz.js:113
+msgid "Capital social:"
+msgstr ""
+
+#: assets/js/engines/biz.js:119
+msgid "El emisor"
+msgstr ""
+
+#: assets/js/engines/biz.js:120
+msgid "la dirección indicada en este documento"
+msgstr ""
+
+#: assets/js/engines/biz.js:121
+#, js-format
+msgid "Protección de datos: %1$s es responsable del tratamiento de los datos personales que figuran en este documento. Se tratan para gestionar la relación comercial y cumplir las obligaciones legales, fiscales y contables, sobre la base de la ejecución del contrato y del cumplimiento de obligaciones legales (art. 6.1.b y 6.1.c del Reglamento (UE) 2016/679, RGPD). Se conservarán durante los plazos legalmente exigidos y no se cederán a terceros salvo obligación legal. Puede ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad escribiendo a %2$s, y presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es)."
+msgstr ""
+
+#: assets/js/engines/biz.js:128
+#: assets/js/engines/biz.js:149
+#: assets/js/engines/biz.js:290
+#: assets/js/engines/biz.js:712
+#: assets/js/engines/biz.js:717
+msgid "NIF"
+msgstr ""
+
+#: assets/js/engines/biz.js:148
+#: assets/js/engines/biz.js:289
+msgid "Nombre comercial"
+msgstr ""
+
+#: assets/js/engines/biz.js:153
+#: assets/js/engines/biz.js:270
+#: assets/js/engines/biz.js:490
+msgid "Fecha de expedición"
+msgstr ""
+
+#: assets/js/engines/biz.js:154
+#: assets/js/engines/biz.js:271
+msgid "Fecha de la operación"
+msgstr ""
+
+#: assets/js/engines/biz.js:157
+#: assets/js/engines/biz.js:308
+#: assets/js/engines/biz.js:502
+#: assets/js/engines/biz.js:700
 #: assets/js/engines/lists.js:103
 #: assets/js/engines/lists.js:139
 #: assets/js/engines/lists.js:152
 msgid "Concepto"
 msgstr ""
 
-#: assets/js/engines/biz.js:105
-#: assets/js/engines/biz.js:179
+#: assets/js/engines/biz.js:157
+#: assets/js/engines/biz.js:310
 msgid "Cant."
 msgstr ""
 
-#: assets/js/engines/biz.js:105
-#: assets/js/engines/biz.js:179
+#: assets/js/engines/biz.js:157
+#: assets/js/engines/biz.js:310
 msgid "Dto."
 msgstr ""
 
-#: assets/js/engines/biz.js:105
-#: assets/js/engines/biz.js:179
-#: assets/js/engines/biz.js:272
-#: assets/js/engines/biz.js:304
+#: assets/js/engines/biz.js:157
+#: assets/js/engines/biz.js:310
+#: assets/js/engines/biz.js:508
+#: assets/js/engines/biz.js:597
 msgid "IVA"
 msgstr ""
 
-#: assets/js/engines/biz.js:105
-#: assets/js/engines/biz.js:179
+#: assets/js/engines/biz.js:157
+#: assets/js/engines/biz.js:310
 #: assets/js/engines/calc-money.js:31
 #: assets/js/engines/calc-money.js:304
 #: assets/js/engines/calc-money.js:542
@@ -11211,135 +11431,438 @@ msgstr ""
 msgid "Importe"
 msgstr ""
 
-#: assets/js/engines/biz.js:106
-#: assets/js/engines/biz.js:321
+#: assets/js/engines/biz.js:164
+#: assets/js/engines/biz.js:337
+#: assets/js/engines/biz.js:597
+#: assets/js/engines/calc-money.js:49
+#: assets/js/engines/calc-money.js:59
+#: assets/js/engines/calc-money.js:72
+msgid "Base imponible"
+msgstr ""
+
+#: assets/js/engines/biz.js:166
+#: assets/js/engines/biz.js:339
+#, js-format
+msgid "IVA %s %% sobre %s"
+msgstr ""
+
+#: assets/js/engines/biz.js:167
+#: assets/js/engines/biz.js:340
+#, js-format
+msgid "Recargo de equivalencia %s %%"
+msgstr ""
+
+#: assets/js/engines/biz.js:169
+#: assets/js/engines/biz.js:342
+#, js-format
+msgid "Retención IRPF %s %%"
+msgstr ""
+
+#: assets/js/engines/biz.js:171
+#, js-format
+msgid "Logotipo de %s"
+msgstr ""
+
+#: assets/js/engines/biz.js:171
+msgid "el emisor"
+msgstr ""
+
+#: assets/js/engines/biz.js:175
+msgid "Vista previa del documento"
+msgstr ""
+
+#: assets/js/engines/biz.js:179
+#: assets/js/engines/biz.js:268
+#: assets/js/engines/biz.js:388
+msgid "Factura rectificativa"
+msgstr ""
+
+#: assets/js/engines/biz.js:181
+#: assets/js/engines/biz.js:277
+msgid "Rectifica la factura"
+msgstr ""
+
+#: assets/js/engines/biz.js:181
+#: assets/js/engines/biz.js:277
+msgid "de fecha"
+msgstr ""
+
+#: assets/js/engines/biz.js:181
+#: assets/js/engines/biz.js:278
+msgid "Motivo"
+msgstr ""
+
+#: assets/js/engines/biz.js:182
+#: assets/js/engines/biz.js:296
+msgid "Emisor"
+msgstr ""
+
+#: assets/js/engines/biz.js:182
+#: assets/js/engines/biz.js:296
+msgid "Cliente"
+msgstr ""
+
+#: assets/js/engines/biz.js:185
+#: assets/js/engines/biz.js:621
 #: assets/js/engines/qr.js:215
 msgid "Añade al menos una línea."
 msgstr ""
 
-#: assets/js/engines/biz.js:109
-#: assets/js/engines/biz.js:212
-#: assets/js/engines/biz.js:277
-#: assets/js/engines/biz.js:381
-#: assets/js/engines/biz.js:395
+#: assets/js/engines/biz.js:189
+#: assets/js/engines/biz.js:361
+#: assets/js/engines/biz.js:521
+#: assets/js/engines/biz.js:701
+#: assets/js/engines/biz.js:715
 msgid "Forma de pago"
 msgstr ""
 
-#: assets/js/engines/biz.js:110
-#: assets/js/engines/biz.js:212
-#: assets/js/engines/biz.js:278
+#: assets/js/engines/biz.js:190
+#: assets/js/engines/biz.js:361
+#: assets/js/engines/biz.js:524
 msgid "Observaciones"
 msgstr ""
 
-#: assets/js/engines/biz.js:222
+#: assets/js/engines/biz.js:192
+#: assets/js/engines/biz.js:373
+msgid "Entregado por"
+msgstr ""
+
+#: assets/js/engines/biz.js:193
+#: assets/js/engines/biz.js:373
+msgid "Recibí conforme (nombre, DNI y fecha)"
+msgstr ""
+
+#: assets/js/engines/biz.js:386
 #, js-format
 msgid "Página %d de %d"
 msgstr ""
 
-#: assets/js/engines/biz.js:235
+#: assets/js/engines/biz.js:401
+msgid "Nombre y apellidos o razón social"
+msgstr ""
+
+#: assets/js/engines/biz.js:401
 msgid "Nombre o razón social"
 msgstr ""
 
-#: assets/js/engines/biz.js:236
-msgid "NIF / CIF"
+#: assets/js/engines/biz.js:402
+msgid "NIF / NIE / CIF"
 msgstr ""
 
-#: assets/js/engines/biz.js:237
-#: assets/js/engines/qr.js:90
-msgid "Dirección"
+#: assets/js/engines/biz.js:403
+msgid "Domicilio (calle, número, código postal y población)"
 msgstr ""
 
-#: assets/js/engines/biz.js:238
+#: assets/js/engines/biz.js:404
 msgid "Email o teléfono (opcional)"
 msgstr ""
 
-#: assets/js/engines/biz.js:261
+#: assets/js/engines/biz.js:406
+msgid "Nombre comercial (opcional)"
+msgstr ""
+
+#: assets/js/engines/biz.js:449
+msgid "Tipo de emisor"
+msgstr ""
+
+#: assets/js/engines/biz.js:449
+msgid "Autónomo o particular"
+msgstr ""
+
+#: assets/js/engines/biz.js:449
+msgid "Empresa (sociedad)"
+msgstr ""
+
+#: assets/js/engines/biz.js:452
+#: assets/js/engines/qr.js:197
+msgid "Quitar logotipo"
+msgstr ""
+
+#: assets/js/engines/biz.js:457
+msgid "El logotipo debe ocupar menos de 5 MB."
+msgstr ""
+
+#: assets/js/engines/biz.js:460
+msgid "Logotipo (opcional)"
+msgstr ""
+
+#: assets/js/engines/biz.js:461
+msgid "Subir logotipo"
+msgstr ""
+
+#: assets/js/engines/biz.js:462
+msgid "PNG, JPG, WebP o SVG. Aparece arriba a la izquierda del documento."
+msgstr ""
+
+#: assets/js/engines/biz.js:466
+msgid "Forma jurídica"
+msgstr ""
+
+#: assets/js/engines/biz.js:466
+msgid "— Elige —"
+msgstr ""
+
+#: assets/js/engines/biz.js:467
+msgid "Registro"
+msgstr ""
+
+#: assets/js/engines/biz.js:468
+msgid "Nombre del registro"
+msgstr ""
+
+#: assets/js/engines/biz.js:469
+msgid "Provincia o lugar del registro"
+msgstr ""
+
+#: assets/js/engines/biz.js:469
+msgid "Por ejemplo: Barcelona"
+msgstr ""
+
+#: assets/js/engines/biz.js:471
+msgid "Libro (si consta)"
+msgstr ""
+
+#: assets/js/engines/biz.js:473
+msgid "Sección (si consta)"
+msgstr ""
+
+#: assets/js/engines/biz.js:476
+msgid "Capital social (opcional)"
+msgstr ""
+
+#: assets/js/engines/biz.js:478
+msgid "Datos registrales de la sociedad"
+msgstr ""
+
+#: assets/js/engines/biz.js:479
+msgid "Las sociedades inscritas deben indicar sus datos de inscripción en facturas y demás documentación (Reglamento del Registro Mercantil, art. 24). Los encontrarás en la escritura o en una nota simple del registro."
+msgstr ""
+
+#: assets/js/engines/biz.js:483
 msgid "Tus datos (emisor)"
 msgstr ""
 
-#: assets/js/engines/biz.js:262
+#: assets/js/engines/biz.js:485
 msgid "Datos del cliente"
 msgstr ""
 
-#: assets/js/engines/biz.js:268
+#: assets/js/engines/biz.js:488
+msgid "Tipo de factura"
+msgstr ""
+
+#: assets/js/engines/biz.js:488
+msgid "Ordinaria"
+msgstr ""
+
+#: assets/js/engines/biz.js:488
+msgid "Rectificativa"
+msgstr ""
+
+#: assets/js/engines/biz.js:489
+msgid "Numeración correlativa; si usas series, inclúyela (p. ej. A-2026-001). Las rectificativas suelen llevar su propia serie (R-…)."
+msgstr ""
+
+#: assets/js/engines/biz.js:491
+msgid "Fecha de la operación (si es distinta)"
+msgstr ""
+
+#: assets/js/engines/biz.js:494
+msgid "Nº de la factura rectificada"
+msgstr ""
+
+#: assets/js/engines/biz.js:495
+msgid "Fecha de la factura rectificada"
+msgstr ""
+
+#: assets/js/engines/biz.js:496
+msgid "Motivo de la rectificación"
+msgstr ""
+
+#: assets/js/engines/biz.js:496
+msgid "Por ejemplo: devolución de mercancía, error en el precio…"
+msgstr ""
+
+#: assets/js/engines/biz.js:502
 msgid "Descripción del producto o servicio"
 msgstr ""
 
-#: assets/js/engines/biz.js:270
+#: assets/js/engines/biz.js:504
+msgid "Precio unitario (opcional)"
+msgstr ""
+
+#: assets/js/engines/biz.js:504
 msgid "Precio unitario (sin IVA)"
 msgstr ""
 
-#: assets/js/engines/biz.js:271
+#: assets/js/engines/biz.js:507
 msgid "Dto. %"
 msgstr ""
 
-#: assets/js/engines/biz.js:273
+#: assets/js/engines/biz.js:510
 msgid "Añadir línea"
 msgstr ""
 
-#: assets/js/engines/biz.js:274
-#: assets/js/engines/biz.js:304
+#: assets/js/engines/biz.js:511
+#: assets/js/engines/biz.js:597
 #: assets/js/engines/calc-money.js:743
 msgid "Retención IRPF"
 msgstr ""
 
-#: assets/js/engines/biz.js:274
+#: assets/js/engines/biz.js:511
 msgid "Sin retención"
 msgstr ""
 
-#: assets/js/engines/biz.js:274
-msgid "Solo aplica si facturas como profesional a empresas o autónomos."
+#: assets/js/engines/biz.js:511
+msgid "Habitual en profesionales que facturan a empresas o autónomos: 15 % general, 7 % en los primeros años de actividad. Comprueba tu caso."
 msgstr ""
 
-#: assets/js/engines/biz.js:275
+#: assets/js/engines/biz.js:512
 msgid "Aplicar recargo de equivalencia (cliente en ese régimen)"
 msgstr ""
 
-#: assets/js/engines/biz.js:277
-msgid "Por ejemplo: transferencia a la cuenta ES00 0000 0000 0000 0000 0000"
+#: assets/js/engines/biz.js:514
+msgid "Mención especial obligatoria (si aplica)"
 msgstr ""
 
-#: assets/js/engines/biz.js:278
+#: assets/js/engines/biz.js:514
+msgid "Las operaciones exentas, con inversión del sujeto pasivo, intracomunitarias o en criterio de caja deben indicarlo en la factura (Real Decreto 1619/2012, art. 6)."
+msgstr ""
+
+#: assets/js/engines/biz.js:515
+msgid "Precepto o texto de la mención"
+msgstr ""
+
+#: assets/js/engines/biz.js:515
+msgid "Por ejemplo: artículo 20.Uno.9º de la Ley 37/1992 (enseñanza)"
+msgstr ""
+
+#: assets/js/engines/biz.js:517
+msgid "Mostrar precios e importes en el albarán"
+msgstr ""
+
+#: assets/js/engines/biz.js:521
+msgid "Por ejemplo: transferencia bancaria a 30 días"
+msgstr ""
+
+#: assets/js/engines/biz.js:522
+msgid "IBAN para el pago (opcional)"
+msgstr ""
+
+#: assets/js/engines/biz.js:524
 msgid "Condiciones, plazos de entrega, validez…"
 msgstr ""
 
-#: assets/js/engines/biz.js:278
+#: assets/js/engines/biz.js:524
 msgid "Información adicional, si la necesitas"
 msgstr ""
 
-#: assets/js/engines/biz.js:299
-msgid "Faltan tu nombre o tu NIF."
+#: assets/js/engines/biz.js:526
+msgid "Incluir al pie la cláusula de protección de datos y derechos (RGPD)"
 msgstr ""
 
-#: assets/js/engines/biz.js:300
+#: assets/js/engines/biz.js:528
+msgid "Texto de la cláusula"
+msgstr ""
+
+#: assets/js/engines/biz.js:528
+msgid "Se genera con tus datos. Si lo modificas, se usará tu texto; vacíalo para volver al generado."
+msgstr ""
+
+#: assets/js/engines/biz.js:529
+msgid "Pie legal del documento"
+msgstr ""
+
+#: assets/js/engines/biz.js:530
+msgid "Se imprime al final de cada página. En las sociedades incluye la razón social, el NIF y los datos registrales."
+msgstr ""
+
+#: assets/js/engines/biz.js:563
+msgid "El logotipo es demasiado grande para guardarlo en el navegador; se usará solo en esta sesión."
+msgstr ""
+
+#: assets/js/engines/biz.js:569
+msgid "Faltan tu nombre o razón social, tu NIF o tu domicilio."
+msgstr ""
+
+#: assets/js/engines/biz.js:570
+#, js-format
+msgid "El NIF del emisor (%s) no supera la comprobación de su letra o dígito de control."
+msgstr ""
+
+#: assets/js/engines/biz.js:571
+msgid "Has elegido «Empresa», pero el NIF corresponde a una persona física. Las sociedades tienen un NIF que empieza por letra."
+msgstr ""
+
+#: assets/js/engines/biz.js:573
+msgid "Indica la forma jurídica de la sociedad (S.L., S.A.…)."
+msgstr ""
+
+#: assets/js/engines/biz.js:575
+msgid "Faltan datos registrales (registro, tomo, folio y hoja)."
+msgstr ""
+
+#: assets/js/engines/biz.js:577
+#, js-format
+msgid "El NIF del cliente (%s) no parece válido. Si es un cliente extranjero, indica su número de IVA con el prefijo del país."
+msgstr ""
+
+#: assets/js/engines/biz.js:578
+msgid "El IBAN no supera la comprobación de sus dígitos de control."
+msgstr ""
+
+#: assets/js/engines/biz.js:580
 msgid "Falta el nombre del cliente."
 msgstr ""
 
-#: assets/js/engines/biz.js:301
+#: assets/js/engines/biz.js:581
+msgid "Para una factura completa a una empresa o profesional, indica también su NIF y su domicilio."
+msgstr ""
+
+#: assets/js/engines/biz.js:582
 msgid "Falta el número de factura."
 msgstr ""
 
-#: assets/js/engines/biz.js:303
+#: assets/js/engines/biz.js:583
+msgid "Indica el número de la factura que se rectifica."
+msgstr ""
+
+#: assets/js/engines/biz.js:585
+msgid "Con la mención elegida las líneas no suelen llevar IVA: revisa los tipos aplicados."
+msgstr ""
+
+#: assets/js/engines/biz.js:586
+msgid "Escribe el texto de la mención especial."
+msgstr ""
+
+#: assets/js/engines/biz.js:587
+msgid "En una entrega intracomunitaria indica el NIF-IVA del cliente con el prefijo de su país."
+msgstr ""
+
+#: assets/js/engines/biz.js:589
 msgid "Hay líneas con cantidad 0 o negativa."
 msgstr ""
 
-#: assets/js/engines/biz.js:304
+#: assets/js/engines/biz.js:597
 msgid "Total del documento"
 msgstr ""
 
-#: assets/js/engines/biz.js:304
+#: assets/js/engines/biz.js:597
 msgid "Recargo"
 msgstr ""
 
-#: assets/js/engines/biz.js:319
+#: assets/js/engines/biz.js:601
+msgid "Revisa antes de emitir el documento:"
+msgstr ""
+
+#: assets/js/engines/biz.js:619
 msgid "Descargar PDF"
 msgstr ""
 
-#: assets/js/engines/biz.js:324
+#: assets/js/engines/biz.js:624
 msgid "No se ha podido generar el PDF."
 msgstr ""
 
-#: assets/js/engines/biz.js:326
+#: assets/js/engines/biz.js:626
 #: assets/js/engines/dates.js:357
 #: assets/js/engines/guide.js:37
 #: assets/js/engines/lists.js:152
@@ -11352,250 +11875,393 @@ msgstr ""
 msgid "Imprimir"
 msgstr ""
 
-#: assets/js/engines/biz.js:327
+#: assets/js/engines/biz.js:627
 msgid "Exportar datos (JSON)"
 msgstr ""
 
-#: assets/js/engines/biz.js:328
+#: assets/js/engines/biz.js:628
 msgid "Importar JSON"
 msgstr ""
 
-#: assets/js/engines/biz.js:334
+#: assets/js/engines/biz.js:633
 msgid "El archivo es demasiado grande."
 msgstr ""
 
-#: assets/js/engines/biz.js:338
+#: assets/js/engines/biz.js:637
 msgid "El archivo no contiene un documento de HerramientasClave."
 msgstr ""
 
-#: assets/js/engines/biz.js:344
+#: assets/js/engines/biz.js:656
 msgid "Documento importado"
 msgstr ""
 
-#: assets/js/engines/biz.js:345
+#: assets/js/engines/biz.js:657
 msgid "No se ha podido leer el archivo."
 msgstr ""
 
-#: assets/js/engines/biz.js:349
-msgid "Si activas «Guardar en este navegador», solo se recuerdan tus datos de emisor, la forma de pago y el siguiente número. Los datos del cliente no se guardan."
+#: assets/js/engines/biz.js:661
+msgid "Si activas «Guardar en este navegador», se recuerdan tus datos de emisor (incluido el logotipo), la forma de pago y el siguiente número. Los datos del cliente no se guardan."
 msgstr ""
 
-#: assets/js/engines/biz.js:352
+#: assets/js/engines/biz.js:666
 #: assets/js/engines/text.js:151
 #: assets/js/engines/text.js:326
 #: assets/js/engines/text.js:396
 msgid "Líneas"
 msgstr ""
 
-#: assets/js/engines/biz.js:359
-#: assets/js/engines/biz.js:418
+#: assets/js/engines/biz.js:678
+#: assets/js/engines/biz.js:738
 #: assets/js/engines/files.js:72
 #: assets/js/engines/image.js:584
 #: assets/js/engines/text.js:743
 msgid "Vista previa"
 msgstr ""
 
-#: assets/js/engines/biz.js:362
-msgid "Plantilla orientativa. Revisa que la factura incluya los datos obligatorios de tu caso (número correlativo, fechas, NIF y domicilio de ambas partes, desglose de impuestos, menciones especiales si hay exención) y comprueba si estás obligado a usar un programa de facturación que cumpla la normativa vigente o la factura electrónica. HerramientasClave no envía nada a Hacienda ni guarda tus facturas."
+#: assets/js/engines/biz.js:681
+msgid "Plantilla orientativa. El documento incluye los datos que exige el Reglamento de facturación (Real Decreto 1619/2012): número, fechas, datos y NIF de ambas partes, descripción, base, tipo y cuota de IVA, menciones especiales y, en sociedades, datos registrales. Tú eres responsable de su contenido y de su numeración correlativa. Comprueba si debes usar un programa de facturación que cumpla la normativa vigente o la factura electrónica. HerramientasClave no envía nada a Hacienda ni guarda tus facturas."
 msgstr ""
 
-#: assets/js/engines/biz.js:372
+#: assets/js/engines/biz.js:692
 msgid "Nº de recibo (opcional)"
 msgstr ""
 
-#: assets/js/engines/biz.js:374
+#: assets/js/engines/biz.js:693
+#: assets/js/engines/dates.js:387
+#: assets/js/engines/dates.js:401
+#: assets/js/engines/gen.js:427
+#: assets/js/engines/image.js:535
+#: assets/js/engines/prod.js:89
+#: assets/js/engines/prod.js:172
+msgid "Fecha"
+msgstr ""
+
+#: assets/js/engines/biz.js:694
 msgid "Lugar (opcional)"
 msgstr ""
 
-#: assets/js/engines/biz.js:375
+#: assets/js/engines/biz.js:695
 msgid "Importe recibido"
 msgstr ""
 
-#: assets/js/engines/biz.js:376
+#: assets/js/engines/biz.js:696
 msgid "Recibí de (quien paga)"
 msgstr ""
 
-#: assets/js/engines/biz.js:377
+#: assets/js/engines/biz.js:697
 msgid "NIF de quien paga (opcional)"
 msgstr ""
 
-#: assets/js/engines/biz.js:378
+#: assets/js/engines/biz.js:698
 msgid "Quien cobra"
 msgstr ""
 
-#: assets/js/engines/biz.js:379
+#: assets/js/engines/biz.js:699
 msgid "NIF de quien cobra (opcional)"
 msgstr ""
 
-#: assets/js/engines/biz.js:381
+#: assets/js/engines/biz.js:701
 msgid "Efectivo"
 msgstr ""
 
-#: assets/js/engines/biz.js:381
+#: assets/js/engines/biz.js:701
 msgid "Transferencia"
 msgstr ""
 
-#: assets/js/engines/biz.js:381
+#: assets/js/engines/biz.js:701
 msgid "Tarjeta"
 msgstr ""
 
-#: assets/js/engines/biz.js:381
+#: assets/js/engines/biz.js:701
 #: assets/js/engines/dev.js:351
 msgid "Otro"
 msgstr ""
 
-#: assets/js/engines/biz.js:383
+#: assets/js/engines/biz.js:703
 msgid "Incluir copia para quien cobra (dos recibos por hoja)"
 msgstr ""
 
-#: assets/js/engines/biz.js:390
+#: assets/js/engines/biz.js:710
 msgid "Recibo"
 msgstr ""
 
-#: assets/js/engines/biz.js:392
+#: assets/js/engines/biz.js:712
 msgid "Recibí de"
 msgstr ""
 
-#: assets/js/engines/biz.js:393
+#: assets/js/engines/biz.js:713
 msgid "la cantidad de"
 msgstr ""
 
-#: assets/js/engines/biz.js:394
+#: assets/js/engines/biz.js:714
 msgid "en concepto de"
 msgstr ""
 
-#: assets/js/engines/biz.js:397
+#: assets/js/engines/biz.js:717
 msgid "Firma de quien cobra"
 msgstr ""
 
-#: assets/js/engines/biz.js:399
+#: assets/js/engines/biz.js:719
 msgid "Ejemplar para quien paga"
 msgstr ""
 
-#: assets/js/engines/biz.js:400
+#: assets/js/engines/biz.js:720
 msgid "Ejemplar para quien cobra"
 msgstr ""
 
-#: assets/js/engines/biz.js:412
+#: assets/js/engines/biz.js:732
 msgid "Imprimir o guardar como PDF"
 msgstr ""
 
-#: assets/js/engines/biz.js:414
+#: assets/js/engines/biz.js:734
 msgid "Indica un importe mayor que 0."
 msgstr ""
 
-#: assets/js/engines/biz.js:425
+#: assets/js/engines/biz.js:745
 msgid "Pega tu lista (CSV, columnas de Excel o «nombre; precio» por línea)"
 msgstr ""
 
-#: assets/js/engines/biz.js:426
+#: assets/js/engines/biz.js:746
 msgid "O arrastra un archivo CSV o TXT"
 msgstr ""
 
-#: assets/js/engines/biz.js:427
+#: assets/js/engines/biz.js:747
 msgid "La primera fila son encabezados"
 msgstr ""
 
-#: assets/js/engines/biz.js:428
+#: assets/js/engines/biz.js:748
 msgid "Columna del nombre"
 msgstr ""
 
-#: assets/js/engines/biz.js:429
+#: assets/js/engines/biz.js:749
 msgid "Columna del precio"
 msgstr ""
 
-#: assets/js/engines/biz.js:430
+#: assets/js/engines/biz.js:750
 msgid "Operación sobre el precio"
 msgstr ""
 
-#: assets/js/engines/biz.js:431
-#: assets/js/engines/pdf.js:332
-msgid "Ninguna"
-msgstr ""
-
-#: assets/js/engines/biz.js:431
+#: assets/js/engines/biz.js:751
 msgid "Añadir IVA"
 msgstr ""
 
-#: assets/js/engines/biz.js:431
+#: assets/js/engines/biz.js:751
 msgid "Quitar IVA"
 msgstr ""
 
-#: assets/js/engines/biz.js:432
+#: assets/js/engines/biz.js:752
 msgid "Subir un porcentaje"
 msgstr ""
 
-#: assets/js/engines/biz.js:432
+#: assets/js/engines/biz.js:752
 msgid "Bajar un porcentaje"
 msgstr ""
 
-#: assets/js/engines/biz.js:434
+#: assets/js/engines/biz.js:754
 #: assets/js/engines/calc-basic.js:167
 msgid "Redondeo"
 msgstr ""
 
-#: assets/js/engines/biz.js:435
+#: assets/js/engines/biz.js:755
 #: assets/js/engines/calc-basic.js:168
 msgid "Al céntimo"
 msgstr ""
 
-#: assets/js/engines/biz.js:435
+#: assets/js/engines/biz.js:755
 msgid "Terminar en ,99"
 msgstr ""
 
-#: assets/js/engines/biz.js:435
+#: assets/js/engines/biz.js:755
 msgid "Terminar en ,95"
 msgstr ""
 
-#: assets/js/engines/biz.js:436
+#: assets/js/engines/biz.js:756
 msgid "Al 0,50 más cercano"
 msgstr ""
 
-#: assets/js/engines/biz.js:436
+#: assets/js/engines/biz.js:756
 msgid "Al euro más cercano"
 msgstr ""
 
-#: assets/js/engines/biz.js:437
+#: assets/js/engines/biz.js:757
 #: assets/js/engines/image.js:176
 #: assets/js/engines/server.js:30
 #: assets/js/engines/server.js:39
 msgid "Formato de salida"
 msgstr ""
 
-#: assets/js/engines/biz.js:439
+#: assets/js/engines/biz.js:759
 msgid "Tabla HTML"
 msgstr ""
 
-#: assets/js/engines/biz.js:439
+#: assets/js/engines/biz.js:759
 msgid "Lista de texto"
 msgstr ""
 
-#: assets/js/engines/biz.js:458
+#: assets/js/engines/biz.js:778
 #, js-format
 msgid "Columna %d"
 msgstr ""
 
-#: assets/js/engines/biz.js:493
+#: assets/js/engines/biz.js:813
 #: assets/js/engines/prod.js:117
 #: assets/js/engines/prod.js:342
 msgid "Producto"
 msgstr ""
 
-#: assets/js/engines/biz.js:506
+#: assets/js/engines/biz.js:826
 msgid "Productos convertidos"
 msgstr ""
 
-#: assets/js/engines/biz.js:506
+#: assets/js/engines/biz.js:826
 msgid "Precio medio"
 msgstr ""
 
-#: assets/js/engines/biz.js:506
+#: assets/js/engines/biz.js:826
 msgid "Sin precio válido"
 msgstr ""
 
-#: assets/js/engines/biz.js:507
+#: assets/js/engines/biz.js:827
 #, js-format
 msgid "%d filas no tienen un precio numérico en la columna elegida y se han dejado vacías."
+msgstr ""
+
+#: assets/js/engines/biz.js:845
+msgid "NIF, NIE o CIF (uno por línea para comprobar varios)"
+msgstr ""
+
+#: assets/js/engines/biz.js:847
+msgid "La letra no corresponde al número."
+msgstr ""
+
+#: assets/js/engines/biz.js:847
+msgid "El carácter de control no corresponde."
+msgstr ""
+
+#: assets/js/engines/biz.js:847
+msgid "El formato no es el de un NIF, NIE o CIF español."
+msgstr ""
+
+#: assets/js/engines/biz.js:847
+msgid "Válido; faltaban ceros a la izquierda."
+msgstr ""
+
+#: assets/js/engines/biz.js:855
+msgid "Formato y control correctos"
+msgstr ""
+
+#: assets/js/engines/biz.js:855
+msgid "No válido"
+msgstr ""
+
+#: assets/js/engines/biz.js:856
+msgid "Tipo de entidad"
+msgstr ""
+
+#: assets/js/engines/biz.js:856
+msgid "Con el control correcto sería"
+msgstr ""
+
+#: assets/js/engines/biz.js:860
+#: assets/js/engines/biz.js:891
+#, js-format
+msgid "%1$s válidos de %2$s"
+msgstr ""
+
+#: assets/js/engines/biz.js:861
+#: assets/js/engines/biz.js:862
+#: assets/js/engines/dates.js:554
+msgid "Entrada"
+msgstr ""
+
+#: assets/js/engines/biz.js:861
+#: assets/js/engines/biz.js:862
+msgid "Correcto sería"
+msgstr ""
+
+#: assets/js/engines/biz.js:862
+#: assets/js/engines/calc.js:117
+#: assets/js/engines/dates.js:627
+#: assets/js/engines/files.js:121
+#: assets/js/engines/lists.js:152
+#: assets/js/engines/prod.js:62
+#: assets/js/engines/prod.js:108
+#: assets/js/engines/prod.js:287
+#: assets/js/engines/prod.js:438
+msgid "Descargar CSV"
+msgstr ""
+
+#: assets/js/engines/biz.js:862
+msgid "Válido"
+msgstr ""
+
+#: assets/js/engines/biz.js:869
+msgid "Solo se comprueban el formato y la letra o el dígito de control con el algoritmo oficial. No se consulta ningún registro: un NIF válido no garantiza que exista ni a nombre de quién está. Nada se envía a ningún servidor."
+msgstr ""
+
+#: assets/js/engines/biz.js:875
+msgid "IBAN (uno por línea para comprobar varios)"
+msgstr ""
+
+#: assets/js/engines/biz.js:877
+msgid "No tiene el formato de un IBAN (dos letras de país, dos dígitos de control y la cuenta)."
+msgstr ""
+
+#: assets/js/engines/biz.js:877
+msgid "El código de país no es de un país que use IBAN."
+msgstr ""
+
+#: assets/js/engines/biz.js:877
+msgid "La longitud no corresponde a ese país."
+msgstr ""
+
+#: assets/js/engines/biz.js:877
+msgid "Los dígitos de control del IBAN no son correctos."
+msgstr ""
+
+#: assets/js/engines/biz.js:877
+msgid "El IBAN es coherente, pero los dígitos de control de la cuenta española (CCC) no son correctos."
+msgstr ""
+
+#: assets/js/engines/biz.js:884
+#: assets/js/engines/biz.js:892
+msgid "País"
+msgstr ""
+
+#: assets/js/engines/biz.js:885
+msgid "Entidad"
+msgstr ""
+
+#: assets/js/engines/biz.js:885
+msgid "Oficina"
+msgstr ""
+
+#: assets/js/engines/biz.js:885
+msgid "Dígitos de control"
+msgstr ""
+
+#: assets/js/engines/biz.js:885
+msgid "Número de cuenta"
+msgstr ""
+
+#: assets/js/engines/biz.js:886
+msgid "Longitud esperada"
+msgstr ""
+
+#: assets/js/engines/biz.js:887
+msgid "IBAN válido"
+msgstr ""
+
+#: assets/js/engines/biz.js:887
+msgid "IBAN no válido"
+msgstr ""
+
+#: assets/js/engines/biz.js:892
+msgid "IBAN"
+msgstr ""
+
+#: assets/js/engines/biz.js:899
+msgid "Se comprueban la estructura y los dígitos de control (ISO 13616 y, en cuentas españolas, el CCC). No se consulta al banco: un IBAN válido puede no existir o estar cerrado. Nada se envía a ningún servidor."
 msgstr ""
 
 #: assets/js/engines/calc-basic.js:15
@@ -14965,17 +15631,6 @@ msgstr ""
 msgid "Debe ser mayor que cero."
 msgstr ""
 
-#: assets/js/engines/calc.js:117
-#: assets/js/engines/dates.js:627
-#: assets/js/engines/files.js:121
-#: assets/js/engines/lists.js:152
-#: assets/js/engines/prod.js:62
-#: assets/js/engines/prod.js:108
-#: assets/js/engines/prod.js:287
-#: assets/js/engines/prod.js:438
-msgid "Descargar CSV"
-msgstr ""
-
 #: assets/js/engines/calc.js:129
 msgid "Calculadora no encontrada."
 msgstr ""
@@ -15021,7 +15676,7 @@ msgstr ""
 #: assets/js/engines/gen.js:320
 #: assets/js/engines/gen.js:372
 #: assets/js/engines/security.js:183
-#: assets/js/ui.js:474
+#: assets/js/ui.js:489
 msgid "Copiar"
 msgstr ""
 
@@ -15042,7 +15697,7 @@ msgid "Borrar último"
 msgstr ""
 
 #: assets/js/engines/calculator.js:92
-#: assets/js/ui.js:597
+#: assets/js/ui.js:612
 msgid "Borrar todo"
 msgstr ""
 
@@ -15741,10 +16396,6 @@ msgstr ""
 #: assets/js/engines/prod.js:436
 #: assets/js/engines/prod.js:438
 msgid "Día"
-msgstr ""
-
-#: assets/js/engines/dates.js:554
-msgid "Entrada"
 msgstr ""
 
 #: assets/js/engines/dates.js:554
@@ -17478,7 +18129,7 @@ msgid "Descargar todo (ZIP)"
 msgstr ""
 
 #: assets/js/engines/image.js:82
-#: assets/js/ui.js:501
+#: assets/js/ui.js:516
 msgid "Limpiar"
 msgstr ""
 
@@ -17509,7 +18160,7 @@ msgid "Procesando %1$d de %2$d: %3$s"
 msgstr ""
 
 #: assets/js/engines/image.js:132
-#: assets/js/ui.js:475
+#: assets/js/ui.js:490
 msgid "Descargar"
 msgstr ""
 
@@ -17626,7 +18277,7 @@ msgid "Mantener la proporción (encajar dentro del ancho y alto)"
 msgstr ""
 
 #: assets/js/engines/image.js:306
-msgid "Entre 1 y 1000 %."
+msgid "Entre 1 y 1.000 %."
 msgstr ""
 
 #: assets/js/engines/image.js:307
@@ -20010,10 +20661,6 @@ msgstr ""
 msgid "Leche, pan…"
 msgstr ""
 
-#: assets/js/engines/prod.js:120
-msgid "Sección"
-msgstr ""
-
 #: assets/js/engines/prod.js:125
 msgid "Añade productos; se agruparán por sección del supermercado."
 msgstr ""
@@ -20495,6 +21142,10 @@ msgstr ""
 msgid "Web"
 msgstr ""
 
+#: assets/js/engines/qr.js:90
+msgid "Dirección"
+msgstr ""
+
 #: assets/js/engines/qr.js:91
 msgid "Ubicación"
 msgstr ""
@@ -20647,10 +21298,6 @@ msgstr ""
 
 #: assets/js/engines/qr.js:196
 msgid "Añadir logotipo"
-msgstr ""
-
-#: assets/js/engines/qr.js:197
-msgid "Quitar logotipo"
 msgstr ""
 
 #: assets/js/engines/qr.js:201
@@ -20839,7 +21486,7 @@ msgid "Palabras en la lista"
 msgstr ""
 
 #: assets/js/engines/security.js:108
-msgid "Diceware usa 7776 palabras; BIP-39, 2048."
+msgid "Diceware usa 7.776 palabras; BIP-39, 2.048."
 msgstr ""
 
 #: assets/js/engines/security.js:109
@@ -21629,7 +22276,7 @@ msgid "Descargar .txt"
 msgstr ""
 
 #: assets/js/engines/text.js:662
-#: assets/js/ui.js:495
+#: assets/js/ui.js:510
 msgid "Abrir archivo"
 msgstr ""
 
@@ -22253,152 +22900,152 @@ msgid "Medidas ISO 216 (series A y B), ISO 269 (sobres C) y formatos norteameric
 msgstr ""
 
 #: assets/js/engines/units.js:141
-msgid "Número (1 a 3999) o número romano"
+msgid "Número (1 a 3.999) o número romano"
 msgstr ""
 
 #: assets/js/engines/units.js:149
-msgid "Los números romanos clásicos van del 1 al 3999."
+msgid "Los números romanos clásicos van del 1 al 3.999."
 msgstr ""
 
 #: assets/js/engines/units.js:153
 msgid "No es un número romano válido. Usa I, V, X, L, C, D y M en notación estándar."
 msgstr ""
 
-#: assets/js/ui.js:157
+#: assets/js/ui.js:172
 msgid "Documento de Word (DOCX)"
 msgstr ""
 
-#: assets/js/ui.js:158
+#: assets/js/ui.js:173
 msgid "Hoja de Excel (XLSX)"
 msgstr ""
 
-#: assets/js/ui.js:159
+#: assets/js/ui.js:174
 msgid "Presentación de PowerPoint (PPTX)"
 msgstr ""
 
-#: assets/js/ui.js:174
+#: assets/js/ui.js:189
 msgid "Documento Office antiguo (DOC/XLS/PPT)"
 msgstr ""
 
-#: assets/js/ui.js:175
+#: assets/js/ui.js:190
 msgid "Ejecutable de Windows (EXE/DLL)"
 msgstr ""
 
-#: assets/js/ui.js:176
+#: assets/js/ui.js:191
 msgid "Ejecutable ELF (Linux)"
 msgstr ""
 
-#: assets/js/ui.js:177
+#: assets/js/ui.js:192
 msgid "Clase Java / binario universal de macOS"
 msgstr ""
 
-#: assets/js/ui.js:195
+#: assets/js/ui.js:210
 msgid "JSON (probable)"
 msgstr ""
 
-#: assets/js/ui.js:198
+#: assets/js/ui.js:213
 msgid "Texto plano"
 msgstr ""
 
-#: assets/js/ui.js:221
+#: assets/js/ui.js:236
 msgid "No se ha podido descargar un componente necesario. Comprueba tu conexión e inténtalo de nuevo."
 msgstr ""
 
-#: assets/js/ui.js:376
+#: assets/js/ui.js:391
 msgid "Fórmula:"
 msgstr ""
 
-#: assets/js/ui.js:379
+#: assets/js/ui.js:394
 msgid "Copiar resultado"
 msgstr ""
 
-#: assets/js/ui.js:399
+#: assets/js/ui.js:414
 msgid "Tabla de resultados"
 msgstr ""
 
-#: assets/js/ui.js:417
+#: assets/js/ui.js:432
 msgid "Procesando…"
 msgstr ""
 
-#: assets/js/ui.js:432
+#: assets/js/ui.js:447
 msgid "Arrastra tus archivos aquí o pulsa para seleccionarlos"
 msgstr ""
 
-#: assets/js/ui.js:432
+#: assets/js/ui.js:447
 msgid "Arrastra tu archivo aquí o pulsa para seleccionarlo"
 msgstr ""
 
-#: assets/js/ui.js:456
+#: assets/js/ui.js:471
 #, js-format
 msgid "Formato no admitido: %s"
 msgstr ""
 
-#: assets/js/ui.js:457
+#: assets/js/ui.js:472
 #, js-format
 msgid "Supera el límite de %1$d MB: %2$s"
 msgstr ""
 
-#: assets/js/ui.js:490
+#: assets/js/ui.js:505
 msgid "El archivo de texto es demasiado grande (máximo 20 MB)."
 msgstr ""
 
-#: assets/js/ui.js:496
+#: assets/js/ui.js:511
 msgid "Pegar"
 msgstr ""
 
-#: assets/js/ui.js:498
-#: assets/js/ui.js:499
+#: assets/js/ui.js:513
+#: assets/js/ui.js:514
 msgid "Tu navegador no permite pegar desde aquí. Usa Ctrl+V."
 msgstr ""
 
-#: assets/js/ui.js:502
+#: assets/js/ui.js:517
 msgid "Restaurar"
 msgstr ""
 
-#: assets/js/ui.js:593
+#: assets/js/ui.js:608
 msgid "Se guardará en este navegador"
 msgstr ""
 
-#: assets/js/ui.js:593
+#: assets/js/ui.js:608
 msgid "Ya no se guarda y se han borrado los datos guardados"
 msgstr ""
 
-#: assets/js/ui.js:596
+#: assets/js/ui.js:611
 msgid "Guardar en este navegador"
 msgstr ""
 
-#: assets/js/ui.js:598
+#: assets/js/ui.js:613
 msgid "¿Borrar todos los datos de esta herramienta?"
 msgstr ""
 
-#: assets/js/ui.js:598
+#: assets/js/ui.js:613
 msgid "Datos borrados"
 msgstr ""
 
-#: assets/js/ui.js:609
+#: assets/js/ui.js:624
 msgid "No se ha podido leer la imagen. Puede estar dañada o tener un formato que tu navegador no admite."
 msgstr ""
 
-#: assets/js/ui.js:617
+#: assets/js/ui.js:632
 msgid "El navegador no ha podido generar la imagen. Prueba con dimensiones más pequeñas."
 msgstr ""
 
-#: assets/js/ui.js:675
+#: assets/js/ui.js:690
 msgid "Se ha producido un error inesperado."
 msgstr ""
 
-#: assets/js/ui.js:676
+#: assets/js/ui.js:691
 msgid "El documento está protegido con contraseña."
 msgstr ""
 
-#: assets/js/ui.js:676
+#: assets/js/ui.js:691
 msgid "Desbloquéalo primero (con autorización) y vuelve a intentarlo."
 msgstr ""
 
-#: assets/js/ui.js:677
+#: assets/js/ui.js:692
 msgid "El archivo no es un PDF válido o está dañado."
 msgstr ""
 
-#: assets/js/ui.js:677
+#: assets/js/ui.js:692
 msgid "Comprueba que se abre en un lector de PDF."
 msgstr ""

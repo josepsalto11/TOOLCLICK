@@ -537,7 +537,7 @@ return array(
 			__( 'Escribe el precio del kWh de tu factura.', 'clicktools' ),
 		),
 		'examples' => array(
-			__( 'Un radiador de 1500 W durante 2 horas consume 3 kWh al día; a 0,15 €/kWh cuesta 0,45 € diarios.', 'clicktools' ),
+			__( 'Un radiador de 1.500 W durante 2 horas consume 3 kWh al día; a 0,15 €/kWh cuesta 0,45 € diarios.', 'clicktools' ),
 		),
 		'faq'      => array(
 			array( __( '¿Por qué no usáis el precio actual de la luz?', 'clicktools' ), __( 'Porque depende de tu tarifa, la franja horaria y el día. Introduce el precio que aparece en tu factura para obtener un cálculo realista.', 'clicktools' ) ),

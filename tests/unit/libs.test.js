@@ -94,3 +94,27 @@ test('Metadatos: identifica PNG con extensión falsa', () => {
   const b = new Uint8Array(fs.readFileSync(path.join(FIX, 'engano.jpg')));
   assert.equal(meta.type(b), 'png');
 });
+
+const validate = require(path.join(LIB, 'validate.js'));
+test('NIF: DNI, NIE, CIF y errores de control', () => {
+  assert.equal(validate.nif('12345678Z').valid, true);
+  assert.equal(validate.nif('12345678A').expected, '12345678Z');
+  assert.equal(validate.nif('x-1234567-l').type, 'NIE');
+  assert.equal(validate.nif('X1234567L').valid, true);
+  assert.equal(validate.nif('Q2826000H').valid, true);   // Agencia Tributaria
+  assert.equal(validate.nif('A58818501').valid, true);
+  assert.equal(validate.nif('A5881850J').valid, false); // A exige dígito de control
+  assert.equal(validate.nif('B12345674').entity, 'Sociedad de responsabilidad limitada');
+  assert.equal(validate.nif('1234567L').value, '01234567L');
+  assert.equal(validate.nif('hola').detail, 'formato');
+});
+test('IBAN: control ISO 13616 y CCC español', () => {
+  assert.equal(validate.iban('ES91 2100 0418 4502 0005 1332').valid, true);
+  assert.equal(validate.iban('ES9121000418450200051333').detail, 'control');
+  assert.equal(validate.iban('DE89370400440532013000').valid, true);
+  assert.equal(validate.iban('GB82WEST12345698765432').formatted, 'GB82 WEST 1234 5698 7654 32');
+  assert.equal(validate.iban('ES912100041845020005133').detail, 'longitud');
+  // IBAN con control internacional correcto pero CCC español incorrecto.
+  const fix = (98 - Number(BigInt(('2100041810' + '0200051332' + '142800').replace(/\s/g, '')) % 97n)).toString().padStart(2, '0');
+  assert.equal(validate.iban('ES' + fix + '21000418100200051332').detail, 'ccc');
+});

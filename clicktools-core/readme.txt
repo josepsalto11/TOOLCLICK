@@ -4,7 +4,7 @@ Tags: herramientas, pdf, imágenes, calculadoras, conversores
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Plataforma de herramientas online gratuitas: PDF, imágenes, vídeo y audio, tex
 
 == Description ==
 
-HerramientasClave convierte un WordPress en un sitio de herramientas online con 276 herramientas reales en 13 categorías. La gran mayoría funcionan en el navegador del visitante: los archivos no se suben a ningún servidor.
+HerramientasClave convierte un WordPress en un sitio de herramientas online con 279 herramientas reales en 13 categorías. La gran mayoría funcionan en el navegador del visitante: los archivos no se suben a ningún servidor.
 
 * Página propia por herramienta con URL corta, instrucciones, preguntas frecuentes y herramientas relacionadas.
 * Buscador instantáneo, catálogo con filtros, favoritos e historial local opcional.
@@ -47,6 +47,11 @@ No en una instalación nueva. AdSense y la analítica externa solo se cargan si 
 Por defecto se conservan los datos. Si activas el borrado en Ajustes, se eliminan ajustes, mensajes y estadísticas. Las páginas creadas se conservan siempre.
 
 == Changelog ==
+
+= 1.2.0 =
+* Generador de facturas ampliado: logotipo, emisor autónomo o empresa, datos registrales (registro, tomo, folio, hoja, inscripción, capital social), cláusula de protección de datos y derechos al pie de cada página, menciones especiales del Reglamento de facturación, facturas rectificativas, fecha de operación, IBAN y comprobación de NIF.
+* Nuevas herramientas: generador de albaranes, validador de NIF/NIE/CIF y validador de IBAN.
+* Los números se muestran siempre con punto de miles y coma decimal (3.528,93), también los de cuatro cifras.
 
 = 1.1.0 =
 * El sitio pasa a llamarse HerramientasClave.

@@ -138,7 +138,7 @@
 	}
 	CT.roman = { to: toRoman, from: fromRoman };
 	function roman(el) {
-		var f = ui.field({ label: __('Número (1 a 3999) o número romano'), value: '2026', placeholder: 'MMXXVI' });
+		var f = ui.field({ label: __('Número (1 a 3.999) o número romano'), value: '2026', placeholder: 'MMXXVI' });
 		var result = ui.result();
 		var run = function () {
 			var raw = f.input.value.trim();
@@ -146,7 +146,7 @@
 			if (!raw) { result.clear(); return; }
 			if (/^\d+$/.test(raw)) {
 				var n = parseInt(raw, 10);
-				if (n < 1 || n > 3999) { f.error(__('Los números romanos clásicos van del 1 al 3999.')); result.clear(); return; }
+				if (n < 1 || n > 3999) { f.error(__('Los números romanos clásicos van del 1 al 3.999.')); result.clear(); return; }
 				result.set(ui.resultCard({ label: raw + ' =', main: toRoman(n), copy: toRoman(n) }));
 			} else {
 				var r = fromRoman(raw);

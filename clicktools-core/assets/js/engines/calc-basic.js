@@ -333,7 +333,7 @@
 			return {
 				main: { label: __('Volumen'), value: N(vol, 4) + ' ' + v.unit + '³' },
 				stats: [[__('Litros'), N(m3 * 1000, 3) + ' L'], [__('Metros cúbicos'), N(m3, 6) + ' m³'], [__('Galones (EE. UU.)'), N(m3 * 264.172052, 3) + ' gal']],
-				formula: f + '; 1 m³ = 1000 L'
+				formula: f + '; 1 m³ = 1.000 L'
 			};
 		}
 	});

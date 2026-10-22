@@ -29,6 +29,7 @@ class Assets {
 			'lib-diff'   => array( 'file' => 'lib/diff.js', 'deps' => array() ),
 			'lib-expr'   => array( 'file' => 'lib/expr.js', 'deps' => array() ),
 			'lib-imgmeta' => array( 'file' => 'lib/imgmeta.js', 'deps' => array() ),
+			'lib-validate' => array( 'file' => 'lib/validate.js', 'deps' => array() ),
 			'lib-gif'    => array( 'file' => 'lib/gif.js', 'deps' => array() ),
 			'calc'       => array( 'file' => 'engines/calc.js', 'deps' => array( 'lib-csv' ) ),
 			'calc-basic' => array( 'file' => 'engines/calc-basic.js', 'deps' => array( 'calc' ) ),
@@ -49,7 +50,7 @@ class Assets {
 			'files'      => array( 'file' => 'engines/files.js', 'deps' => array( 'lib-zip', 'lib-imgmeta', 'lib-csv' ) ),
 			'lists'      => array( 'file' => 'engines/lists.js', 'deps' => array( 'lib-csv' ) ),
 			'prod'       => array( 'file' => 'engines/prod.js', 'deps' => array( 'lib-csv' ) ),
-			'biz'        => array( 'file' => 'engines/biz.js', 'deps' => array( 'lib-csv', 'lists' ) ),
+			'biz'        => array( 'file' => 'engines/biz.js', 'deps' => array( 'lib-csv', 'lib-validate', 'lists' ) ),
 			'server'     => array( 'file' => 'engines/server.js', 'deps' => array() ),
 			'guide'      => array( 'file' => 'engines/guide.js', 'deps' => array() ),
 		);
